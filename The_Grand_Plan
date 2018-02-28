@@ -1,0 +1,23 @@
+Note: 
+	Always separate functionalities! 
+	Graphics
+	User input
+	Elevator
+Classes: 
+	order
+		destination floor
+	out_order -> order
+		direction // up or down
+	elevator
+		current_floor
+		current_direction // up or down
+		exe_orders // should be a linked_list, storing all orders to be gone through
+		delay_orders // linked_list, storing all delaying orders
+		place_order(order) // a public method for customers to place an order
+		process_order(order) // a private method to add the order to either list
+		sort_insert(order, which_list) // a private method to insert the order based on the floor number
+		move() // a private method to cause the elevator to move to its next destination
+		swap() // a private method to swap the two lists when the exe is empty
+		go_to() // a private method to tell the elevator to go to specific floor
+		up() // a private method moving up one floor
+		down() // a private method moving down one floor
