@@ -2,19 +2,19 @@
 # $@ for target name
 # $^ for all prerequisites
 # $< for first prerequisites
-CMD = g++
-FLAG = -std=c++11
+CXX = g++
+CXXFLAGS = -std=c++11
 target: conio.o eleGraphics.o testEleGraphics.cpp
-	$(CMD) $(FLAG) $^ -o $@
+	$(CXX) $(CXXFLAGS) $^ -o $@
 
 eleGraphics.o: eleGraphics.cpp eleGraphics.h
-	$(CMD) $(FLAG) -c $< -o $@ 
+	$(CXX) $(CXXFLAGS) -c $< -o $@ 
 
 conio.o: conio.cpp
-	$(CMD) $(FLAG) -c $^ -o $@
+	$(CXX) $(CXXFLAGS) -c $^ -o $@
 
 clean:
-	rm *.o
+	$(RM) *.o
 
 cleanall:
-	rm target *.o
+	$(RM) target *.o
