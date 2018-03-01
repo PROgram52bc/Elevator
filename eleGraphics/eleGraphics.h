@@ -1,5 +1,5 @@
-#ifndef ELEGRAPHICS
-#define ELEGRAPHICS
+#ifndef ELEGRAPHICS_H
+#define ELEGRAPHICS_H
 
 #include <iostream>
 #include <string>
@@ -7,16 +7,21 @@
 namespace elegraphics {
 	/**************Constants*************/
 	const int MAXFLOOR = 10; // the maximum floor number allowed
-	const int MAXFLOORPERCOL = 10; // the maximum floor number per column
-	const int LABELPERFLR = 5; // print floor number for every LABELPERFLR floors
-	const int BASEROW = 22; // the row number for floor 1
-	const int FLRWIDTH = 2; // the width of a floor/ available space for elevator
-	const int FLRHEIGHT = 2; // the height of a floor
-	const int LEFTMARGIN = 5; // the margin on the left for numbering
 	enum Direction { up, down, open };
+
+	namespace { 
+		// encapsulated constants
+		const int MAXFLOORPERCOL = 10; // the maximum floor number per column
+		const int LABELPERFLR = 5; // print floor number for every LABELPERFLR floors
+		const int BASEROW = 22; // the row number for floor 1
+		const int FLRWIDTH = 2; // the width of a floor/ available space for elevator
+		const int FLRHEIGHT = 2; // the height of a floor
+		const int LEFTMARGIN = 5; // the margin on the left for numbering
+	}
 	/**************Functions****************/
 	void drawFloor(int);
 	void drawElevator(int floor, Direction d);
+	void clrscr();
 	namespace {
 		/*
 		   Let's make the coordinate for elevator always the upper left corner!

@@ -1,5 +1,5 @@
-#ifndef ELEVATOR
-#define ELEVATOR
+#ifndef ELEVATOR_H
+#define ELEVATOR_H
 
 #include "eleGraphics/eleGraphics.h"
 

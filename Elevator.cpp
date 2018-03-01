@@ -1,7 +1,6 @@
 #include <iostream>
 #include "Elevator.h"
 #include "eleGraphics/eleGraphics.h"
-#include "eleGraphics/conio.h"
 
 using namespace std;
 /**********************Constructors*********************/
@@ -21,10 +20,9 @@ Elevator::~Elevator() {}
 /**********************Methods definitions*********************/
 
 void Elevator::drawMe() {
-	cout << conio::clrscr();
+	elegraphics::clrscr();
 	elegraphics::drawFloor(maxFloor);
 	elegraphics::drawElevator(currentFloor, currentDirection);
-	cout << conio::gotoRowCol(elegraphics::BASEROW + 1,1);
 }
 
 
