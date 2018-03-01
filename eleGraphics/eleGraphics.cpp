@@ -11,7 +11,7 @@
 using namespace std;
 using namespace conio;
 
-namespace eleGraphics {
+namespace elegraphics {
 	void drawFloor(int n) {
 		if (n > MAXFLOOR)
 			n = MAXFLOOR;

@@ -4,8 +4,7 @@
 #include <iostream>
 #include <string>
 #include "conio.h"
-namespace eleGraphics {
-
+namespace elegraphics {
 	/**************Constants*************/
 	const int MAXFLOOR = 10; // the maximum floor number allowed
 	const int MAXFLOORPERCOL = 10; // the maximum floor number per column
