@@ -4,9 +4,14 @@
 # $< for first prerequisites
 CXX = g++
 CXXFLAGS = -std=c++11
-TESTEXE = testElegraphics
-$(TESTEXE): conio.o eleGraphics.o testEleGraphics.cpp
-	$(CXX) $(CXXFLAGS) $^ -o $@
+OBJ = conio.o eleGraphics.o
+TESTCPP = testEleGraphics.cpp
+TESTEXE = $(basename $(TESTCPP))
+
+tests: $(TESTEXE)
+
+$(TESTEXE): %: %.cpp $(OBJ)
+	$(CXX) $(CXXFLAGS) $(OBJ) $< -o $@
 
 eleGraphics.o: eleGraphics.cpp eleGraphics.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@ 

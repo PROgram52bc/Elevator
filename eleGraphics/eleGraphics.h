@@ -5,6 +5,21 @@
 #include <string>
 #include "conio.h"
 namespace elegraphics {
+	/**************Structs*************/
+	// used to define sections
+	namespace {
+		struct Section { 
+			const int
+				row,
+				col,
+				width,
+				height;
+			Section(int r, int c, int w, int h):
+				row(r), col(c), width(w), height(h) {}
+			void clrSection();
+			
+		};
+	}
 	/**************Constants*************/
 	const int MAXFLOOR = 10; // the maximum floor number allowed
 	enum Direction { up, down, open };
