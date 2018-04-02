@@ -11,7 +11,7 @@
 using namespace std;
 using namespace conio;
 
-namespace eleGraphics {
+namespace elegraphics {
 	void drawFloor(int n) {
 		if (n > MAXFLOOR)
 			n = MAXFLOOR;
@@ -22,6 +22,7 @@ namespace eleGraphics {
 			cout << gotoRowCol(BASEROW - FLRHEIGHT * i, 1 + LEFTMARGIN) << "_"
 				<< string(FLRWIDTH, ' ') << "_";
 		}
+		cout << gotoRowCol(BASEROW + 1,1);
 	}
 
 	namespace {
@@ -38,7 +39,6 @@ namespace eleGraphics {
 			"[]"
 		};
 	}
-	
 
 	void drawElevator(int floor, Direction direction) {
 		string* pEle = nullptr;
@@ -59,7 +59,12 @@ namespace eleGraphics {
 			cout << gotoRowCol(getRowNum(floor) + row, getColNum(floor))
 				<< pEle[row];
 		}
+		cout << gotoRowCol(BASEROW + 1,1);
 
+	}
+
+	void clrscr() {
+		cout << conio::clrscr();
 	}
 
 	
