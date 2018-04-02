@@ -7,18 +7,26 @@
 #include "conio.h"
 
 using namespace std;
-using namespace conio;
+using namespace elegraphics;
 
 int main() {
 
-	cerr << clrscr() << flush;
+	clrscr();
 	for (int i=5; i>1; i--) {
-		cout << clrscr();
-		elegraphics::drawFloor(7);
-		elegraphics::drawElevator(i,elegraphics::down);
-		cout << gotoRowCol(100,0) << "Press something to make it go down." << endl;
+		drawElevatorAndFloor(10, i, elegraphics::down);
 		cin.get();
 	}
+
+//	clrscr();
+//	Section section_test(1,1,5,5); 
+//	for (int c=1; c<=15; c++)
+//		for (int r=1; r<=15; r++)
+//		{
+//			cout << conio::gotoRowCol(r,c);
+//			cout << (c+r) % 10;
+//		}
+//	section_test.clrSection();
+
 
 	return 0;
 }

@@ -7,19 +7,17 @@
 namespace elegraphics {
 	/**************Structs*************/
 	// used to define sections
-	namespace {
+	// Others can create Section structs
 		struct Section { 
 			const int
-				row,
 				col,
+				row,
 				width,
 				height;
-			Section(int r, int c, int w, int h):
-				row(r), col(c), width(w), height(h) {}
+			Section(int c, int r, int w, int h):
+				col(c), row(r), width(w), height(h) {}
 			void clrSection();
-			
 		};
-	}
 	/**************Constants*************/
 	const int MAXFLOOR = 10; // the maximum floor number allowed
 	enum Direction { up, down, open };
@@ -36,6 +34,7 @@ namespace elegraphics {
 	/**************Functions****************/
 	void drawFloor(int);
 	void drawElevator(int floor, Direction d);
+	void drawElevatorAndFloor(int, int, Direction); // a combined drawFloor and drawElevator, clearing partial screen automatically
 	void clrscr();
 	namespace {
 		/*

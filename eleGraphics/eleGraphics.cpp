@@ -38,6 +38,8 @@ namespace elegraphics {
 			"[]",
 			"[]"
 		};
+		// section_elevator is only visible in the elegraphics namespace (encapsulated)
+		Section section_elevator(6, 1, 4, 22);
 	}
 
 	void drawElevator(int floor, Direction direction) {
@@ -66,6 +68,22 @@ namespace elegraphics {
 	void clrscr() {
 		cout << conio::clrscr();
 	}
+
+	void Section::clrSection() {
+		for (int i=0; i<height; i++)
+		{
+			cout << gotoRowCol(row+i, col);
+			for (int nspace=0; nspace<width; nspace++)
+				cout << " " << flush;
+		}
+	}
+
+	void drawElevatorAndFloor(int totalFloor, int floor, Direction direction) {
+		section_elevator.clrSection();
+		drawFloor(totalFloor);
+		drawElevator(floor, direction);
+	}
+
 
 	
 }
