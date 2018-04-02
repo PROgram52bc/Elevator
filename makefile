@@ -1,11 +1,9 @@
 CXX = g++
 CXXFLAGS = -std=c++11
 OBJ = Elevator.o eleGraphics/*.o
-TESTEXE = testElevator
-TESTCXX = testElevator.cpp
+TESTCPP = testElevator2.cpp testElevator.cpp
+TESTEXE = $(basename $(TESTCPP))
 
-$(TESTEXE): Elevator.o elegraphics $(TESTCXX)
-	$(CXX) $(CXXFLAGS) $(OBJ) $(TESTCXX) -o $@
 
 elegraphics:
 	$(MAKE) -C eleGraphics
@@ -13,5 +11,16 @@ elegraphics:
 Elevator.o: Elevator.cpp Elevator.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@ 
 
+tests: $(TESTEXE)
+
+$(TESTEXE): %: %.cpp elegraphics Elevator.o
+	$(CXX) $(CXXFLAGS) $(OBJ) $< -o $@
+
+cleanTest:
+	$(RM) $(TESTEXE)
+
 clean:
 	$(RM) $(TESTEXE)
+
+cleanAll:
+	$(RM) $(TESTEXE) $(OBJ)

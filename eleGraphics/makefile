@@ -17,5 +17,5 @@ conio.o: conio.cpp conio.h
 clean:
 	$(RM) *.o
 
-cleanall:
+cleanAll:
 	$(RM) $(TESTEXE) *.o
