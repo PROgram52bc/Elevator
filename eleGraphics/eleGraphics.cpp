@@ -84,6 +84,4 @@ namespace elegraphics {
 		drawElevator(floor, direction);
 	}
 
-
-	
 }
