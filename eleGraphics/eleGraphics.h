@@ -4,37 +4,35 @@
 #include <iostream>
 #include <string>
 #include "conio.h"
+#include "section.h"
+/** \addtogroup elegraphics
+  @{
+  */
 namespace elegraphics {
-	/**************Structs*************/
-	// used to define sections
-	// Others can create Section structs
-		struct Section { 
-			const int
-				col,
-				row,
-				width,
-				height;
-			Section(int c, int r, int w, int h):
-				col(c), row(r), width(w), height(h) {}
-			void clrSection();
-		};
 	/**************Constants*************/
-	const int MAXFLOOR = 10; // the maximum floor number allowed
-	enum Direction { up, down, open };
+	const int MAXFLOOR = 9; /**< the maximum floor number allowed.
+							 Currently only allowing 9 because it 
+							 is the biggest one-digit number.*/
+	const int FLRHEIGHT = 4; /**< the height of each floor. */
+	enum Direction /** the state of the elevator */
+	{ 	up, 	/**< when the elevator is going upward */
+		down, 	/**< when the elevator is going down */
+		open 	/**< when the elevator's door is open */
+	}; 
 
-	namespace { 
-		// encapsulated constants
-		const int MAXFLOORPERCOL = 10; // the maximum floor number per column
-		const int LABELPERFLR = 5; // print floor number for every LABELPERFLR floors
-		const int BASEROW = 22; // the row number for floor 1
-		const int FLRWIDTH = 2; // the width of a floor/ available space for elevator
-		const int FLRHEIGHT = 2; // the height of a floor
-		const int LEFTMARGIN = 5; // the margin on the left for numbering
-	}
+	Section secElevator(2,1, // starting x and y
+						7,FLRHEIGHT*MAXFLOOR); // width and height
+	Section secFloor(secElevator.col+secElevator.width, secElevator.row, // starting x, y
+					 20, secElevator.height); // width and height
+					
+
+
+
 	/**************Functions****************/
 	void drawFloor(int);
 	void drawElevator(int floor, Direction d);
 	void drawElevatorAndFloor(int, int, Direction); // a combined drawFloor and drawElevator, clearing partial screen automatically
+	// void drawCustomerInElevator(int floor, Customer[] c); // Just a thought that might be used
 	void clrscr();
 	namespace {
 		/*
@@ -54,4 +52,6 @@ namespace elegraphics {
 		}
 	}
 }
+/*
+  @} end of doxygen group */
 #endif

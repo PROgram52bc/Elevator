@@ -8,16 +8,13 @@ OBJ = conio.o eleGraphics.o section.o
 TESTCPP = testEleGraphics.cpp testSection.cpp
 TESTEXE = $(basename $(TESTCPP))
 
-# tests: $(TESTEXE)
+tests: $(TESTEXE)
 
-# $(TESTEXE): %: %.cpp $(OBJ)
-# 	$(CXX) $(CXXFLAGS) $(OBJ) $< -o $@
+$(TESTEXE): %: %.cpp $(OBJ)
+	$(CXX) $(CXXFLAGS) $(OBJ) $< -o $@
 
 eleGraphics.o: eleGraphics.cpp eleGraphics.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@ 
-
-testSection: testSection.cpp section.o conio.o
-	$(CXX) $(CXXFLAGS) $^ -o $@
 
 section.o: section.cpp section.h conio.o
 	$(CXX) $(CXXFLAGS) -c $< -o $@
