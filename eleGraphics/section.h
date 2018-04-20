@@ -16,7 +16,11 @@ class Section {
 		Section(int c, int r, int w, int h):
 			col(c), row(r), width(w), height(h) {}
 		void clrSection();
-		void drawStrAt(const string&, int row=1, int col=1);
+		void drawStrAt( const string&, 
+						int col=1, 
+						int row=1, 
+						conio::Color bg=conio::RESET, 
+						conio::Color fg=conio::RESET);
 };
 
 

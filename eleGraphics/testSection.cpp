@@ -1,39 +1,30 @@
 #include "section.h"
+#include "conio.h"
 #include <string>
 #include <iostream>
 
 int main() {
 	using namespace std;
-	Section testSec1(1,1,50,10);
-	Section testSec2(51,1,50,10);
-	Section testSec3(1,11,50,10);
-	Section testSec4(51,11,50,10);
+	using namespace conio;
+	cout << conio::clrscr() << flush;
+	Section testSec1(1,1,50,20);
 
-/* 	sec1...sec2
- *  .
- *  .
- *  sec3...sec4
- */
+	testSec1.clrSection();
+	// draw a frame
+	testSec1.drawStrAt(string(testSec1.width, '*')); // top
+	testSec1.drawStrAt(string(testSec1.width, '*'), 1, -1); // bottom
+	for (int row=1; row<= testSec1.height; row++)
+	{
+		testSec1.drawStrAt("*", 1, row);
+		testSec1.drawStrAt("*", testSec1.width, row);
+	}
 
-	testSec1.drawStrAt("SEC1Start");
-	testSec2.drawStrAt("SEC2Start");
-	testSec3.drawStrAt("SEC3Start");
-	testSec4.drawStrAt("SEC4Start"); 
 
-	testSec1.drawStrAt("SEC1End", testSec1.height);
-	testSec2.drawStrAt("SEC2End", testSec2.height);
-	testSec3.drawStrAt("SEC3End", testSec3.height);
-	testSec4.drawStrAt("SEC4End", testSec4.height);
+	testSec1.drawStrAt("NONONONOvvvv", -47, -1); // test left overflow
+	testSec1.drawStrAt("vvvvNONONONO", 47, -2); // test right overflow
 
-	testSec1.drawStrAt("}", 1,  testSec1.width);
-	testSec1.drawStrAt("}", testSec1.height, testSec1.width);
-	testSec2.drawStrAt("}", 1,  testSec2.width);
-	testSec2.drawStrAt("}", testSec2.height,  testSec2.width);
-	testSec3.drawStrAt("}", 1,  testSec3.width);
-	testSec3.drawStrAt("}", testSec3.height,  testSec3.width);
-	testSec4.drawStrAt("}", 1,  testSec4.width);
-	testSec4.drawStrAt("}", testSec4.height,  testSec4.width);
-
-	testSec3.clrSection();
+	testSec1.drawStrAt("Cyan Background", 2, -3, CYAN); // test bg color
+	testSec1.drawStrAt("Green Foreground", 2, -4, RESET, GREEN); // test fg color
+	testSec1.drawStrAt("Blue Foreground and Yellow background", 2, -5, YELLOW, BLUE); // test both
 
 }
