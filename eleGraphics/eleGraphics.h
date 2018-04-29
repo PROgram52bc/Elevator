@@ -20,10 +20,18 @@ namespace elegraphics {
 		open 	/**< when the elevator's door is open */
 	}; 
 
-	Section secElevator(2,1, // starting x and y
-						7,FLRHEIGHT*MAXFLOOR); // width and height
-	Section secFloor(secElevator.col+secElevator.width, secElevator.row, // starting x, y
-					 20, secElevator.height); // width and height
+
+	//  123456789
+	// 1#_|   |_
+	// 2  |   |
+	// 3  |   |
+	// 4  v   v
+	// 5
+	// 6
+	// 7
+	// 8
+	// 9
+
 					
 
 
@@ -32,25 +40,24 @@ namespace elegraphics {
 	void drawFloor(int);
 	void drawElevator(int floor, Direction d);
 	void drawElevatorAndFloor(int, int, Direction); // a combined drawFloor and drawElevator, clearing partial screen automatically
-	// void drawCustomerInElevator(int floor, Customer[] c); // Just a thought that might be used
+	// void drawCustomersInElevator(int floor, Customer[] c); // Just a thought that might be used
+	// void drawCustomersOnFloor(int floor, list<Customer*>&);
 	void clrscr();
-	namespace {
-		/*
-		   Let's make the coordinate for elevator always the upper left corner!
-		   _  _
-			!*
-		   _**_
+	/*
+	   Let's make the coordinate for elevator always the upper left corner!
+	   _  _
+		!*
+	   _**_
 
-		   '!' is the coordinate we are getting.
-	   */
+	   '!' is the coordinate we are getting.
+   */
 
-		int getRowNum(int floor) {
-			return BASEROW + 1 - floor * (FLRHEIGHT);
-		}
-		int getColNum(int floor) {
-			return 2 + LEFTMARGIN;
-		}
-	}
+//	int getRowNum(int floor) { 
+//		return BASEROW + 1 - floor * (FLRHEIGHT);
+//	}
+//	int getColNum(int floor) {
+//		return 2 + LEFTMARGIN;
+//	}
 }
 /*
   @} end of doxygen group */

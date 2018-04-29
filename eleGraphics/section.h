@@ -13,7 +13,7 @@ class Section {
 			row,
 			width,
 			height;
-		Section(int c, int r, int w, int h):
+		explicit Section(int c, int r, int w, int h):
 			col(c), row(r), width(w), height(h) {}
 		void clrSection();
 		void drawStrAt( const string&, 

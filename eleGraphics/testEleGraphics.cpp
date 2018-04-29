@@ -7,15 +7,16 @@
 #include "conio.h"
 
 using namespace std;
-using namespace elegraphics;
 
 int main() {
 
-	clrscr();
-	for (int i=5; i>1; i--) {
-		drawElevatorAndFloor(10, i, elegraphics::down);
-		cin.get();
-	}
+	elegraphics::clrscr();
+	elegraphics::drawFloor(3);
+
+//	for (int i=5; i>1; i--) {
+//		drawElevatorAndFloor(10, i, elegraphics::down);
+//		cin.get();
+//	}
 
 //	clrscr();
 //	Section section_test(1,1,5,5); 
