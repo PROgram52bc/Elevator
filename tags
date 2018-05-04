@@ -4,17 +4,96 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BLACK	eleGraphics/conio.h	/^    		BLACK=30, RED=31, GREEN=32, YELLOW=33, BLUE=34, MAGENTA=35, $/;"	e	enum:conio::Color
+BLUE	eleGraphics/conio.h	/^    		BLACK=30, RED=31, GREEN=32, YELLOW=33, BLUE=34, MAGENTA=35, $/;"	e	enum:conio::Color
+BOLD	eleGraphics/conio.h	/^    enum TextStyle { BOLD=1, FAINT=2, ITALIC=3, UNDERLINE=4, SLOW_BLINK=5, RAPID_BLINK=6, $/;"	e	enum:conio::TextStyle
+Background	eleGraphics/conio.cpp	/^    const int Background = 2;$/;"	m	namespace:conio	file:
+CONCEAL	eleGraphics/conio.h	/^    		NEGATIVE_IMAGE=7, CONCEAL=8, DOUBLE_UNDERLINE=21, NORMAL_INTENSITY=22, $/;"	e	enum:conio::TextStyle
+CONIO_CPP	eleGraphics/conio.cpp	17;"	d	file:
+CONIO_H	eleGraphics/conio.h	8;"	d
+CSI	eleGraphics/conio.h	/^    const char CSI[] = {'\\033', '[', '\\0'};$/;"	m	namespace:conio
+CXX	eleGraphics/makefile	/^CXX = g++$/;"	m
+CXX	makefile	/^CXX = g++$/;"	m
+CXXFLAGS	eleGraphics/makefile	/^CXXFLAGS = -std=c++11 -Wall -g$/;"	m
+CXXFLAGS	makefile	/^CXXFLAGS = -std=c++11$/;"	m
+CYAN	eleGraphics/conio.h	/^                CYAN=36, LIGHT_GRAY=37, RESET=39,$/;"	e	enum:conio::Color
+Color	eleGraphics/conio.h	/^    enum Color { $/;"	g	namespace:conio
+DOUBLE_UNDERLINE	eleGraphics/conio.h	/^    		NEGATIVE_IMAGE=7, CONCEAL=8, DOUBLE_UNDERLINE=21, NORMAL_INTENSITY=22, $/;"	e	enum:conio::TextStyle
+Direction	eleGraphics/eleGraphics.h	/^	enum Direction \/** the state of the elevator *\/$/;"	g	namespace:elegraphics
+ELEGRAPHICS_H	eleGraphics/eleGraphics.h	2;"	d
 ELEVATOR_H	Elevator.h	2;"	d
 Elevator	Elevator.cpp	/^Elevator::Elevator(): $/;"	f	class:Elevator
 Elevator	Elevator.h	/^class Elevator $/;"	c
+FAINT	eleGraphics/conio.h	/^    enum TextStyle { BOLD=1, FAINT=2, ITALIC=3, UNDERLINE=4, SLOW_BLINK=5, RAPID_BLINK=6, $/;"	e	enum:conio::TextStyle
+FLRHEIGHT	eleGraphics/eleGraphics.h	/^	const int FLRHEIGHT = 4; \/**< the height of each floor. *\/$/;"	m	namespace:elegraphics
+Foreground	eleGraphics/conio.cpp	/^    const int Foreground = 1;	\/\/ local implementation-specific values$/;"	m	namespace:conio	file:
+GRAY	eleGraphics/conio.h	/^                GRAY=90, LIGHT_RED=91, LIGHT_GREEN=92, LIGHT_YELLOW=93, LIGHT_BLUE=94, $/;"	e	enum:conio::Color
+GREEN	eleGraphics/conio.h	/^    		BLACK=30, RED=31, GREEN=32, YELLOW=33, BLUE=34, MAGENTA=35, $/;"	e	enum:conio::Color
+ITALIC	eleGraphics/conio.h	/^    enum TextStyle { BOLD=1, FAINT=2, ITALIC=3, UNDERLINE=4, SLOW_BLINK=5, RAPID_BLINK=6, $/;"	e	enum:conio::TextStyle
+LIGHT_BLUE	eleGraphics/conio.h	/^                GRAY=90, LIGHT_RED=91, LIGHT_GREEN=92, LIGHT_YELLOW=93, LIGHT_BLUE=94, $/;"	e	enum:conio::Color
+LIGHT_CYAN	eleGraphics/conio.h	/^		LIGHT_MAGENTA=95, LIGHT_CYAN=96, WHITE=97 };$/;"	e	enum:conio::Color
+LIGHT_GRAY	eleGraphics/conio.h	/^                CYAN=36, LIGHT_GRAY=37, RESET=39,$/;"	e	enum:conio::Color
+LIGHT_GREEN	eleGraphics/conio.h	/^                GRAY=90, LIGHT_RED=91, LIGHT_GREEN=92, LIGHT_YELLOW=93, LIGHT_BLUE=94, $/;"	e	enum:conio::Color
+LIGHT_MAGENTA	eleGraphics/conio.h	/^		LIGHT_MAGENTA=95, LIGHT_CYAN=96, WHITE=97 };$/;"	e	enum:conio::Color
+LIGHT_RED	eleGraphics/conio.h	/^                GRAY=90, LIGHT_RED=91, LIGHT_GREEN=92, LIGHT_YELLOW=93, LIGHT_BLUE=94, $/;"	e	enum:conio::Color
+LIGHT_YELLOW	eleGraphics/conio.h	/^                GRAY=90, LIGHT_RED=91, LIGHT_GREEN=92, LIGHT_YELLOW=93, LIGHT_BLUE=94, $/;"	e	enum:conio::Color
+MAGENTA	eleGraphics/conio.h	/^    		BLACK=30, RED=31, GREEN=32, YELLOW=33, BLUE=34, MAGENTA=35, $/;"	e	enum:conio::Color
+MAXFLOOR	eleGraphics/eleGraphics.h	/^	const int MAXFLOOR = 9; \/**< the maximum floor number allowed.$/;"	m	namespace:elegraphics
+NEGATIVE_IMAGE	eleGraphics/conio.h	/^    		NEGATIVE_IMAGE=7, CONCEAL=8, DOUBLE_UNDERLINE=21, NORMAL_INTENSITY=22, $/;"	e	enum:conio::TextStyle
+NORMAL_INTENSITY	eleGraphics/conio.h	/^    		NEGATIVE_IMAGE=7, CONCEAL=8, DOUBLE_UNDERLINE=21, NORMAL_INTENSITY=22, $/;"	e	enum:conio::TextStyle
+OBJ	eleGraphics/makefile	/^OBJ = conio.o eleGraphics.o section.o$/;"	m
+OBJ	makefile	/^OBJ = Elevator.o eleGraphics\/*.o$/;"	m
+RAPID_BLINK	eleGraphics/conio.h	/^    enum TextStyle { BOLD=1, FAINT=2, ITALIC=3, UNDERLINE=4, SLOW_BLINK=5, RAPID_BLINK=6, $/;"	e	enum:conio::TextStyle
+RED	eleGraphics/conio.h	/^    		BLACK=30, RED=31, GREEN=32, YELLOW=33, BLUE=34, MAGENTA=35, $/;"	e	enum:conio::Color
+RESET	eleGraphics/conio.h	/^                CYAN=36, LIGHT_GRAY=37, RESET=39,$/;"	e	enum:conio::Color
+REVEAL	eleGraphics/conio.h	/^		REVEAL=28 };$/;"	e	enum:conio::TextStyle
+SECTION_H	eleGraphics/section.h	2;"	d
+SLOW_BLINK	eleGraphics/conio.h	/^    enum TextStyle { BOLD=1, FAINT=2, ITALIC=3, UNDERLINE=4, SLOW_BLINK=5, RAPID_BLINK=6, $/;"	e	enum:conio::TextStyle
+Section	eleGraphics/section.h	/^		explicit Section(int c, int r, int w, int h):$/;"	f	class:Section
+Section	eleGraphics/section.h	/^class Section { $/;"	c
+TESTCPP	eleGraphics/makefile	/^TESTCPP = testEleGraphics.cpp testSection.cpp$/;"	m
+TESTCPP	makefile	/^TESTCPP = testElevator2.cpp testElevator.cpp$/;"	m
+TESTEXE	eleGraphics/makefile	/^TESTEXE = $(basename $(TESTCPP))$/;"	m
+TESTEXE	makefile	/^TESTEXE = $(basename $(TESTCPP))$/;"	m
+TextStyle	eleGraphics/conio.h	/^    enum TextStyle { BOLD=1, FAINT=2, ITALIC=3, UNDERLINE=4, SLOW_BLINK=5, RAPID_BLINK=6, $/;"	g	namespace:conio
+UNDERLINE	eleGraphics/conio.h	/^    enum TextStyle { BOLD=1, FAINT=2, ITALIC=3, UNDERLINE=4, SLOW_BLINK=5, RAPID_BLINK=6, $/;"	e	enum:conio::TextStyle
+WHITE	eleGraphics/conio.h	/^		LIGHT_MAGENTA=95, LIGHT_CYAN=96, WHITE=97 };$/;"	e	enum:conio::Color
+YELLOW	eleGraphics/conio.h	/^    		BLACK=30, RED=31, GREEN=32, YELLOW=33, BLUE=34, MAGENTA=35, $/;"	e	enum:conio::Color
+bgColor	eleGraphics/conio.cpp	/^    string bgColor( Color c ) {$/;"	f	namespace:conio
+clrSection	eleGraphics/section.cpp	/^void Section::clrSection() {$/;"	f	class:Section
+clrscr	eleGraphics/conio.cpp	/^    string clrscr() {$/;"	f	namespace:conio
+clrscr	eleGraphics/eleGraphics.cpp	/^	void clrscr() {$/;"	f	namespace:elegraphics
+col	eleGraphics/section.h	/^			col,$/;"	m	class:Section
+conio	eleGraphics/conio.cpp	/^namespace conio {$/;"	n	file:
+conio	eleGraphics/conio.h	/^namespace conio {$/;"	n
 currentDirection	Elevator.h	/^		elegraphics::Direction currentDirection;$/;"	m	class:Elevator
 currentFloor	Elevator.h	/^		int currentFloor;$/;"	m	class:Elevator
+down	eleGraphics/eleGraphics.h	/^		down, 	\/**< when the elevator is going down *\/$/;"	e	enum:elegraphics::Direction
+downElevator	eleGraphics/eleGraphics.cpp	/^		string downElevator[] = {$/;"	m	namespace:elegraphics::__anon1	file:
+drawFloor	eleGraphics/eleGraphics.cpp	/^	void drawFloor(int n) {$/;"	f	namespace:elegraphics
 drawMe	Elevator.cpp	/^void Elevator::drawMe() {$/;"	f	class:Elevator
+drawStrAt	eleGraphics/section.cpp	/^void Section::drawStrAt(const string& toBeDrawn,$/;"	f	class:Section
+elegraphics	eleGraphics/eleGraphics.cpp	/^namespace elegraphics {$/;"	n	file:
+elegraphics	eleGraphics/eleGraphics.h	/^namespace elegraphics {$/;"	n
+fgColor	eleGraphics/conio.cpp	/^    string fgColor( Color c ) {$/;"	f	namespace:conio
+getColorSequence	eleGraphics/conio.cpp	/^    string getColorSequence( Color c, int fgOrBg ) {$/;"	f	namespace:conio
 goDown	Elevator.cpp	/^void Elevator::goDown()$/;"	f	class:Elevator
 goUp	Elevator.cpp	/^void Elevator::goUp() $/;"	f	class:Elevator
+gotoRowCol	eleGraphics/conio.cpp	/^    string gotoRowCol( const int row, const int col ) {$/;"	f	namespace:conio
+height	eleGraphics/section.h	/^			height;$/;"	m	class:Section
+main	eleGraphics/testEleGraphics.cpp	/^int main() {$/;"	f
+main	eleGraphics/testSection.cpp	/^int main() {$/;"	f
 main	testElevator.cpp	/^int main() {$/;"	f
 main	testElevator2.cpp	/^int main() {$/;"	f
 maxFloor	Elevator.h	/^		int maxFloor;$/;"	m	class:Elevator
+open	eleGraphics/eleGraphics.h	/^		open 	\/**< when the elevator's door is open *\/$/;"	e	enum:elegraphics::Direction
+openElevator	eleGraphics/eleGraphics.cpp	/^		string openElevator[] = {$/;"	m	namespace:elegraphics::__anon1	file:
 pause	testElevator.cpp	/^const int pause = 1;$/;"	v
 pause	testElevator2.cpp	/^const int pause = 1;$/;"	v
+resetAll	eleGraphics/conio.cpp	/^    string resetAll( ) {$/;"	f	namespace:conio
+row	eleGraphics/section.h	/^			row,$/;"	m	class:Section
+setTextStyle	eleGraphics/conio.cpp	/^    string setTextStyle( TextStyle ts ) {$/;"	f	namespace:conio
+up	eleGraphics/eleGraphics.h	/^	{ 	up, 	\/**< when the elevator is going upward *\/$/;"	e	enum:elegraphics::Direction
+upElevator	eleGraphics/eleGraphics.cpp	/^		string upElevator[] = {$/;"	m	namespace:elegraphics::__anon1	file:
+width	eleGraphics/section.h	/^			width,$/;"	m	class:Section
 ~Elevator	Elevator.cpp	/^Elevator::~Elevator() {}$/;"	f	class:Elevator
