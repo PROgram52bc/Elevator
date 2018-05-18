@@ -11,7 +11,10 @@ using namespace std;
 int main() {
 
 	elegraphics::clrscr();
-	elegraphics::drawFloor(3);
+	for (int i=1; i<=9; i++) {
+		elegraphics::drawElevatorAndFloor(i, 9, elegraphics::up);
+		cin.get();
+	}
 
 //	for (int i=5; i>1; i--) {
 //		drawElevatorAndFloor(10, i, elegraphics::down);

@@ -13,6 +13,15 @@ class Section {
 			row,
 			width,
 			height;
+		/* Accessors */
+		int getStartCol() { return col; }
+		int getStartRow() { return row; }
+		int getEndCol() { return col+width-1; }
+		int getEndRow() { return row+height-1; }
+		int getConsecutiveCol() { return col+width; } /**< Return the column number right after the last column of this section */
+		int getConsecutiveRow() { return row+height; } /**< Return the row number right after the last row of this section */
+		int getWidth() { return width; }
+		int getHeight() { return height; }
 		explicit Section(int c, int r, int w, int h):
 			col(c), row(r), width(w), height(h) {}
 		void clrSection();
