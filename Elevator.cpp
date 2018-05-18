@@ -20,9 +20,7 @@ Elevator::~Elevator() {}
 /**********************Methods definitions*********************/
 
 void Elevator::drawMe() {
-	elegraphics::clrscr();
-	elegraphics::drawFloor(maxFloor);
-	elegraphics::drawElevator(currentFloor, currentDirection);
+	elegraphics::drawElevatorAndFloor(currentFloor, maxFloor, currentDirection);
 }
 
 
