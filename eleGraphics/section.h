@@ -7,12 +7,13 @@
 
 
 class Section { 
-	public:
+	private:
 		const int
 			col,
 			row,
 			width,
 			height;
+	public:
 		/* Accessors */
 		int getStartCol() { return col; }
 		int getStartRow() { return row; }
