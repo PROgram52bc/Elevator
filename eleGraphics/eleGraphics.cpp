@@ -10,8 +10,6 @@
 using namespace std;
 using namespace conio;
 
-
-
 namespace elegraphics {
 
 /*****************************Variables***************************/
@@ -109,10 +107,11 @@ namespace elegraphics {
 		drawFloor(maxFloor);
 		drawElevator(floor, state);
 	}
+	/** @brief draw customers in the elevator */
 	void drawCustomersInElevator(const list<Customer>& listCustomer, int floor) {
-		int maxCustomer = 9;
-		int numPerRow = 3;
-		int startCol = 5; // which col in section to start drawing customer
+		const int maxCustomer = 9;
+		const int numPerRow = 3;
+		const int startCol = 5; // which col in section to start drawing customer
 		int colOffset = 0;
 		int currentRow = getFlrTopRow(floor);
 		auto itCustomer = listCustomer.cbegin();
@@ -141,10 +140,41 @@ namespace elegraphics {
 		}
 	} 
 
+	/** @brief draw customers on the floor */
+	void drawCustomersOnFloor(const list<Customer>& listCustomer, int floor) {
+		const int maxCustomer = 20;
+		const int numPerRow = 20;
+		const int startCol = 2; // which col in section to start drawing customer
+		int colOffset = 0;
+		int currentRow = getFlrBotRow(floor);
+		auto itCustomer = listCustomer.cbegin();
+		for (int i=0; i<maxCustomer && itCustomer != listCustomer.cend() ; i++) {
+			int customerFloor = itCustomer->destinationFloor;
+			int customerTimeSpent = itCustomer->timeSpent;
+			conio::Color customerColor = conio::GREEN;
+			if (customerTimeSpent > 10)
+				customerColor = conio::YELLOW;
+			else if (customerTimeSpent > 20)
+				customerColor = conio::RED;
+			secFloor.drawStrAt(to_string(customerFloor), 
+					startCol+colOffset,
+					currentRow,
+					customerColor);
+			// advance offset
+			if (colOffset == numPerRow-1) {
+				colOffset = 0;
+				currentRow++;
+			}
+			else {
+				colOffset++;
+			}
+			// advance iterator
+			itCustomer++;
+		}
+	}
+
 	/** @brief clear the entire screen */
 	void clrscr() {
 		cout << conio::clrscr();
 	}
-
-
 }

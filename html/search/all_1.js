@@ -10,7 +10,10 @@ var searchData=
   ['conio_2eh',['conio.h',['../conio_8h.html',1,'']]],
   ['conio_5fcpp',['CONIO_CPP',['../conio_8cpp.html#a310fb74d0279aa67af0db163f24ccb9e',1,'conio.cpp']]],
   ['csi',['CSI',['../namespaceconio.html#ab6e72c3f7e8297901e23f6f11333d58d',1,'conio']]],
-  ['currentdirection',['currentDirection',['../classElevator.html#ae821faa50e31b5720f3f3faba1ac4044',1,'Elevator']]],
   ['currentfloor',['currentFloor',['../classElevator.html#a59fc574201dc14357f17693eda0a4201',1,'Elevator']]],
+  ['currentstate',['currentState',['../classElevator.html#a92b02a1436abca588e7fe868f41f93ea',1,'Elevator']]],
+  ['customer',['Customer',['../structCustomer.html',1,'Customer'],['../structCustomer.html#abcc8fae9701e5ba9d7d6fe44498b34e3',1,'Customer::Customer()'],['../structCustomer.html#a80bfc3402a79c8c69dd0e2d9c5094428',1,'Customer::Customer(int flr)']]],
+  ['customer_2eh',['Customer.h',['../Customer_8h.html',1,'']]],
+  ['customers',['customers',['../classElevator.html#ab93a1807a9d4490fbd8652f156611f23',1,'Elevator']]],
   ['cyan',['CYAN',['../namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789ebaffa3665eaf9b125500bf820eaf198340',1,'conio']]]
 ];

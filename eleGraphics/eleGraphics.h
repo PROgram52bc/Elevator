@@ -22,18 +22,6 @@ namespace elegraphics {
 		open 	/**< when the elevator's door is open */
 	}; 
 
-
-	//  123456789
-	// 1#_|   |_
-	// 2  |   |
-	// 3  |   |
-	// 4  v   v
-	// 5
-	// 6
-	// 7
-	// 8
-	// 9
-
 	/**************Helper Functions****************/
 	void drawFloor(int flr);
 	void drawElevator(int floor, ElevatorState d);
@@ -43,7 +31,7 @@ namespace elegraphics {
 	/**************Functions****************/
 	void drawElevatorAndFloor(int flr, int max, ElevatorState d); 
 	void drawCustomersInElevator(const list<Customer>& listCustomer, int floor); 
-	// void drawCustomersOnFloor(int floor, list<Customer*>&);
+	void drawCustomersOnFloor(const list<Customer>& listCustomer, int floor);
 	
 	void clrscr();
 }

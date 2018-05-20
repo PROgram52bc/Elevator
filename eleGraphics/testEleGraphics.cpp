@@ -18,6 +18,11 @@ int main() {
 	customers.push_back(Customer(9));
 	customers.push_back(Customer(3));
 	customers.push_back(Customer(3));
+	list<Customer> floor1(customers);
+	list<Customer> floor2(customers);
+	elegraphics::drawCustomersOnFloor(floor1, 1);
+	elegraphics::drawCustomersOnFloor(floor2, 2);
+	
 
 	for (int i=1; i<=9; i++) {
 		elegraphics::drawElevatorAndFloor(i, 9, elegraphics::up);

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['height',['height',['../classSection.html#aef00307a00a10e45941ed658cb6361ea',1,'Section']]]
+  ['elevatorwidth',['elevatorWidth',['../namespaceelegraphics.html#aab6193dfa9a34c150709bec725396856',1,'elegraphics']]]
 ];

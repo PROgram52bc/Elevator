@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['width',['width',['../classSection.html#ade59819935828a73b9a226ac5b8f73dc',1,'Section']]]
+  ['openelevator',['openElevator',['../namespaceelegraphics.html#a0caedcd3db52e7949dfc38a9921cc7cb',1,'elegraphics']]]
 ];

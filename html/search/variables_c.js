@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['width',['width',['../classSection.html#ade59819935828a73b9a226ac5b8f73dc',1,'Section']]]
+  ['timespent',['timeSpent',['../structCustomer.html#a215f5c0100cc112cbb3c28a2d01c9c02',1,'Customer']]]
 ];

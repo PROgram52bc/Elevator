@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['maxfloor',['maxFloor',['../classElevator.html#adbc1e4804aca39b1224bdcd2c3e76a41',1,'Elevator::maxFloor()'],['../group__elegraphics.html#ga1442394354e070a21dee16ccd237c844',1,'elegraphics::MAXFLOOR()']]]
+  ['flrheight',['FLRHEIGHT',['../group__elegraphics.html#ga680671cca346d01861e8692eab8b7cbd',1,'elegraphics']]],
+  ['foreground',['Foreground',['../namespaceconio.html#a4ae886d3c2f997a19540d3f9b134c197',1,'conio']]]
 ];
