@@ -7,7 +7,7 @@ using namespace std;
 Elevator::Elevator(): 
 	currentFloor(1), 
 	maxFloor(elegraphics::MAXFLOOR),
-	currentDirection(elegraphics::up)
+	currentState(elegraphics::up)
 {
 	drawMe();
 }
@@ -20,7 +20,7 @@ Elevator::~Elevator() {}
 /**********************Methods definitions*********************/
 
 void Elevator::drawMe() {
-	elegraphics::drawElevatorAndFloor(currentFloor, maxFloor, currentDirection);
+	elegraphics::drawElevatorAndFloor(currentFloor, maxFloor, currentState);
 }
 
 
@@ -28,7 +28,7 @@ void Elevator::goUp()
 {
 	if (currentFloor == maxFloor)
 		return;
-	currentDirection = elegraphics::up;
+	currentState = elegraphics::up;
 	currentFloor++;
 	drawMe();
 
@@ -37,7 +37,7 @@ void Elevator::goDown()
 {
 	if (currentFloor == 1)
 		return;
-	currentDirection = elegraphics::down;
+	currentState = elegraphics::down;
 	currentFloor--;
 	drawMe();
 }

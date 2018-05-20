@@ -3,8 +3,10 @@
 
 #include <iostream>
 #include <string>
+#include <list>
 #include "conio.h"
 #include "section.h"
+#include "../Customer.h"
 /** \addtogroup elegraphics
   @{
   */
@@ -14,7 +16,7 @@ namespace elegraphics {
 							 Currently only allowing 9 because it 
 							 is the biggest one-digit number.*/
 	const int FLRHEIGHT = 4; /**< the height of each floor. */
-	enum Direction /** the state of the elevator */
+	enum ElevatorState /** the state of the elevator */
 	{ 	up, 	/**< when the elevator is going upward */
 		down, 	/**< when the elevator is going down */
 		open 	/**< when the elevator's door is open */
@@ -32,12 +34,17 @@ namespace elegraphics {
 	// 8
 	// 9
 
-	/**************Functions****************/
+	/**************Helper Functions****************/
 	void drawFloor(int flr);
-	void drawElevator(int floor, Direction d);
-	void drawElevatorAndFloor(int flr, int max, Direction d); // a combined drawFloor and drawElevator, clearing partial screen automatically
-	// void drawCustomersInElevator(int floor, Customer[] c); // Just a thought that might be used
+	void drawElevator(int floor, ElevatorState d);
+	int getFlrTopRow(int flr);
+	int getFlrBotRow(int flr);
+
+	/**************Functions****************/
+	void drawElevatorAndFloor(int flr, int max, ElevatorState d); 
+	void drawCustomersInElevator(const list<Customer>& listCustomer, int floor); 
 	// void drawCustomersOnFloor(int floor, list<Customer*>&);
+	
 	void clrscr();
 }
 /*

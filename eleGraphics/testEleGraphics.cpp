@@ -3,16 +3,25 @@
  */
 
 #include <iostream>
+#include <list>
 #include "eleGraphics.h"
 #include "conio.h"
+#include "../Customer.h"
 
 using namespace std;
 
 int main() {
 
 	elegraphics::clrscr();
+	list<Customer> customers;
+	customers.push_back(Customer(5));
+	customers.push_back(Customer(9));
+	customers.push_back(Customer(3));
+	customers.push_back(Customer(3));
+
 	for (int i=1; i<=9; i++) {
 		elegraphics::drawElevatorAndFloor(i, 9, elegraphics::up);
+		elegraphics::drawCustomersInElevator(customers, i);
 		cin.get();
 	}
 

@@ -1,6 +1,7 @@
 #ifndef ELEVATOR_H
 #define ELEVATOR_H
 
+#include <list>
 #include "eleGraphics/eleGraphics.h"
 
 class Elevator 
@@ -9,7 +10,8 @@ class Elevator
 		void drawMe();
 		int currentFloor;
 		int maxFloor;
-		elegraphics::Direction currentDirection;
+		list<Customer> customers;
+		elegraphics::ElevatorState currentState;
 	public:
 		Elevator();
 		~Elevator();

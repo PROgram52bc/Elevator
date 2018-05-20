@@ -8,19 +8,16 @@ const int pause = 1;
 
 int main() {
 	Elevator my_ele;
-	cout << "Elevator created!" << endl;
-	this_thread::sleep_for(chrono::seconds(pause));
-	for (int i=0; i<7; i++)
-	{
-		my_ele.goUp();
-		cout << "Going up!" << endl;
-		this_thread::sleep_for(chrono::seconds(pause));
-	}
-	for (int i=0; i<9; i++)
-	{
-		my_ele.goDown();
-		cout << "Going down!" << endl;
-		this_thread::sleep_for(chrono::seconds(pause));
+	char signal;
+	while (cin.get(signal)) {
+		switch(signal) {
+			case 'j':
+				my_ele.goDown();
+				break;
+			case 'k':
+				my_ele.goUp();
+				break;
+		}
 	}
 
 
