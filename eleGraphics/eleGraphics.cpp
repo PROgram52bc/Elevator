@@ -1,6 +1,10 @@
 /*
  * A preliminary library for graphing the elevator simulator
  */
+/* Fix:
+ * 1. combine draw Customer functions
+ * 2. implementing using customerLists instead of raw list
+ */
 
 #include <iostream>
 #include <string>
@@ -14,13 +18,15 @@ namespace elegraphics {
 
 /*****************************Variables***************************/
 
-	const int elevatorWidth = 10; /**< Width of the elevator section */
-	const int queueWidth = 20; /**< Width of the customer queue */
 
 	Section secElevator(1,1, // starting x and y
-			elevatorWidth,FLRHEIGHT*MAXFLOOR); // width and height
+			ELEVATORWIDTH,FLRHEIGHT*MAXFLOOR); // width and height
 	Section secFloor(secElevator.getConsecutiveCol(), secElevator.getStartRow(), // starting x, y
-			queueWidth, secElevator.getHeight()); // width and height
+			QUEUEWIDTH, secElevator.getHeight()); // width and height
+	Section secElevatorB(secFloor.getConsecutiveCol(), secFloor.getStartRow(), // starting x and y
+			ELEVATORWIDTH,FLRHEIGHT*MAXFLOOR); // width and height
+	Section secConsole(secElevator.getStartCol(),secElevator.getConsecutiveRow()+1, // starting x, y
+			CONSOLEWIDTH, CONSOLEHEIGHT); // width and height
 
 
 	string upElevator[] = {
@@ -61,19 +67,19 @@ namespace elegraphics {
 	}
 
 	/** @brief draw the floor frame */
-	void drawFloor(int n) {
+	void drawFloor(int n, Section sec) {
 		if (n > MAXFLOOR)
 			n = MAXFLOOR; // draw only until the max floor
 		for (int i=1; i<=n; i++) // i indicates the floor number
 		{
 			int floorRow = getFlrBotRow(i); // convert i to the actual row number from bottom
-			secElevator.drawStrAt(to_string(i)+"_", 1, floorRow);
-			secElevator.drawStrAt("_", -1, floorRow);
+			sec.drawStrAt(to_string(i)+"_", 1, floorRow);
+			sec.drawStrAt("_", -1, floorRow);
 		}
 	}
 
 	/** @brief draw the elevator inside the floor frame */
-	void drawElevator(int floor, ElevatorState state) {
+	void drawElevator(int floor, ElevatorState state, Section sec) {
 		string* pEle = nullptr;
 		switch (state) {
 			case up:
@@ -92,23 +98,23 @@ namespace elegraphics {
 		int floorRow = getFlrTopRow(floor);
 		for (int strRowNum=0; strRowNum<FLRHEIGHT; strRowNum++) /**< tracking the line number in the elevator string array */
 		{
-			secElevator.drawStrAt(pEle[strRowNum], 3, floorRow, conio::RESET, conio::GREEN);
+			sec.drawStrAt(pEle[strRowNum], 3, floorRow, conio::RESET, conio::GREEN);
 			floorRow++; // increment negative index -> absolute value smaller -> going down
 		}
-		cout << gotoRowCol(secElevator.getConsecutiveRow(),
-				secElevator.getStartCol());
 
 	}
 
 	/** @brief a combined drawFloor and drawElevator, clearing section automatically.
 	*/
-	void drawElevatorAndFloor(int floor, int maxFloor, ElevatorState state) {
-		secElevator.clrSection();
+	void drawElevatorAndFloor(int floor, int maxFloor, ElevatorState state, Section sec) {
+		sec.clrSection();
 		drawFloor(maxFloor);
 		drawElevator(floor, state);
+		cout << gotoRowCol(secConsole.getStartRow(),
+				secConsole.getStartCol());
 	}
 	/** @brief draw customers in the elevator */
-	void drawCustomersInElevator(const list<Customer>& listCustomer, int floor) {
+	void drawCustomersInElevator(const list<Customer>& listCustomer, int floor, Section sec) {
 		const int maxCustomer = 9;
 		const int numPerRow = 3;
 		const int startCol = 5; // which col in section to start drawing customer
@@ -123,7 +129,7 @@ namespace elegraphics {
 				customerColor = conio::YELLOW;
 			else if (customerTimeSpent > 20)
 				customerColor = conio::RED;
-			secElevator.drawStrAt(to_string(customerFloor), 
+			sec.drawStrAt(to_string(customerFloor), 
 					startCol+colOffset,
 					currentRow,
 					customerColor);
@@ -138,10 +144,12 @@ namespace elegraphics {
 			// advance iterator
 			itCustomer++;
 		}
+		cout << gotoRowCol(secConsole.getStartRow(),
+				secConsole.getStartCol());
 	} 
 
 	/** @brief draw customers on the floor */
-	void drawCustomersOnFloor(const list<Customer>& listCustomer, int floor) {
+	void drawCustomersOnFloor(const list<Customer>& listCustomer, int floor, Section sec) {
 		const int maxCustomer = 20;
 		const int numPerRow = 20;
 		const int startCol = 2; // which col in section to start drawing customer
@@ -156,7 +164,7 @@ namespace elegraphics {
 				customerColor = conio::YELLOW;
 			else if (customerTimeSpent > 20)
 				customerColor = conio::RED;
-			secFloor.drawStrAt(to_string(customerFloor), 
+			sec.drawStrAt(to_string(customerFloor), 
 					startCol+colOffset,
 					currentRow,
 					customerColor);
@@ -171,6 +179,8 @@ namespace elegraphics {
 			// advance iterator
 			itCustomer++;
 		}
+		cout << gotoRowCol(secConsole.getStartRow(),
+				secConsole.getStartCol());
 	}
 
 	/** @brief clear the entire screen */
