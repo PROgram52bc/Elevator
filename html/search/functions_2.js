@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['drawcustomersinelevator',['drawCustomersInElevator',['../group__elegraphics.html#gaf88fff8e12be176fdc78fc552d1f5ced',1,'elegraphics']]],
-  ['drawcustomersonfloor',['drawCustomersOnFloor',['../namespaceelegraphics.html#a3dc798c83cabcc23411df6f58f6c90e3',1,'elegraphics']]],
-  ['drawelevator',['drawElevator',['../group__elegraphics.html#ga104af28b2ea213fe8ec09379bfd5240d',1,'elegraphics']]],
-  ['drawelevatorandfloor',['drawElevatorAndFloor',['../group__elegraphics.html#ga88bfdb26a3f97b930f491d02c5eb481a',1,'elegraphics']]],
-  ['drawfloor',['drawFloor',['../group__elegraphics.html#ga054864dbf97f4882cef04f6b73f5b491',1,'elegraphics']]],
-  ['drawme',['drawMe',['../classElevator.html#abc9c9a57bdd64a3330a73103bf364183',1,'Elevator']]],
-  ['drawstrat',['drawStrAt',['../classSection.html#a8c2f4462d6c814cdcda1b6817207e03e',1,'Section']]]
+  ['clrscr',['clrscr',['../namespaceconio.html#afc18f30814e14ce8c5bcd15a60aae173',1,'conio::clrscr()'],['../group__elegraphics.html#ga802649d0a876d1365dead475c60140ce',1,'elegraphics::clrscr()']]],
+  ['clrsection',['clrSection',['../classSection.html#a500b5df816b8a9a187a50963025c3f1e',1,'Section']]],
+  ['customer',['Customer',['../structCustomer.html#abcc8fae9701e5ba9d7d6fe44498b34e3',1,'Customer::Customer()'],['../structCustomer.html#a80bfc3402a79c8c69dd0e2d9c5094428',1,'Customer::Customer(int flr)']]],
+  ['customerlist',['CustomerList',['../classCustomerList.html#afdfd258668723bfc586517770c3d23dc',1,'CustomerList::CustomerList()'],['../classCustomerList.html#a1babcdfe6e2eb21d0f23680b4855153a',1,'CustomerList::CustomerList(int max)']]]
 ];

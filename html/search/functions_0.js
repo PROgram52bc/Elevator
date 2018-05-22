@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bgcolor',['bgColor',['../namespaceconio.html#a2a5d9994e199d91db69d7274e091d71a',1,'conio']]]
+  ['addcustomer',['addCustomer',['../classCustomerList.html#a8301f7fcdc613ddfa32c9d65e882fc89',1,'CustomerList::addCustomer()'],['../classElevator.html#a6f33d1d9687621237aef724a200c0cf2',1,'Elevator::addCustomer()']]]
 ];

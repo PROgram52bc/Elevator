@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['elevatorwidth',['elevatorWidth',['../namespaceelegraphics.html#aab6193dfa9a34c150709bec725396856',1,'elegraphics']]]
+  ['elevatorwidth',['ELEVATORWIDTH',['../group__elegraphics.html#ga1e69fed70ad71fe2d4bbe474895c61ca',1,'elegraphics']]]
 ];

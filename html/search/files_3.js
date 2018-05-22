@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['section_2ecpp',['section.cpp',['../section_8cpp.html',1,'']]],
-  ['section_2eh',['section.h',['../section_8h.html',1,'']]]
+  ['platform_2ecpp',['Platform.cpp',['../Platform_8cpp.html',1,'']]],
+  ['platform_2eh',['Platform.h',['../Platform_8h.html',1,'']]]
 ];

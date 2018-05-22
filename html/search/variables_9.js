@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['queuewidth',['queueWidth',['../namespaceelegraphics.html#abf7a88719316a7ce04ba8cbeb8a45535',1,'elegraphics']]]
+  ['queuewidth',['QUEUEWIDTH',['../group__elegraphics.html#gab14bb9a237a1082de897647a0cef66f6',1,'elegraphics']]]
 ];

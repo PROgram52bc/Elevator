@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_7eelevator',['~Elevator',['../classElevator.html#a6e2fb71cfcde094c087b8a19a8bcab4b',1,'Elevator']]]
+  ['popcustomer',['popCustomer',['../classCustomerList.html#ae889f98c5a6846707e3a3cd5905682e4',1,'CustomerList']]],
+  ['printlist',['printList',['../testCustomerList_8cpp.html#afdb2fd5d9c9eabcba06d83ed57b069b8',1,'testCustomerList.cpp']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['groups_5f0_2ejs',['groups_0.js',['../groups__0_8js.html',1,'']]]
+  ['section_2ecpp',['section.cpp',['../section_8cpp.html',1,'']]],
+  ['section_2eh',['section.h',['../section_8h.html',1,'']]]
 ];

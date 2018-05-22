@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['togglefolder',['toggleFolder',['../dynsections_8js.html#af244da4527af2d845dca04f5656376cd',1,'dynsections.js']]],
-  ['toggleinherit',['toggleInherit',['../dynsections_8js.html#ac057b640b17ff32af11ced151c9305b4',1,'dynsections.js']]],
-  ['togglelevel',['toggleLevel',['../dynsections_8js.html#a19f577cc1ba571396a85bb1f48bf4df2',1,'dynsections.js']]],
-  ['togglevisibility',['toggleVisibility',['../dynsections_8js.html#a1922c462474df7dfd18741c961d59a25',1,'dynsections.js']]]
+  ['secconsole',['secConsole',['../namespaceelegraphics.html#af5f48f45ff88d6f940a4197858298f1f',1,'elegraphics']]],
+  ['secelevatorb',['secElevatorB',['../namespaceelegraphics.html#aa1455353cbf3bd4ed70d032b2d59176e',1,'elegraphics']]],
+  ['secfloor',['secFloor',['../namespaceelegraphics.html#a18e35258de207243828f3068f780e27d',1,'elegraphics']]],
+  ['section',['Section',['../classSection.html#acaf45671483a12dcb1d5389602f6bae7',1,'Section']]],
+  ['settextstyle',['setTextStyle',['../namespaceconio.html#a5ad1fe72a9301d2206e56cc517b01a32',1,'conio']]]
 ];
