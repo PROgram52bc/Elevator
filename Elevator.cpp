@@ -1,26 +1,33 @@
-#include <iostream>
 #include "Elevator.h"
-#include "eleGraphics/eleGraphics.h"
 
 using namespace std;
 /**********************Constructors*********************/
 Elevator::Elevator(): 
-	currentFloor(1), 
 	maxFloor(elegraphics::MAXFLOOR),
-	currentState(elegraphics::up)
-{
+	maxCustomers(DEFAULT_MAX_CUSTOMER),
+	customers(maxCustomers),
+	currentFloor(1), 
+	currentState(elegraphics::up) 
+{ 
 	drawMe();
 }
 
-
-/**********************Destructors*********************/
-Elevator::~Elevator() {}
+Elevator::Elevator(int maxFlr):
+	maxFloor(maxFlr),
+	maxCustomers(DEFAULT_MAX_CUSTOMER),
+	customers(maxCustomers),
+	currentFloor(1),
+	currentState(elegraphics::up)
+{ 
+	drawMe();
+}
 
 
 /**********************Methods definitions*********************/
 
 void Elevator::drawMe() {
 	elegraphics::drawElevatorAndFloor(currentFloor, maxFloor, currentState);
+	elegraphics::drawCustomersInElevator(customers, currentFloor);
 }
 
 
@@ -33,6 +40,7 @@ void Elevator::goUp()
 	drawMe();
 
 }
+
 void Elevator::goDown()
 {
 	if (currentFloor == 1)
@@ -41,3 +49,15 @@ void Elevator::goDown()
 	currentFloor--;
 	drawMe();
 }
+
+bool Elevator::isFull()
+{
+	return customers.isFull();
+}
+
+bool Elevator::addCustomer(Customer c)
+{
+	customers.addCustomer(c);
+	drawMe();
+}
+

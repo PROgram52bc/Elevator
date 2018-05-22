@@ -1,11 +1,17 @@
 CXX = g++
-CXXFLAGS = -std=c++11
-OBJ = Elevator.o eleGraphics/*.o
-TESTCPP = testElevator2.cpp testElevator.cpp
-TESTEXE = $(basename $(TESTCPP))
+CXXFLAGS = -std=c++11 
+LIBS = -lncurses #add at the end of a recipe
+OBJ = eleGraphics/*.o
+TESTELEVATORCPP = testElevator2.cpp testElevator.cpp
+TESTELEVATOREXE = $(basename $(TESTELEVATORCPP))
 
-$(TESTEXE): %: %.cpp elegraphics Elevator.o
-	$(CXX) $(CXXFLAGS) $(OBJ) $< -o $@
+# for multiple testing of the elevator class
+$(TESTELEVATOREXE): %: %.cpp elegraphics Elevator.o
+	$(CXX) $(CXXFLAGS) $(OBJ) $^ -o $@ 
+
+# for general testing of different component
+test%: test%.cpp %.o
+	$(CXX) $(CXXFLAGS) $^ -o $@
 
 elegraphics:
 	$(MAKE) -C eleGraphics
@@ -15,6 +21,5 @@ Elevator.o: Elevator.cpp Elevator.h
 
 tests: $(TESTEXE)
 
-
 clean:
-	$(RM) $(TESTEXE) $(OBJ)
+	$(RM) $(OBJ) *.o test*[^.][^c][^p][^p]
