@@ -7,8 +7,7 @@ CXXFLAGS = -std=c++11 -Wall -g
 OBJ = conio.o eleGraphics.o section.o
 TESTCPP = testEleGraphics.cpp testSection.cpp
 
-eleGraphics.o: eleGraphics.cpp eleGraphics.h
-	$(CXX) $(CXXFLAGS) -c $< -o $@ 
+OBJECTS: $(OBJ)
 
 TESTEXE = $(basename $(TESTCPP))
 
@@ -17,6 +16,9 @@ testEleGraphics: testEleGraphics.cpp eleGraphics.o section.o conio.o ../Customer
 
 testSection: testSection.cpp section.o conio.o
 	$(CXX) $(CXXFLAGS) $^ -o $@ 
+
+eleGraphics.o: eleGraphics.cpp eleGraphics.h conio.o section.o
+	$(CXX) $(CXXFLAGS) -c $< -o $@ 
 
 section.o: section.cpp section.h conio.o
 	$(CXX) $(CXXFLAGS) -c $< -o $@
