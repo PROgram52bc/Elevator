@@ -113,15 +113,20 @@ namespace elegraphics {
 		cout << gotoRowCol(secConsole.getStartRow(),
 				secConsole.getStartCol());
 	}
-	/** @brief draw customers in the elevator */
-	void drawCustomersInElevator(const list<Customer>& listCustomer, int floor, Section sec) {
-		const int maxCustomer = 9;
-		const int numPerRow = 3;
-		const int startCol = 5; // which col in section to start drawing customer
+
+	/**@brief a helper function to draw customers from a CustomerList.
+	 * @param listCustomer the CustomerList object containing customers to be drawn
+	 * @param sec the section where the Customer is to be drawn
+	 * @param numPerRow how many customers per row
+	 * @param maxCustomer the maximum number of customers to be drawn
+	 * @param startCol the column in section to start drawing
+	 * @param startRow the row in section to start drawing
+	 */
+	void drawCustomers(const CustomerList& listCustomer, Section sec, int numPerRow, int maxCustomer, int startCol, int startRow) {
 		int colOffset = 0;
-		int currentRow = getFlrTopRow(floor);
-		auto itCustomer = listCustomer.cbegin();
-		for (int i=0; i<maxCustomer && itCustomer != listCustomer.cend() ; i++) {
+		int currentRow = startRow;
+		auto itCustomer = listCustomer.getList().cbegin();
+		for (int i=0; i<maxCustomer && itCustomer != listCustomer.getList().cend() ; i++) {
 			int customerFloor = itCustomer->destinationFloor;
 			int customerTimeSpent = itCustomer->timeSpent;
 			conio::Color customerColor = conio::GREEN;
@@ -144,41 +149,26 @@ namespace elegraphics {
 			// advance iterator
 			itCustomer++;
 		}
+
+	}
+	/** @brief draw customers in the elevator */
+	void drawCustomersInElevator(const CustomerList& listCustomer, int floor, Section sec) {
+		const int maxCustomer = 9;
+		const int numPerRow = 3;
+		const int startCol = 5; // which col in section to start drawing customer
+		int startRow = getFlrTopRow(floor);
+		drawCustomers(listCustomer, sec, numPerRow, maxCustomer, startCol, startRow);
 		cout << gotoRowCol(secConsole.getStartRow(),
 				secConsole.getStartCol());
 	} 
 
 	/** @brief draw customers on the floor */
-	void drawCustomersOnFloor(const list<Customer>& listCustomer, int floor, Section sec) {
+	void drawCustomersOnFloor(const CustomerList& listCustomer, int floor, Section sec) {
 		const int maxCustomer = 20;
 		const int numPerRow = 20;
 		const int startCol = 2; // which col in section to start drawing customer
-		int colOffset = 0;
-		int currentRow = getFlrBotRow(floor);
-		auto itCustomer = listCustomer.cbegin();
-		for (int i=0; i<maxCustomer && itCustomer != listCustomer.cend() ; i++) {
-			int customerFloor = itCustomer->destinationFloor;
-			int customerTimeSpent = itCustomer->timeSpent;
-			conio::Color customerColor = conio::GREEN;
-			if (customerTimeSpent > 10)
-				customerColor = conio::YELLOW;
-			else if (customerTimeSpent > 20)
-				customerColor = conio::RED;
-			sec.drawStrAt(to_string(customerFloor), 
-					startCol+colOffset,
-					currentRow,
-					customerColor);
-			// advance offset
-			if (colOffset == numPerRow-1) {
-				colOffset = 0;
-				currentRow++;
-			}
-			else {
-				colOffset++;
-			}
-			// advance iterator
-			itCustomer++;
-		}
+		int startRow = getFlrBotRow(floor);
+		drawCustomers(listCustomer, sec, numPerRow, maxCustomer, startCol, startRow);
 		cout << gotoRowCol(secConsole.getStartRow(),
 				secConsole.getStartCol());
 	}

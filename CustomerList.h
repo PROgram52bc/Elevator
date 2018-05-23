@@ -1,3 +1,5 @@
+#ifndef CUSTOMERLIST_H
+#define CUSTOMERLIST_H
 #include <list>
 #include "Customer.h"
 #include <functional>
@@ -20,3 +22,4 @@ class CustomerList {
 
 };
 
+#endif

@@ -3,10 +3,10 @@
 
 #include <iostream>
 #include <string>
-#include <list>
 #include "conio.h"
 #include "section.h"
 #include "../Customer.h"
+#include "../CustomerList.h"
 /** \addtogroup elegraphics
   @{
   */
@@ -31,6 +31,7 @@ namespace elegraphics {
 	extern Section secConsole;
 
 	/**************Helper Functions****************/
+	void drawCustomers(const CustomerList& listCustomer, Section sec, int numPerRow, int maxCustomer = 20, int startCol = 1, int startRow = 1);
 	void drawFloor(int flr, Section sec = secElevator);
 	void drawElevator(int floor, ElevatorState d, Section sec = secElevator);
 	int getFlrTopRow(int flr);
@@ -38,8 +39,8 @@ namespace elegraphics {
 
 	/**************Functions****************/
 	void drawElevatorAndFloor(int flr, int max, ElevatorState d, Section sec = secElevator); 
-	void drawCustomersInElevator(const list<Customer>& listCustomer, int floor, Section sec = secElevator); 
-	void drawCustomersOnFloor(const list<Customer>& listCustomer, int floor, Section sec = secFloor);
+	void drawCustomersInElevator(const CustomerList& listCustomer, int floor, Section sec = secElevator); 
+	void drawCustomersOnFloor(const CustomerList& listCustomer, int floor, Section sec = secFloor);
 	
 	void clrscr();
 }

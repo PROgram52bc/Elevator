@@ -9,7 +9,7 @@ TESTCPP = testEleGraphics.cpp testSection.cpp
 TESTEXE = $(basename $(TESTCPP))
 
 
-testEleGraphics: testEleGraphics.cpp eleGraphics.o section.o conio.o
+testEleGraphics: testEleGraphics.cpp eleGraphics.o section.o conio.o ../CustomerList.o
 	$(CXX) $(CXXFLAGS) $^ -o $@ 
 
 testSection: testSection.cpp section.o conio.o
