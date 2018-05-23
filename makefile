@@ -23,3 +23,4 @@ tests: $(TESTEXE)
 
 clean:
 	$(RM) $(OBJ) *.o test*[^.][^c][^p][^p]
+	$(MAKE) -C eleGraphics clean
