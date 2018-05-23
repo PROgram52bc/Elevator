@@ -55,9 +55,24 @@ bool Elevator::isFull()
 	return customers.isFull();
 }
 
-bool Elevator::addCustomer(Customer c)
+bool Elevator::getInCustomer(Customer c)
 {
-	customers.addCustomer(c);
+	bool result = customers.addCustomer(c);
 	drawMe();
+	return result;
 }
 
+bool Elevator::getOutCustomer()
+{
+	int d = this->currentFloor;
+	Customer targetCustomer = customers.popCustomer(
+			[d](Customer c) -> bool
+			{
+				return c.destinationFloor == d;
+			}); // pop a customer who already arrived
+	drawMe();
+	if (targetCustomer.destinationFloor != -1)
+		return true;
+	else 
+		return false;
+}
