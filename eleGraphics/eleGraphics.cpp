@@ -19,14 +19,21 @@ namespace elegraphics {
 /*****************************Variables***************************/
 
 
+	/**@brief graphic section for elevator 1 */
 	Section secElevator(1,1, // starting x and y
 			ELEVATORWIDTH,FLRHEIGHT*MAXFLOOR); // width and height
+	/**@brief graphic section for floor */
 	Section secFloor(secElevator.getConsecutiveCol(), secElevator.getStartRow(), // starting x, y
 			QUEUEWIDTH, secElevator.getHeight()); // width and height
+	/**@brief graphic section for elevator 2*/
 	Section secElevatorB(secFloor.getConsecutiveCol(), secFloor.getStartRow(), // starting x and y
 			ELEVATORWIDTH,FLRHEIGHT*MAXFLOOR); // width and height
-	Section secConsole(secElevator.getStartCol(),secElevator.getConsecutiveRow()+1, // starting x, y
-			CONSOLEWIDTH, CONSOLEHEIGHT); // width and height
+	/**@brief graphic section for input */
+	ConsoleSection secConsoleIn(secElevator.getStartCol(),secElevator.getConsecutiveRow(), // starting x, y
+			CONSOLEINWIDTH, CONSOLEINHEIGHT); // width and height
+	/**@brief graphic section for output */
+	ConsoleSection secConsoleOut(secElevatorB.getConsecutiveCol(), secElevatorB.getStartRow(),
+			CONSOLEOUTWIDTH, secElevatorB.getHeight());
 
 
 	string upElevator[] = {
@@ -110,8 +117,7 @@ namespace elegraphics {
 		sec.clrSection();
 		drawFloor(maxFloor);
 		drawElevator(floor, state);
-		cout << gotoRowCol(secConsole.getStartRow(),
-				secConsole.getStartCol());
+		secConsoleIn.focusCursor();
 	}
 
 	/**@brief a helper function to draw customers from a CustomerList.
@@ -158,8 +164,7 @@ namespace elegraphics {
 		const int startCol = 5; // which col in section to start drawing customer
 		int startRow = getFlrTopRow(floor);
 		drawCustomers(listCustomer, sec, numPerRow, maxCustomer, startCol, startRow);
-		cout << gotoRowCol(secConsole.getStartRow(),
-				secConsole.getStartCol());
+		secConsoleIn.focusCursor();
 	} 
 
 	/** @brief draw customers on the floor */
@@ -169,8 +174,7 @@ namespace elegraphics {
 		const int startCol = 2; // which col in section to start drawing customer
 		int startRow = getFlrBotRow(floor);
 		drawCustomers(listCustomer, sec, numPerRow, maxCustomer, startCol, startRow);
-		cout << gotoRowCol(secConsole.getStartRow(),
-				secConsole.getStartCol());
+		secConsoleIn.focusCursor();
 	}
 
 	/** @brief clear the entire screen */

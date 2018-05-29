@@ -1,17 +1,21 @@
 CXX = g++
 CXXFLAGS = -std=c++11 
-LIBS = -lncurses #add at the end of a recipe
+LIBS = -lncurses # add at the end of a recipe
 OBJ = CustomerList.o Elevator.o
-TESTELEVATORCPP = testElevator.cpp testElevator2.cpp 
+ELEGRAPHICSOBJ = eleGraphics/*.o
+TESTELEVATORCPP = testElevator.cpp 
 TESTELEVATOREXE = $(basename $(TESTELEVATORCPP))
 
 # for multiple testing of the elevator class
 $(TESTELEVATOREXE): %: %.cpp elegraphics $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) eleGraphics/*.o $< -o $@ 
+	$(CXX) $(CXXFLAGS) $(OBJ) $(ELEGRAPHICSOBJ) $< -o $@ 
 
 # for independent testing of different component
 test%: test%.cpp %.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
+
+RawElevatorDemo: RawElevatorDemo.cpp elegraphics $(OBJ)
+	$(CXX) $(CXXFLAGS) $(OBJ) $(ELEGRAPHICSOBJ) $< -o $@ 
 
 elegraphics:
 	$(MAKE) -C eleGraphics
@@ -19,7 +23,7 @@ elegraphics:
 $(OBJ): %.o: %.cpp %.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@ 
 
-tests: $(TESTEXE)
+.PHONY: clean
 
 clean:
 	$(RM) $(OBJ) *.o test*[^.][^c][^p][^p]

@@ -33,8 +33,9 @@ int main() {
 			case '9':
 				my_ele.getInCustomer(Customer(int(signal)-48));
 				break;
-
 		}
+		elegraphics::secConsoleIn.clrSection();
+		elegraphics::secConsoleIn.focusCursor();
 	}
 
 
