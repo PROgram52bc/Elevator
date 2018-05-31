@@ -24,8 +24,8 @@ class Elevator
 		Elevator(int);
 
 		/****Mutators****/
-		void goUp();
-		void goDown();
+		bool goUp();
+		bool goDown();
 		bool getInCustomer(Customer c);
 		bool getOutCustomer();
 

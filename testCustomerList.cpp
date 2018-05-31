@@ -4,7 +4,7 @@
 using namespace std;
 void printList(const list<Customer>& l) {
 	for (auto& i: l)
-		cout << i.destinationFloor << " ";
+		cout << i.getDestinationFloor() << " ";
 	cout << endl;
 }
 
@@ -47,21 +47,18 @@ int main() {
 
 	cout << "Pop 1 customer from c1: " << endl;
 	// pop floor numbers less than 5
-	Customer poped = c1.popCustomer([](Customer c) {return c.destinationFloor<5;});
-	cout << poped.destinationFloor << " poped." << endl;
+	Customer poped = c1.popCustomer([](Customer c) {return c.getDestinationFloor()==10;});
+	cout << poped.getDestinationFloor() << " poped." << endl;
 	printList(c1.getList());
 
 	cout << "Loop pop: " << endl;
 	// note: this is the syntax of continue pop until not available
-	do {
-		poped = c1.popCustomer([](Customer c){return c.destinationFloor<5;});
-		if (poped.destinationFloor != -1)
-			cout << poped.destinationFloor << " poped." << endl;
-		else
-			break;
+	try {
+		while(1) {
+			poped = c1.popCustomer([](Customer c){return c.getDestinationFloor()<5;});
+			cout << poped.getDestinationFloor() << " poped." << endl;
+		}
 	}
-	while (1);
+	catch (std::runtime_error) {}
 	printList(c1.getList());
-	
-
 }

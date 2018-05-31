@@ -133,8 +133,8 @@ namespace elegraphics {
 		int currentRow = startRow;
 		auto itCustomer = listCustomer.getList().cbegin();
 		for (int i=0; i<maxCustomer && itCustomer != listCustomer.getList().cend() ; i++) {
-			int customerFloor = itCustomer->destinationFloor;
-			int customerTimeSpent = itCustomer->timeSpent;
+			int customerFloor = itCustomer->getDestinationFloor();
+			int customerTimeSpent = itCustomer->getTimeSpent();
 			conio::Color customerColor = conio::GREEN;
 			if (customerTimeSpent > 10)
 				customerColor = conio::YELLOW;

@@ -31,23 +31,24 @@ void Elevator::drawMe() {
 }
 
 
-void Elevator::goUp() 
+bool Elevator::goUp() 
 {
 	if (currentFloor == maxFloor)
-		return;
+		return false;
 	currentState = elegraphics::up;
 	currentFloor++;
 	drawMe();
-
+	return true;
 }
 
-void Elevator::goDown()
+bool Elevator::goDown()
 {
 	if (currentFloor == 1)
-		return;
+		return false;
 	currentState = elegraphics::down;
 	currentFloor--;
 	drawMe();
+	return true;
 }
 
 bool Elevator::isFull()
@@ -65,14 +66,16 @@ bool Elevator::getInCustomer(Customer c)
 bool Elevator::getOutCustomer()
 {
 	int d = this->currentFloor;
-	Customer targetCustomer = customers.popCustomer(
-			[d](Customer c) -> bool
-			{
-				return c.destinationFloor == d;
-			}); // pop a customer who already arrived
+	try {
+		customers.popCustomer(
+				[d](Customer c) -> bool
+				{
+				return c.getDestinationFloor() == d;
+				}); // try to pop a customer who already arrived
+	}
+	// if failed, return false
+	catch (std::runtime_error) { return false; } 
+	// if succeeded, redraw the elevator and return true
 	drawMe();
-	if (targetCustomer.destinationFloor != -1)
-		return true;
-	else 
-		return false;
+	return true;
 }

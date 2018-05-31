@@ -16,16 +16,22 @@ int main() {
 	while (cin.get(signal)) {
 		switch(signal) {
 			case 'j':
-				my_ele.goDown();
-				elegraphics::secConsoleOut.sendMsg("Laowugui went to dimen.");
+				if (my_ele.goDown())
+					elegraphics::secConsoleOut.sendMsg("Laowugui went to dimen.");
+				else
+					elegraphics::secConsoleOut.sendMsg("Can't go down.");
 				break;
 			case 'k':
-				my_ele.goUp();
-				elegraphics::secConsoleOut.sendMsg("Laowugui went up.");
+				if (my_ele.goUp())
+					elegraphics::secConsoleOut.sendMsg("Laowugui went up.");
+				else
+					elegraphics::secConsoleOut.sendMsg("Can't go up.");
 				break;
 			case 'r':
 				if(my_ele.getOutCustomer())
 					elegraphics::secConsoleOut.sendMsg("Laowugui went away.");
+				else
+					elegraphics::secConsoleOut.sendMsg("Failed to pop customer.");
 				break;
 			case '1':
 			case '2':
@@ -43,10 +49,6 @@ int main() {
 		elegraphics::secConsoleIn.clrSection();
 		elegraphics::secConsoleIn.focusCursor();
 	}
-
-
-
-
 
 	return 0;
 }
