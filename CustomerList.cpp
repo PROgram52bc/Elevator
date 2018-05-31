@@ -1,6 +1,7 @@
 /* getSize and getMaxSize may be unnecessary */
 
 #include "CustomerList.h"
+#include "EmptyError.h"
 
 CustomerList::CustomerList():
 	maxCustomers(DEFAULT_MAX_CUSTOMER)
@@ -40,7 +41,7 @@ bool CustomerList::addCustomer(Customer c)
 /**@brief remove and return a customer from the customer list
  * @param query a function object determining eligible customers
  * @return a customer that made query return true
- * @throw std::runtime_error no suitable customer found to be popped
+ * @throw EmptyError no suitable customer found to be popped
  */
 Customer CustomerList::popCustomer(std::function<bool(Customer)> query) {
 	std::list<Customer>::iterator it = this->customers.begin();
@@ -56,9 +57,7 @@ Customer CustomerList::popCustomer(std::function<bool(Customer)> query) {
 			it++;
 		}
 	}
-	// return Customer(-1);
-	// throw a runtime_error exception instead :
-	throw (std::runtime_error("No suitable customer found."));
+	throw (EmptyError("No suitable customer found."));
 }
 
 /**@brief get the raw list to iterate through the customers in the list.

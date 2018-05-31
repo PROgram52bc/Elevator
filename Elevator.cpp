@@ -1,4 +1,5 @@
 #include "Elevator.h"
+#include "EmptyError.h"
 
 using namespace std;
 /**********************Constructors*********************/
@@ -74,7 +75,7 @@ bool Elevator::getOutCustomer()
 				}); // try to pop a customer who already arrived
 	}
 	// if failed, return false
-	catch (std::runtime_error) { return false; } 
+	catch (EmptyError) { return false; } 
 	// if succeeded, redraw the elevator and return true
 	drawMe();
 	return true;

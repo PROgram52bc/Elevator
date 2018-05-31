@@ -1,4 +1,5 @@
 #include "CustomerList.h"
+#include "EmptyError.h"
 #include <iostream>
 
 using namespace std;
@@ -59,6 +60,6 @@ int main() {
 			cout << poped.getDestinationFloor() << " poped." << endl;
 		}
 	}
-	catch (std::runtime_error) {}
+	catch (EmptyError) {}
 	printList(c1.getList());
 }
