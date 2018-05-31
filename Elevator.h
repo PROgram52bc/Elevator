@@ -7,9 +7,9 @@
 class Elevator 
 {
 	protected:
-
 		/****Variables****/
 		static const int DEFAULT_MAX_CUSTOMER = 9;
+		Section section;
 		const int maxFloor;
 		const int maxCustomers;
 		int currentFloor;
@@ -20,8 +20,7 @@ class Elevator
 		void drawMe();
 	public:
 		/****Constructor***/
-		Elevator();
-		Elevator(int);
+		Elevator(int maxFlr = elegraphics::MAXFLOOR, Section s = elegraphics::secElevator);
 
 		/****Mutators****/
 		bool goUp();

@@ -3,22 +3,14 @@
 
 using namespace std;
 /**********************Constructors*********************/
-Elevator::Elevator(): 
-	maxFloor(elegraphics::MAXFLOOR),
-	maxCustomers(DEFAULT_MAX_CUSTOMER),
-	customers(maxCustomers),
-	currentFloor(1), 
-	currentState(elegraphics::up) 
-{ 
-	drawMe();
-}
 
-Elevator::Elevator(int maxFlr):
+Elevator::Elevator(int maxFlr, Section sec):
 	maxFloor(maxFlr),
 	maxCustomers(DEFAULT_MAX_CUSTOMER),
 	customers(maxCustomers),
 	currentFloor(1),
-	currentState(elegraphics::up)
+	currentState(elegraphics::up),
+	section(sec)
 { 
 	drawMe();
 }
@@ -26,11 +18,11 @@ Elevator::Elevator(int maxFlr):
 
 /**********************Methods definitions*********************/
 
-void Elevator::drawMe() {
-	elegraphics::drawElevatorAndFloor(currentFloor, maxFloor, currentState);
-	elegraphics::drawCustomersInElevator(customers, currentFloor);
+void Elevator::drawMe() 
+{
+	elegraphics::drawElevatorAndFloor(currentFloor, maxFloor, currentState, section);
+	elegraphics::drawCustomersInElevator(customers, currentFloor, section);
 }
-
 
 bool Elevator::goUp() 
 {

@@ -14,6 +14,9 @@ class Section {
 			width,
 			height;
 	public:
+		/* Constructors */
+		explicit Section(int c, int r, int w, int h):
+			col(c), row(r), width(w), height(h) {}
 		/* Accessors */
 		int getStartCol() { return col; }
 		int getStartRow() { return row; }
@@ -23,8 +26,6 @@ class Section {
 		int getConsecutiveRow() { return row+height; } /**< Return the row number right after the last row of this section */
 		int getWidth() { return width; }
 		int getHeight() { return height; }
-		explicit Section(int c, int r, int w, int h):
-			col(c), row(r), width(w), height(h) {}
 		void clrSection();
 		void drawStrAt( const string&, 
 						int col=1, 
