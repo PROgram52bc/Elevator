@@ -40,7 +40,7 @@ bool CustomerList::addCustomer(Customer c)
 /**@brief remove and return a customer from the customer list
  * @param query a function object determining eligible customers
  * @return a customer that made query return true
- * @retval Customer(-1) if no eligible customer is found in the customer list.
+ * @throw std::runtime_error no suitable customer found to be popped
  */
 Customer CustomerList::popCustomer(std::function<bool(Customer)> query) {
 	std::list<Customer>::iterator it = this->customers.begin();
@@ -56,7 +56,9 @@ Customer CustomerList::popCustomer(std::function<bool(Customer)> query) {
 			it++;
 		}
 	}
-	return Customer(-1);
+	// return Customer(-1);
+	// throw a runtime_error exception instead :
+	throw (std::runtime_error("No suitable customer found."));
 }
 
 /**@brief get the raw list to iterate through the customers in the list.
