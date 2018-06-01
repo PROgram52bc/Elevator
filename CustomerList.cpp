@@ -21,16 +21,22 @@ bool CustomerList::isEmpty() const
 	return customers.empty();
 }
 
+/**@brief get the number of customers in this list
+ */
 int CustomerList::getSize() const
 {
 	return customers.size();
 }
 
+/**@brief get the maximum customers this list can contain
+ */
 int CustomerList::getMaxSize() const
 {
 	return maxCustomers;
 }
 
+/**@brief add a customer to the CustomerList
+ */
 bool CustomerList::addCustomer(Customer c)
 {
 	if (isFull()) return false;
@@ -43,7 +49,8 @@ bool CustomerList::addCustomer(Customer c)
  * @return a customer that made query return true
  * @throw EmptyError no suitable customer found to be popped
  */
-Customer CustomerList::popCustomer(std::function<bool(Customer)> query) {
+Customer CustomerList::popCustomer(std::function<bool(Customer)> query) 
+{
 	std::list<Customer>::iterator it = this->customers.begin();
 	while (it != this->customers.end()) {
 		if (query(*it))
@@ -63,7 +70,8 @@ Customer CustomerList::popCustomer(std::function<bool(Customer)> query) {
 /**@brief get the raw list to iterate through the customers in the list.
  * @return a constant reference to the internal list
  */
-const std::list<Customer>& CustomerList::getList() const {
+const std::list<Customer>& CustomerList::getList() const 
+{
 	return this->customers;
 }
 
