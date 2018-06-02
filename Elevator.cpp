@@ -72,3 +72,9 @@ bool Elevator::getOutCustomer()
 	drawMe();
 	return true;
 }
+
+void Elevator::setCurrentState(elegraphics::ElevatorState st)
+{
+	currentState = st;
+	drawMe();
+}

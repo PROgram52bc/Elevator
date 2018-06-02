@@ -27,6 +27,7 @@ class Elevator
 		bool goDown();
 		bool getInCustomer(Customer c);
 		bool getOutCustomer();
+		void setCurrentState(elegraphics::ElevatorState st);
 
 		/****Observers****/
 		bool isFull();
