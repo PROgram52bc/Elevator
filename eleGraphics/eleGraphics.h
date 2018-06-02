@@ -25,7 +25,8 @@ namespace elegraphics {
 	enum ElevatorState /** the state of the elevator */
 	{ 	up, 	/**< when the elevator is going upward */
 		down, 	/**< when the elevator is going down */
-		open 	/**< when the elevator's door is open */
+		open, 	/**< when the elevator's door is open */
+		closed	/**< when the elevator's door is closed */
 	}; 
 	extern Section secElevator;
 	extern Section secElevatorB;

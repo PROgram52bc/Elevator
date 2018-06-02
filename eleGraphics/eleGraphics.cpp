@@ -1,10 +1,6 @@
 /*
  * A preliminary library for graphing the elevator simulator
  */
-/* Fix:
- * 1. combine draw Customer functions
- * 2. implementing using customerLists instead of raw list
- */
 
 #include <iostream>
 #include <string>
@@ -50,9 +46,15 @@ namespace elegraphics {
 	};
 	string openElevator[] = {
 		"[     ]",
-		"|     |",
-		"|     |",
+		"o     o",
+		"o     o",
 		"[     ]"
+	};
+	string closedElevator[] = {
+		"|     |",
+		"|     |",
+		"|     |",
+		"|     |"
 	};
 
 /*****************************Functions***************************/
@@ -98,10 +100,11 @@ namespace elegraphics {
 			case open:
 				pEle = openElevator;
 				break;
+			case closed:
+				pEle = closedElevator;
+				break;
 		}
 
-//		int numRowFromBottom = floor*FLRHEIGHT;
-//		int floorRow = -1 * numRowFromBottom; // convert floor to the actual row number from bottom
 		int floorRow = getFlrTopRow(floor);
 		for (int strRowNum=0; strRowNum<FLRHEIGHT; strRowNum++) /**< tracking the line number in the elevator string array */
 		{
