@@ -1,6 +1,6 @@
 CXX = g++
 CXXFLAGS = -std=c++11 -g -Wall
-LIBS = -lncurses # add at the end of a recipe
+LIBS = -lpthread # -lncurses # add at the end of a recipe
 OBJ = CustomerList.o Elevator.o SignalCore_Normal.o SignaledElevator.o Floor.o
 ELEGRAPHICSOBJ = eleGraphics/*.o
 TESTELEVATORCPP = testElevator.cpp 
@@ -15,7 +15,7 @@ test%: test%.cpp %.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
 testSignaledElevator: testSignaledElevator.cpp elegraphics $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) $(ELEGRAPHICSOBJ) $< -o $@ 
+	$(CXX) $(CXXFLAGS) $(OBJ) $(ELEGRAPHICSOBJ) $< -o $@ $(LIBS)
 
 testFloor: testFloor.cpp elegraphics $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) $(ELEGRAPHICSOBJ) $< -o $@ 

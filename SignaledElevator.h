@@ -6,6 +6,8 @@
 template <class core>
 class SignaledElevator
 {
+	private:
+		void setState();
 	protected:
 		SignalCore_B* signalCore;
 		Elevator elevator;
@@ -14,7 +16,6 @@ class SignaledElevator
 		~SignaledElevator();
 		void addSignal(int, SignalCore_B::Direction);
 		bool move();
-
 };
 
 #endif
