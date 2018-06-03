@@ -5,15 +5,6 @@
 #include "eleGraphics/eleGraphics.h"
 #include <vector>
 
-/* Next step:
- * Think about the memory management of 
- * the floors, is there any other way
- * apart from dynamically allocate certain
- * number of CustomerList and access
- * through a raw pointer?
- * Tue May 22 15:59:16 CST 2018
- */
-
 class Floor {
 	private:
 		static const int DEFAULT_MAX_CUSTOMER = 20;
@@ -32,6 +23,11 @@ class Floor {
 		bool floorIsFull(int flr) const;
 		bool addCustomerToFloor(Customer c, int flr);
 		Customer getOutCustomerFromFloor(std::function<bool(Customer)> f, int flr);
+		void incrementCustomers()
+		{ 
+			for (auto& floor: floors)
+				floor.incrementCustomers();
+		}
 };
 
 

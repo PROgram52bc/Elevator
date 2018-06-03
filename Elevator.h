@@ -28,6 +28,8 @@ class Elevator
 		bool getInCustomer(Customer c);
 		bool getOutCustomer();
 		void setCurrentState(elegraphics::ElevatorState st);
+		void incrementCustomers()
+		{ customers.incrementCustomers(); }
 
 		/****Observers****/
 		bool isFull();
