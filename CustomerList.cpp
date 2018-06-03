@@ -75,3 +75,8 @@ const std::list<Customer>& CustomerList::getList() const
 	return this->customers;
 }
 
+void CustomerList::incrementCustomers()
+{
+	for (auto& i: customers)
+		i.incrementTimeSpent();
+}

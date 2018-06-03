@@ -19,6 +19,7 @@ class CustomerList {
 		bool addCustomer(Customer c);
 		Customer popCustomer(std::function<bool(Customer)>);
 		const std::list<Customer>& getList() const;
+		void incrementCustomers();
 
 };
 
