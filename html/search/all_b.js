@@ -1,5 +1,11 @@
 var searchData=
 [
-  ['negative_5fimage',['NEGATIVE_IMAGE',['../namespaceconio.html#a4c720b3477d66baeb5a8c8c60b9d2002a090b08279141f5fb1bf07054606efde9',1,'conio']]],
-  ['normal_5fintensity',['NORMAL_INTENSITY',['../namespaceconio.html#a4c720b3477d66baeb5a8c8c60b9d2002aab26100210e3442d5e54bb455e78ea23',1,'conio']]]
+  ['magenta',['MAGENTA',['../namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789ebaeb8118f5ba80e30624977558fecc6aff',1,'conio']]],
+  ['main',['main',['../consoleSectionDemo_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;consoleSectionDemo.cpp'],['../testEleGraphics_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testEleGraphics.cpp'],['../testSection_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testSection.cpp'],['../RawElevatorDemo_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;RawElevatorDemo.cpp'],['../testCustomerList_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testCustomerList.cpp'],['../testElevator2_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testElevator2.cpp'],['../testEmptyError_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testEmptyError.cpp'],['../testFloor_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testFloor.cpp'],['../testPlatform_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testPlatform.cpp'],['../testSignalCore__Normal_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testSignalCore_Normal.cpp'],['../testSignaledElevator_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testSignaledElevator.cpp']]],
+  ['maxcustomers',['maxCustomers',['../classCustomerList.html#a7e01f5b36095a4cdbd5c92e0f797c6ef',1,'CustomerList::maxCustomers()'],['../classElevator.html#a8db638338ba7a1a7889c2900357fc361',1,'Elevator::maxCustomers()']]],
+  ['maxcustomersperfloor',['maxCustomersPerFloor',['../classFloor.html#a9635bfb1b3c2619600dfb41e040f86f4',1,'Floor']]],
+  ['maxfloor',['maxFloor',['../classElevator.html#a05b8b78ef061f43cce968823cb3b42e9',1,'Elevator::maxFloor()'],['../classFloor.html#a7921a46337c5364e1c900f2ea3e351e9',1,'Floor::maxFloor()'],['../group__elegraphics.html#ga1442394354e070a21dee16ccd237c844',1,'elegraphics::MAXFLOOR()']]],
+  ['message',['message',['../classEmptyError.html#aa2eb16030a5199e4c6900bda609bdd98',1,'EmptyError']]],
+  ['move',['move',['../classSignaledElevator.html#a6a37591d83b0c925b509e67e43341751',1,'SignaledElevator']]],
+  ['mtx',['mtx',['../classPlatform.html#a771501e7c08ec86cf140d84e88bb72ba',1,'Platform::mtx()'],['../testSignaledElevator_8cpp.html#ad5e0dbd36f0d71fce9b00b7f991b2f38',1,'mtx():&#160;testSignaledElevator.cpp']]]
 ];

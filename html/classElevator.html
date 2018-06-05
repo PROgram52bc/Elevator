@@ -65,6 +65,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classElevator-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Elevator Class Reference</div>  </div>
@@ -72,60 +73,71 @@ $(function() {
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Elevator_8h_source.html">Elevator.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Elevator:</div>
+<div class="dyncontent">
+<div class="center"><img src="classElevator__coll__graph.png" border="0" usemap="#Elevator_coll__map" alt="Collaboration graph"/></div>
+<map name="Elevator_coll__map" id="Elevator_coll__map">
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a42ec2949d6e5f9bf90c361933562eb5f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a42ec2949d6e5f9bf90c361933562eb5f">Elevator</a> ()</td></tr>
-<tr class="separator:a42ec2949d6e5f9bf90c361933562eb5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad78fee65c0845968ac865a468fb03956"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#ad78fee65c0845968ac865a468fb03956">Elevator</a> (int)</td></tr>
-<tr class="separator:ad78fee65c0845968ac865a468fb03956"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cac7be94b7fe9617a3475c262caf0c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a9cac7be94b7fe9617a3475c262caf0c6">goUp</a> ()</td></tr>
-<tr class="separator:a9cac7be94b7fe9617a3475c262caf0c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af393fcaa4b7a7a897f2c9c7f610eb39f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#af393fcaa4b7a7a897f2c9c7f610eb39f">goDown</a> ()</td></tr>
-<tr class="separator:af393fcaa4b7a7a897f2c9c7f610eb39f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f33d1d9687621237aef724a200c0cf2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a6f33d1d9687621237aef724a200c0cf2">addCustomer</a> (<a class="el" href="structCustomer.html">Customer</a> c)</td></tr>
-<tr class="separator:a6f33d1d9687621237aef724a200c0cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8671d7ac2ddf070fa976daa42f7ff62e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a8671d7ac2ddf070fa976daa42f7ff62e">Elevator</a> (int maxFlr=<a class="el" href="group__elegraphics.html#ga1442394354e070a21dee16ccd237c844">elegraphics::MAXFLOOR</a>, <a class="el" href="classSection.html">Section</a> s=<a class="el" href="group__elegraphics.html#ga159960d7d49c8ab8d3a634e8b3870b85">elegraphics::secElevator</a>)</td></tr>
+<tr class="separator:a8671d7ac2ddf070fa976daa42f7ff62e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bb3452c3e06b6e5dc4d8645c87d2643"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a6bb3452c3e06b6e5dc4d8645c87d2643">goUp</a> ()</td></tr>
+<tr class="separator:a6bb3452c3e06b6e5dc4d8645c87d2643"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63ad0c3c09bbab5876d47f8d03f1660a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a63ad0c3c09bbab5876d47f8d03f1660a">goDown</a> ()</td></tr>
+<tr class="separator:a63ad0c3c09bbab5876d47f8d03f1660a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a868a2117c999ffe04871ecfaebfdb73d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a868a2117c999ffe04871ecfaebfdb73d">getInCustomer</a> (<a class="el" href="classCustomer.html">Customer</a> c)</td></tr>
+<tr class="separator:a868a2117c999ffe04871ecfaebfdb73d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a033be7faf8d9a305db85f87e2b6411e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a033be7faf8d9a305db85f87e2b6411e2">getOutCustomer</a> ()</td></tr>
+<tr class="separator:a033be7faf8d9a305db85f87e2b6411e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae53e114f16e0cacb734043f8d1e98c1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#ae53e114f16e0cacb734043f8d1e98c1f">setCurrentDoorState</a> (<a class="el" href="group__elegraphics.html#ga52704887a172c255faf45213cda45d4a">elegraphics::ElevatorDoorState</a> st)</td></tr>
+<tr class="separator:ae53e114f16e0cacb734043f8d1e98c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cf34b7de4a9e9f905384d399b017926"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a3cf34b7de4a9e9f905384d399b017926">setCurrentDirection</a> (<a class="el" href="group__elegraphics.html#ga99ad0455295982e4e2dbf81df297a821">elegraphics::ElevatorDirection</a> st)</td></tr>
+<tr class="separator:a3cf34b7de4a9e9f905384d399b017926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b2eabb13ca89952ef4a02e0a556931f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a0b2eabb13ca89952ef4a02e0a556931f">incrementCustomers</a> ()</td></tr>
+<tr class="separator:a0b2eabb13ca89952ef4a02e0a556931f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1c38f58e5dbb100045effadcf9c9261"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#ab1c38f58e5dbb100045effadcf9c9261">isFull</a> () const</td></tr>
+<tr class="separator:ab1c38f58e5dbb100045effadcf9c9261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bd2803a9c8d32cb40620de0c7570f13"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a1bd2803a9c8d32cb40620de0c7570f13">getCurrentFloor</a> () const</td></tr>
+<tr class="separator:a1bd2803a9c8d32cb40620de0c7570f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16f869ff9548db30ce81d22859f0874d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__elegraphics.html#ga52704887a172c255faf45213cda45d4a">elegraphics::ElevatorDoorState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a16f869ff9548db30ce81d22859f0874d">getCurrentDoorState</a> () const</td></tr>
+<tr class="separator:a16f869ff9548db30ce81d22859f0874d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f364588e2dade5d9fa5b28d91a560d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__elegraphics.html#ga99ad0455295982e4e2dbf81df297a821">elegraphics::ElevatorDirection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a6f364588e2dade5d9fa5b28d91a560d5">getCurrentDirection</a> () const</td></tr>
+<tr class="separator:a6f364588e2dade5d9fa5b28d91a560d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a87d11e6dd11507b6466e3499a32efee1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a87d11e6dd11507b6466e3499a32efee1">isFull</a> ()</td></tr>
-<tr class="separator:a87d11e6dd11507b6466e3499a32efee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc9c9a57bdd64a3330a73103bf364183"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#abc9c9a57bdd64a3330a73103bf364183">drawMe</a> ()</td></tr>
 <tr class="separator:abc9c9a57bdd64a3330a73103bf364183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:ad12ec3f4d15d034e7c2c464655342a9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSection.html">Section</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#ad12ec3f4d15d034e7c2c464655342a9e">section</a></td></tr>
+<tr class="separator:ad12ec3f4d15d034e7c2c464655342a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05b8b78ef061f43cce968823cb3b42e9"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a05b8b78ef061f43cce968823cb3b42e9">maxFloor</a></td></tr>
 <tr class="separator:a05b8b78ef061f43cce968823cb3b42e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8db638338ba7a1a7889c2900357fc361"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a8db638338ba7a1a7889c2900357fc361">maxCustomers</a></td></tr>
 <tr class="separator:a8db638338ba7a1a7889c2900357fc361"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59fc574201dc14357f17693eda0a4201"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a59fc574201dc14357f17693eda0a4201">currentFloor</a></td></tr>
 <tr class="separator:a59fc574201dc14357f17693eda0a4201"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab93a1807a9d4490fbd8652f156611f23"><td class="memItemLeft" align="right" valign="top">list&lt; <a class="el" href="structCustomer.html">Customer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#ab93a1807a9d4490fbd8652f156611f23">customers</a></td></tr>
-<tr class="separator:ab93a1807a9d4490fbd8652f156611f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92b02a1436abca588e7fe868f41f93ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__elegraphics.html#gaa480574a88250fdb657f3768840bb1f7">elegraphics::ElevatorState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a92b02a1436abca588e7fe868f41f93ea">currentState</a></td></tr>
-<tr class="separator:a92b02a1436abca588e7fe868f41f93ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3c122650b464bc6219429a2cf15cf3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCustomerList.html">CustomerList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#ad3c122650b464bc6219429a2cf15cf3f">customers</a></td></tr>
+<tr class="separator:ad3c122650b464bc6219429a2cf15cf3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61f0b8a307858b5e72389b04e5b2d5bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__elegraphics.html#ga52704887a172c255faf45213cda45d4a">elegraphics::ElevatorDoorState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a61f0b8a307858b5e72389b04e5b2d5bd">currentDoorState</a></td></tr>
+<tr class="separator:a61f0b8a307858b5e72389b04e5b2d5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84fd71679ad1d76d69d86a684ead6d38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__elegraphics.html#ga99ad0455295982e4e2dbf81df297a821">elegraphics::ElevatorDirection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a84fd71679ad1d76d69d86a684ead6d38">currentDirection</a></td></tr>
+<tr class="separator:a84fd71679ad1d76d69d86a684ead6d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a22517e9c42e71f54c973dc6ec60ba088"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElevator.html#a22517e9c42e71f54c973dc6ec60ba088">DEFAULT_MAX_CUSTOMER</a> = 9</td></tr>
+<tr class="separator:a22517e9c42e71f54c973dc6ec60ba088"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a42ec2949d6e5f9bf90c361933562eb5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42ec2949d6e5f9bf90c361933562eb5f">&#9670;&nbsp;</a></span>Elevator() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Elevator::Elevator </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad78fee65c0845968ac865a468fb03956"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad78fee65c0845968ac865a468fb03956">&#9670;&nbsp;</a></span>Elevator() <span class="overload">[2/2]</span></h2>
+<a id="a8671d7ac2ddf070fa976daa42f7ff62e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8671d7ac2ddf070fa976daa42f7ff62e">&#9670;&nbsp;</a></span>Elevator()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -134,8 +146,18 @@ Protected Attributes</h2></td></tr>
           <td class="memname">Elevator::Elevator </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>maxFlr</em></td><td>)</td>
+          <td class="paramname"><em>maxFlr</em> = <code><a class="el" href="group__elegraphics.html#ga1442394354e070a21dee16ccd237c844">elegraphics::MAXFLOOR</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classSection.html">Section</a>&#160;</td>
+          <td class="paramname"><em>s</em> = <code><a class="el" href="group__elegraphics.html#ga159960d7d49c8ab8d3a634e8b3870b85">elegraphics::secElevator</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -143,24 +165,6 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6f33d1d9687621237aef724a200c0cf2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f33d1d9687621237aef724a200c0cf2">&#9670;&nbsp;</a></span>addCustomer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Elevator::addCustomer </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structCustomer.html">Customer</a>&#160;</td>
-          <td class="paramname"><em>c</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="abc9c9a57bdd64a3330a73103bf364183"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc9c9a57bdd64a3330a73103bf364183">&#9670;&nbsp;</a></span>drawMe()</h2>
 
@@ -186,14 +190,107 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af393fcaa4b7a7a897f2c9c7f610eb39f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af393fcaa4b7a7a897f2c9c7f610eb39f">&#9670;&nbsp;</a></span>goDown()</h2>
+<a id="a6f364588e2dade5d9fa5b28d91a560d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f364588e2dade5d9fa5b28d91a560d5">&#9670;&nbsp;</a></span>getCurrentDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__elegraphics.html#ga99ad0455295982e4e2dbf81df297a821">elegraphics::ElevatorDirection</a> Elevator::getCurrentDirection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16f869ff9548db30ce81d22859f0874d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16f869ff9548db30ce81d22859f0874d">&#9670;&nbsp;</a></span>getCurrentDoorState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__elegraphics.html#ga52704887a172c255faf45213cda45d4a">elegraphics::ElevatorDoorState</a> Elevator::getCurrentDoorState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1bd2803a9c8d32cb40620de0c7570f13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bd2803a9c8d32cb40620de0c7570f13">&#9670;&nbsp;</a></span>getCurrentFloor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Elevator::getCurrentFloor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a868a2117c999ffe04871ecfaebfdb73d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a868a2117c999ffe04871ecfaebfdb73d">&#9670;&nbsp;</a></span>getInCustomer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Elevator::goDown </td>
+          <td class="memname">bool Elevator::getInCustomer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCustomer.html">Customer</a>&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a033be7faf8d9a305db85f87e2b6411e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a033be7faf8d9a305db85f87e2b6411e2">&#9670;&nbsp;</a></span>getOutCustomer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Elevator::getOutCustomer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -203,14 +300,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9cac7be94b7fe9617a3475c262caf0c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cac7be94b7fe9617a3475c262caf0c6">&#9670;&nbsp;</a></span>goUp()</h2>
+<a id="a63ad0c3c09bbab5876d47f8d03f1660a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63ad0c3c09bbab5876d47f8d03f1660a">&#9670;&nbsp;</a></span>goDown()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Elevator::goUp </td>
+          <td class="memname">bool Elevator::goDown </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -220,8 +317,50 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a87d11e6dd11507b6466e3499a32efee1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87d11e6dd11507b6466e3499a32efee1">&#9670;&nbsp;</a></span>isFull()</h2>
+<a id="a6bb3452c3e06b6e5dc4d8645c87d2643"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bb3452c3e06b6e5dc4d8645c87d2643">&#9670;&nbsp;</a></span>goUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Elevator::goUp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b2eabb13ca89952ef4a02e0a556931f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b2eabb13ca89952ef4a02e0a556931f">&#9670;&nbsp;</a></span>incrementCustomers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Elevator::incrementCustomers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1c38f58e5dbb100045effadcf9c9261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1c38f58e5dbb100045effadcf9c9261">&#9670;&nbsp;</a></span>isFull()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -233,7 +372,66 @@ Protected Attributes</h2></td></tr>
           <td class="memname">bool Elevator::isFull </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3cf34b7de4a9e9f905384d399b017926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cf34b7de4a9e9f905384d399b017926">&#9670;&nbsp;</a></span>setCurrentDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Elevator::setCurrentDirection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__elegraphics.html#ga99ad0455295982e4e2dbf81df297a821">elegraphics::ElevatorDirection</a>&#160;</td>
+          <td class="paramname"><em>st</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae53e114f16e0cacb734043f8d1e98c1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae53e114f16e0cacb734043f8d1e98c1f">&#9670;&nbsp;</a></span>setCurrentDoorState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Elevator::setCurrentDoorState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__elegraphics.html#ga52704887a172c255faf45213cda45d4a">elegraphics::ElevatorDoorState</a>&#160;</td>
+          <td class="paramname"><em>st</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a84fd71679ad1d76d69d86a684ead6d38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84fd71679ad1d76d69d86a684ead6d38">&#9670;&nbsp;</a></span>currentDirection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__elegraphics.html#ga99ad0455295982e4e2dbf81df297a821">elegraphics::ElevatorDirection</a> Elevator::currentDirection</td>
         </tr>
       </table>
   </td>
@@ -245,7 +443,28 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a61f0b8a307858b5e72389b04e5b2d5bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61f0b8a307858b5e72389b04e5b2d5bd">&#9670;&nbsp;</a></span>currentDoorState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__elegraphics.html#ga52704887a172c255faf45213cda45d4a">elegraphics::ElevatorDoorState</a> Elevator::currentDoorState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a59fc574201dc14357f17693eda0a4201"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a59fc574201dc14357f17693eda0a4201">&#9670;&nbsp;</a></span>currentFloor</h2>
 
@@ -268,8 +487,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a92b02a1436abca588e7fe868f41f93ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92b02a1436abca588e7fe868f41f93ea">&#9670;&nbsp;</a></span>currentState</h2>
+<a id="ad3c122650b464bc6219429a2cf15cf3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3c122650b464bc6219429a2cf15cf3f">&#9670;&nbsp;</a></span>customers</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,7 +497,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__elegraphics.html#gaa480574a88250fdb657f3768840bb1f7">elegraphics::ElevatorState</a> Elevator::currentState</td>
+          <td class="memname"><a class="el" href="classCustomerList.html">CustomerList</a> Elevator::customers</td>
         </tr>
       </table>
   </td>
@@ -290,8 +509,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab93a1807a9d4490fbd8652f156611f23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab93a1807a9d4490fbd8652f156611f23">&#9670;&nbsp;</a></span>customers</h2>
+<a id="a22517e9c42e71f54c973dc6ec60ba088"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22517e9c42e71f54c973dc6ec60ba088">&#9670;&nbsp;</a></span>DEFAULT_MAX_CUSTOMER</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -300,12 +519,12 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">list&lt;<a class="el" href="structCustomer.html">Customer</a>&gt; Elevator::customers</td>
+          <td class="memname">const int Elevator::DEFAULT_MAX_CUSTOMER = 9</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -345,6 +564,28 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">const int Elevator::maxFloor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad12ec3f4d15d034e7c2c464655342a9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad12ec3f4d15d034e7c2c464655342a9e">&#9670;&nbsp;</a></span>section</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSection.html">Section</a> Elevator::section</td>
         </tr>
       </table>
   </td>

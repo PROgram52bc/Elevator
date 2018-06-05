@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['light_5fblue',['LIGHT_BLUE',['../namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eba18ad153657315e66d2a0f5434d60388c',1,'conio']]],
-  ['light_5fcyan',['LIGHT_CYAN',['../namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eba3c02cde9bc90576c6f4628f5f7a8ca76',1,'conio']]],
-  ['light_5fgray',['LIGHT_GRAY',['../namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eba89da7145ab86333ee9bbb24caa410f12',1,'conio']]],
-  ['light_5fgreen',['LIGHT_GREEN',['../namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eba6bba22d48e38a674c8aff2f5f559e455',1,'conio']]],
-  ['light_5fmagenta',['LIGHT_MAGENTA',['../namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eba5050d17363eb7569d884b7bd355cf6fc',1,'conio']]],
-  ['light_5fred',['LIGHT_RED',['../namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789ebae0ef17037bb76e75335c11bcefe4dfb5',1,'conio']]],
-  ['light_5fyellow',['LIGHT_YELLOW',['../namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eba22728b3504ce963679de7a2ca6df19a0',1,'conio']]]
+  ['in_5fbetween',['in_between',['../classSignalCore__Normal.html#a99dd50043f689199b5b9a6c7c77c2dd9',1,'SignalCore_Normal']]],
+  ['incrementcustomers',['incrementCustomers',['../classCustomerList.html#a44141f1f58e8596814cba3afacc4b54c',1,'CustomerList::incrementCustomers()'],['../classElevator.html#a0b2eabb13ca89952ef4a02e0a556931f',1,'Elevator::incrementCustomers()'],['../classFloor.html#a3aaac788b556f6ccc71fdfca253161a8',1,'Floor::incrementCustomers()'],['../classPlatform.html#a9884625ea385d75bde6e427644fa200e',1,'Platform::incrementCustomers()'],['../classSignaledElevator.html#ad0570819e1d499249945ae9cbe3aa720',1,'SignaledElevator::incrementCustomers()']]],
+  ['incrementtimespent',['incrementTimeSpent',['../classCustomer.html#ae24047fc5e31189b9d65682b8c723b10',1,'Customer']]],
+  ['insertable',['insertable',['../classSignalCore__Normal.html#a182fe51f1a69c2d7bff17db01aff537e',1,'SignalCore_Normal']]],
+  ['isempty',['isEmpty',['../classCustomerList.html#aa7de0e8f10ef262d80f94aa659622633',1,'CustomerList::isEmpty()'],['../classSignalCore__B.html#a8285efc0efa42cb359bdeef8f9b89f28',1,'SignalCore_B::isEmpty()'],['../classSignalCore__Normal.html#a5926a4e7a5f8c0e67c5ad43875478930',1,'SignalCore_Normal::isEmpty()']]],
+  ['isfull',['isFull',['../classCustomerList.html#a4d149c38c850bbd3d5d2063c442673ef',1,'CustomerList::isFull()'],['../classElevator.html#ab1c38f58e5dbb100045effadcf9c9261',1,'Elevator::isFull()'],['../classSignaledElevator.html#ac09df780dca999a29753b4074d8cb35b',1,'SignaledElevator::isFull()']]],
+  ['isrunning',['isRunning',['../classPlatform.html#a06888066a1ae29431bf710203a774edf',1,'Platform']]],
+  ['italic',['ITALIC',['../namespaceconio.html#a4c720b3477d66baeb5a8c8c60b9d2002a8e8d6c89440b70426bfd6190ff5cedc7',1,'conio']]]
 ];

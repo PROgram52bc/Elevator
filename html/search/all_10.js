@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['secconsole',['secConsole',['../group__elegraphics.html#gaf3bc6c75d8de0ffcb24cd16572b3b969',1,'elegraphics::secConsole()'],['../namespaceelegraphics.html#af5f48f45ff88d6f940a4197858298f1f',1,'elegraphics::secConsole(secElevator.getStartCol(), secElevator.getConsecutiveRow()+1, CONSOLEWIDTH, CONSOLEHEIGHT)']]],
-  ['secelevator',['secElevator',['../group__elegraphics.html#ga159960d7d49c8ab8d3a634e8b3870b85',1,'elegraphics']]],
-  ['secelevatorb',['secElevatorB',['../group__elegraphics.html#gafb3a1014364458bb9af9830b96cc9585',1,'elegraphics::secElevatorB()'],['../namespaceelegraphics.html#aa1455353cbf3bd4ed70d032b2d59176e',1,'elegraphics::secElevatorB(secFloor.getConsecutiveCol(), secFloor.getStartRow(), ELEVATORWIDTH, FLRHEIGHT *MAXFLOOR)']]],
-  ['secfloor',['secFloor',['../group__elegraphics.html#gacb4b4bedf94bdffdc14ae61c4c57cf34',1,'elegraphics::secFloor()'],['../namespaceelegraphics.html#a18e35258de207243828f3068f780e27d',1,'elegraphics::secFloor(secElevator.getConsecutiveCol(), secElevator.getStartRow(), QUEUEWIDTH, secElevator.getHeight())']]],
-  ['section',['Section',['../classSection.html',1,'Section'],['../classSection.html#acaf45671483a12dcb1d5389602f6bae7',1,'Section::Section()']]],
-  ['section_2ecpp',['section.cpp',['../section_8cpp.html',1,'']]],
-  ['section_2eh',['section.h',['../section_8h.html',1,'']]],
-  ['settextstyle',['setTextStyle',['../namespaceconio.html#a5ad1fe72a9301d2206e56cc517b01a32',1,'conio']]],
-  ['slow_5fblink',['SLOW_BLINK',['../namespaceconio.html#a4c720b3477d66baeb5a8c8c60b9d2002a30791714fdcc1569e7a0880d605162c6',1,'conio']]]
+  ['rapid_5fblink',['RAPID_BLINK',['../namespaceconio.html#a4c720b3477d66baeb5a8c8c60b9d2002a7ac7ac49a360eb1dbd60db3eea618577',1,'conio']]],
+  ['rawelevatordemo_2ecpp',['RawElevatorDemo.cpp',['../RawElevatorDemo_8cpp.html',1,'']]],
+  ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
+  ['red',['RED',['../namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789ebabc6f9f80476fea6d4e729b84a4a3b1aa',1,'conio']]],
+  ['reset',['RESET',['../namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eba5ba3eb6635297a623bd94e08d9174816',1,'conio']]],
+  ['resetall',['resetAll',['../namespaceconio.html#a0f86b2fbc565f5e6831e75216cf3e708',1,'conio']]],
+  ['reveal',['REVEAL',['../namespaceconio.html#a4c720b3477d66baeb5a8c8c60b9d2002a868cb2d2b4a144a66137bb7f664c41d9',1,'conio']]],
+  ['row',['row',['../classSection.html#a9caef7e8c0fb2f208068d9e46f369671',1,'Section']]],
+  ['run',['run',['../classPlatform.html#a4f5e5574c715b6fe97755fab0c3e3f4d',1,'Platform']]],
+  ['run_5felevator',['run_elevator',['../testSignaledElevator_8cpp.html#afa54858846ec18410901090659d91ff5',1,'testSignaledElevator.cpp']]],
+  ['run_5ffunc',['run_func',['../classPlatform.html#ab1b06f825872ef6a23e46c664765391e',1,'Platform']]]
 ];

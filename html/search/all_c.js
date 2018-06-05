@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['open',['open',['../group__elegraphics.html#ggaa480574a88250fdb657f3768840bb1f7a81cb92118468044dd3db6cdf0c331a5e',1,'elegraphics']]],
-  ['openelevator',['openElevator',['../namespaceelegraphics.html#a0caedcd3db52e7949dfc38a9921cc7cb',1,'elegraphics']]]
+  ['negative_5fimage',['NEGATIVE_IMAGE',['../namespaceconio.html#a4c720b3477d66baeb5a8c8c60b9d2002a090b08279141f5fb1bf07054606efde9',1,'conio']]],
+  ['none',['none',['../group__elegraphics.html#gga99ad0455295982e4e2dbf81df297a821a69f1a3c3dafe44315b5b913650a80f12',1,'elegraphics']]],
+  ['noneclosedelevator',['noneClosedElevator',['../namespaceelegraphics.html#a747158dd9e5b27662e8fea51fb5096b1',1,'elegraphics']]],
+  ['noneopenelevator',['noneOpenElevator',['../namespaceelegraphics.html#ad4e53567d5e776587502371079a16c4a',1,'elegraphics']]],
+  ['normal_5fintensity',['NORMAL_INTENSITY',['../namespaceconio.html#a4c720b3477d66baeb5a8c8c60b9d2002aab26100210e3442d5e54bb455e78ea23',1,'conio']]]
 ];

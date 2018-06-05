@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['background',['Background',['../namespaceconio.html#a1a360e79f73ab621070f8bfb1ef41a48',1,'conio']]],
-  ['bgcolor',['bgColor',['../namespaceconio.html#a2a5d9994e199d91db69d7274e091d71a',1,'conio']]],
-  ['black',['BLACK',['../namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eba35d823386bdac2d2b2992c4c3ff63225',1,'conio']]],
-  ['blue',['BLUE',['../namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eba260ccd42955a33bcdcaef59a5c401733',1,'conio']]],
-  ['bold',['BOLD',['../namespaceconio.html#a4c720b3477d66baeb5a8c8c60b9d2002a4268b4c1c6f215142feaf57100817122',1,'conio']]]
+  ['addcustomer',['addCustomer',['../classCustomerList.html#a8301f7fcdc613ddfa32c9d65e882fc89',1,'CustomerList']]],
+  ['addcustomertofloor',['addCustomerToFloor',['../classFloor.html#ae7960a1aaa0a1413200ddf43475e3590',1,'Floor::addCustomerToFloor()'],['../classPlatform.html#a0fc6718c28b340f7266f619ecd69270c',1,'Platform::addCustomerToFloor()']]],
+  ['addsignal',['addSignal',['../classSignalCore__B.html#abe095ff819f62ce7e13c197945cb27e6',1,'SignalCore_B::addSignal()'],['../classSignalCore__Normal.html#a31b935da29faa6c54043b8202ee72558',1,'SignalCore_Normal::addSignal()'],['../classSignaledElevator.html#ad3eb1bea0d4bf4185734a3506c87c8b7',1,'SignaledElevator::addSignal()']]]
 ];

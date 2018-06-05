@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['upelevator',['upElevator',['../namespaceelegraphics.html#a7e94838ae826e40cf0a5e87c93062d2e',1,'elegraphics']]]
+  ['timespent',['timeSpent',['../classCustomer.html#a215f5c0100cc112cbb3c28a2d01c9c02',1,'Customer']]]
 ];

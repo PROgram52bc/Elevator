@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['secconsole',['secConsole',['../namespaceelegraphics.html#af5f48f45ff88d6f940a4197858298f1f',1,'elegraphics']]],
-  ['secelevatorb',['secElevatorB',['../namespaceelegraphics.html#aa1455353cbf3bd4ed70d032b2d59176e',1,'elegraphics']]],
-  ['secfloor',['secFloor',['../namespaceelegraphics.html#a18e35258de207243828f3068f780e27d',1,'elegraphics']]],
-  ['section',['Section',['../classSection.html#acaf45671483a12dcb1d5389602f6bae7',1,'Section']]],
-  ['settextstyle',['setTextStyle',['../namespaceconio.html#a5ad1fe72a9301d2206e56cc517b01a32',1,'conio']]]
+  ['platform',['Platform',['../classPlatform.html#ab318651d7ac5aac9955c0dea489c0cf5',1,'Platform']]],
+  ['popcustomer',['popCustomer',['../classCustomerList.html#ae889f98c5a6846707e3a3cd5905682e4',1,'CustomerList']]],
+  ['popsignal',['popSignal',['../classSignalCore__B.html#a1e0bd6d29f99f45e738099504e6dfc2f',1,'SignalCore_B::popSignal()'],['../classSignalCore__Normal.html#a292cb0fd954d2537cb826f8d578a4367',1,'SignalCore_Normal::popSignal()']]],
+  ['printlist',['printList',['../classSignalCore__Normal.html#ad85b70c509ef9d55c4e22ac4bc1c6bc1',1,'SignalCore_Normal::printList()'],['../testCustomerList_8cpp.html#afdb2fd5d9c9eabcba06d83ed57b069b8',1,'printList():&#160;testCustomerList.cpp']]],
+  ['process',['process',['../classPlatform.html#ad2adcda565d14b25f6769b006b991c2f',1,'Platform']]]
 ];

@@ -63,7 +63,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classFloor-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Floor Class Reference</div>  </div>
@@ -71,30 +73,101 @@ $(function() {
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Floor_8h_source.html">Floor.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Floor:</div>
+<div class="dyncontent">
+<div class="center"><img src="classFloor__coll__graph.png" border="0" usemap="#Floor_coll__map" alt="Collaboration graph"/></div>
+<map name="Floor_coll__map" id="Floor_coll__map">
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af54aee372639bc176f4507ab0d481246"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#af54aee372639bc176f4507ab0d481246">Floor</a> ()</td></tr>
-<tr class="separator:af54aee372639bc176f4507ab0d481246"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74b0749aa8fed52d582b13415b068de2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#a74b0749aa8fed52d582b13415b068de2">Floor</a> (int maxFlr)</td></tr>
-<tr class="separator:a74b0749aa8fed52d582b13415b068de2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3c1aecc5af7a1112307f5ca348b20b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#af3c1aecc5af7a1112307f5ca348b20b8">Floor</a> (int maxFlr=<a class="el" href="group__elegraphics.html#ga1442394354e070a21dee16ccd237c844">elegraphics::MAXFLOOR</a>, int maxCus=<a class="el" href="classFloor.html#a724e5b9ea9de0979c0728b43fd8cd5f7">DEFAULT_MAX_CUSTOMER</a>, <a class="el" href="classSection.html">Section</a> sec=<a class="el" href="group__elegraphics.html#gacb4b4bedf94bdffdc14ae61c4c57cf34">elegraphics::secFloor</a>)</td></tr>
+<tr class="separator:af3c1aecc5af7a1112307f5ca348b20b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1b805579f18a76fe2754a3601202e80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#ae1b805579f18a76fe2754a3601202e80">~Floor</a> ()</td></tr>
+<tr class="separator:ae1b805579f18a76fe2754a3601202e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31176a73a126bb48cc00f4ccf0ae80ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#a31176a73a126bb48cc00f4ccf0ae80ef">getMaxFloor</a> () const</td></tr>
+<tr class="separator:a31176a73a126bb48cc00f4ccf0ae80ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff1d7ef9ffa9d7e42f5708872f0795df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#aff1d7ef9ffa9d7e42f5708872f0795df">floorIsEmpty</a> (int flr) const</td></tr>
+<tr class="memdesc:aff1d7ef9ffa9d7e42f5708872f0795df"><td class="mdescLeft">&#160;</td><td class="mdescRight">report whether a floor is empty  <a href="#aff1d7ef9ffa9d7e42f5708872f0795df">More...</a><br /></td></tr>
+<tr class="separator:aff1d7ef9ffa9d7e42f5708872f0795df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa98e587f1b4781c19a9febca91e6b470"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#aa98e587f1b4781c19a9febca91e6b470">floorIsFull</a> (int flr) const</td></tr>
+<tr class="memdesc:aa98e587f1b4781c19a9febca91e6b470"><td class="mdescLeft">&#160;</td><td class="mdescRight">report whether a floor is full  <a href="#aa98e587f1b4781c19a9febca91e6b470">More...</a><br /></td></tr>
+<tr class="separator:aa98e587f1b4781c19a9febca91e6b470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7960a1aaa0a1413200ddf43475e3590"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#ae7960a1aaa0a1413200ddf43475e3590">addCustomerToFloor</a> (<a class="el" href="classCustomer.html">Customer</a> c, int flr)</td></tr>
+<tr class="memdesc:ae7960a1aaa0a1413200ddf43475e3590"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a customer to floor  <a href="#ae7960a1aaa0a1413200ddf43475e3590">More...</a><br /></td></tr>
+<tr class="separator:ae7960a1aaa0a1413200ddf43475e3590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07f2fa82a7130d00924b9cfb876f15cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCustomer.html">Customer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#a07f2fa82a7130d00924b9cfb876f15cf">getOutCustomerFromFloor</a> (std::function&lt; bool(<a class="el" href="classCustomer.html">Customer</a>)&gt; f, int flr)</td></tr>
+<tr class="memdesc:a07f2fa82a7130d00924b9cfb876f15cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a customer from the floor  <a href="#a07f2fa82a7130d00924b9cfb876f15cf">More...</a><br /></td></tr>
+<tr class="separator:a07f2fa82a7130d00924b9cfb876f15cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aaac788b556f6ccc71fdfca253161a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#a3aaac788b556f6ccc71fdfca253161a8">incrementCustomers</a> ()</td></tr>
+<tr class="separator:a3aaac788b556f6ccc71fdfca253161a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a85f61ede7d2b05f86a7629b3e9efbc20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#a85f61ede7d2b05f86a7629b3e9efbc20">drawMe</a> ()</td></tr>
+<tr class="separator:a85f61ede7d2b05f86a7629b3e9efbc20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:af1910c2bbac72e4149abfabf351d0f76"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#af1910c2bbac72e4149abfabf351d0f76">maxFloor</a></td></tr>
-<tr class="separator:af1910c2bbac72e4149abfabf351d0f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16a9feb6327cc41b3b6f12aef1a4daf1"><td class="memItemLeft" align="right" valign="top">list&lt; <a class="el" href="structCustomer.html">Customer</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#a16a9feb6327cc41b3b6f12aef1a4daf1">floors</a></td></tr>
-<tr class="separator:a16a9feb6327cc41b3b6f12aef1a4daf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7921a46337c5364e1c900f2ea3e351e9"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#a7921a46337c5364e1c900f2ea3e351e9">maxFloor</a></td></tr>
+<tr class="separator:a7921a46337c5364e1c900f2ea3e351e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9635bfb1b3c2619600dfb41e040f86f4"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#a9635bfb1b3c2619600dfb41e040f86f4">maxCustomersPerFloor</a></td></tr>
+<tr class="separator:a9635bfb1b3c2619600dfb41e040f86f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4b3e2bc96081241ecba605a2cc15ca5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classCustomerList.html">CustomerList</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#ad4b3e2bc96081241ecba605a2cc15ca5">floors</a></td></tr>
+<tr class="separator:ad4b3e2bc96081241ecba605a2cc15ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ce2f7d09da056ca6aa3a9a95d245c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSection.html">Section</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#a36ce2f7d09da056ca6aa3a9a95d245c7">section</a></td></tr>
+<tr class="separator:a36ce2f7d09da056ca6aa3a9a95d245c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a724e5b9ea9de0979c0728b43fd8cd5f7"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#a724e5b9ea9de0979c0728b43fd8cd5f7">DEFAULT_MAX_CUSTOMER</a> = 20</td></tr>
+<tr class="separator:a724e5b9ea9de0979c0728b43fd8cd5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af54aee372639bc176f4507ab0d481246"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af54aee372639bc176f4507ab0d481246">&#9670;&nbsp;</a></span>Floor() <span class="overload">[1/2]</span></h2>
+<a id="af3c1aecc5af7a1112307f5ca348b20b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3c1aecc5af7a1112307f5ca348b20b8">&#9670;&nbsp;</a></span>Floor()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">Floor::Floor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxFlr</em> = <code><a class="el" href="group__elegraphics.html#ga1442394354e070a21dee16ccd237c844">elegraphics::MAXFLOOR</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxCus</em> = <code><a class="el" href="classFloor.html#a724e5b9ea9de0979c0728b43fd8cd5f7">DEFAULT_MAX_CUSTOMER</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSection.html">Section</a>&#160;</td>
+          <td class="paramname"><em>sec</em> = <code><a class="el" href="group__elegraphics.html#gacb4b4bedf94bdffdc14ae61c4c57cf34">elegraphics::secFloor</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1b805579f18a76fe2754a3601202e80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1b805579f18a76fe2754a3601202e80">&#9670;&nbsp;</a></span>~Floor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Floor::~Floor </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -104,27 +177,211 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a74b0749aa8fed52d582b13415b068de2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74b0749aa8fed52d582b13415b068de2">&#9670;&nbsp;</a></span>Floor() <span class="overload">[2/2]</span></h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae7960a1aaa0a1413200ddf43475e3590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7960a1aaa0a1413200ddf43475e3590">&#9670;&nbsp;</a></span>addCustomerToFloor()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Floor::Floor </td>
+          <td class="memname">bool Floor::addCustomerToFloor </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="classCustomer.html">Customer</a>&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>maxFlr</em></td><td>)</td>
+          <td class="paramname"><em>flr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>add a customer to floor </p>
+<dl class="section return"><dt>Returns</dt><dd>a boolean indicating whether succeeded or failed. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>the customer being added </td></tr>
+    <tr><td class="paramname">flr</td><td>the number of the floor to add customer to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a85f61ede7d2b05f86a7629b3e9efbc20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85f61ede7d2b05f86a7629b3e9efbc20">&#9670;&nbsp;</a></span>drawMe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Floor::drawMe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff1d7ef9ffa9d7e42f5708872f0795df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff1d7ef9ffa9d7e42f5708872f0795df">&#9670;&nbsp;</a></span>floorIsEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Floor::floorIsEmpty </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flr</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>report whether a floor is empty </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flr</td><td>the floor number, starting with 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa98e587f1b4781c19a9febca91e6b470"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa98e587f1b4781c19a9febca91e6b470">&#9670;&nbsp;</a></span>floorIsFull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Floor::floorIsFull </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flr</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>report whether a floor is full </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flr</td><td>the floor number, starting with 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a31176a73a126bb48cc00f4ccf0ae80ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31176a73a126bb48cc00f4ccf0ae80ef">&#9670;&nbsp;</a></span>getMaxFloor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Floor::getMaxFloor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07f2fa82a7130d00924b9cfb876f15cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07f2fa82a7130d00924b9cfb876f15cf">&#9670;&nbsp;</a></span>getOutCustomerFromFloor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCustomer.html">Customer</a> Floor::getOutCustomerFromFloor </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; bool(<a class="el" href="classCustomer.html">Customer</a>)&gt;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>remove a customer from the floor </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classEmptyError.html" title="an exception indicating container is empty ">EmptyError</a></td><td>when no customer is available </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3aaac788b556f6ccc71fdfca253161a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aaac788b556f6ccc71fdfca253161a8">&#9670;&nbsp;</a></span>incrementCustomers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Floor::incrementCustomers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a16a9feb6327cc41b3b6f12aef1a4daf1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16a9feb6327cc41b3b6f12aef1a4daf1">&#9670;&nbsp;</a></span>floors</h2>
+<a id="a724e5b9ea9de0979c0728b43fd8cd5f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a724e5b9ea9de0979c0728b43fd8cd5f7">&#9670;&nbsp;</a></span>DEFAULT_MAX_CUSTOMER</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -133,7 +390,29 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">list&lt;<a class="el" href="structCustomer.html">Customer</a>&gt;* Floor::floors</td>
+          <td class="memname">const int Floor::DEFAULT_MAX_CUSTOMER = 20</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4b3e2bc96081241ecba605a2cc15ca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4b3e2bc96081241ecba605a2cc15ca5">&#9670;&nbsp;</a></span>floors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classCustomerList.html">CustomerList</a>&gt; Floor::floors</td>
         </tr>
       </table>
   </td>
@@ -145,8 +424,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af1910c2bbac72e4149abfabf351d0f76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1910c2bbac72e4149abfabf351d0f76">&#9670;&nbsp;</a></span>maxFloor</h2>
+<a id="a9635bfb1b3c2619600dfb41e040f86f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9635bfb1b3c2619600dfb41e040f86f4">&#9670;&nbsp;</a></span>maxCustomersPerFloor</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,7 +434,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Floor::maxFloor</td>
+          <td class="memname">const int Floor::maxCustomersPerFloor</td>
         </tr>
       </table>
   </td>
@@ -167,8 +446,53 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a id="a7921a46337c5364e1c900f2ea3e351e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7921a46337c5364e1c900f2ea3e351e9">&#9670;&nbsp;</a></span>maxFloor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Floor::maxFloor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36ce2f7d09da056ca6aa3a9a95d245c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36ce2f7d09da056ca6aa3a9a95d245c7">&#9670;&nbsp;</a></span>section</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSection.html">Section</a> Floor::section</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="Floor_8h_source.html">Floor.h</a></li>
+<li><a class="el" href="Floor_8cpp.html">Floor.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

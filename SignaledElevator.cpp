@@ -59,6 +59,10 @@ void SignaledElevator<core>::addSignal(int flr, SignalCore_B::Direction dir)
 	signalCore->addSignal(elevator.getCurrentFloor(), flr, dir);
 }
 
+/**@brief set elevator state according to the next direction
+ * in signalList
+ * @bug can't use when closing the door.
+ */
 template <class core>
 void SignaledElevator<core>::setDirection()
 {

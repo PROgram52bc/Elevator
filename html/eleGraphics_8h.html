@@ -76,10 +76,11 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &lt;list&gt;</code><br />
 <code>#include &quot;<a class="el" href="conio_8h_source.html">conio.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="section_8h_source.html">section.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="consoleSection_8h_source.html">consoleSection.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Customer_8h_source.html">../Customer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="CustomerList_8h_source.html">../CustomerList.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for eleGraphics.h:</div>
 <div class="dyncontent">
@@ -104,35 +105,42 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:gaa480574a88250fdb657f3768840bb1f7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#gaa480574a88250fdb657f3768840bb1f7">elegraphics::ElevatorState</a> { <a class="el" href="group__elegraphics.html#ggaa480574a88250fdb657f3768840bb1f7a250925554a42e9db9d91d13473654042">elegraphics::up</a>, 
-<a class="el" href="group__elegraphics.html#ggaa480574a88250fdb657f3768840bb1f7aeffd67a722698d21f44ca98664a8dfc2">elegraphics::down</a>, 
-<a class="el" href="group__elegraphics.html#ggaa480574a88250fdb657f3768840bb1f7a81cb92118468044dd3db6cdf0c331a5e">elegraphics::open</a>
+<tr class="memitem:ga52704887a172c255faf45213cda45d4a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#ga52704887a172c255faf45213cda45d4a">elegraphics::ElevatorDoorState</a> { <a class="el" href="group__elegraphics.html#gga52704887a172c255faf45213cda45d4aa81cb92118468044dd3db6cdf0c331a5e">elegraphics::open</a>, 
+<a class="el" href="group__elegraphics.html#gga52704887a172c255faf45213cda45d4aa0c126c8ed60488df84723e017a4c6803">elegraphics::closed</a>
  }</td></tr>
-<tr class="separator:gaa480574a88250fdb657f3768840bb1f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ga52704887a172c255faf45213cda45d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99ad0455295982e4e2dbf81df297a821"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#ga99ad0455295982e4e2dbf81df297a821">elegraphics::ElevatorDirection</a> { <a class="el" href="group__elegraphics.html#gga99ad0455295982e4e2dbf81df297a821a250925554a42e9db9d91d13473654042">elegraphics::up</a>, 
+<a class="el" href="group__elegraphics.html#gga99ad0455295982e4e2dbf81df297a821aeffd67a722698d21f44ca98664a8dfc2">elegraphics::down</a>, 
+<a class="el" href="group__elegraphics.html#gga99ad0455295982e4e2dbf81df297a821a69f1a3c3dafe44315b5b913650a80f12">elegraphics::none</a>
+ }</td></tr>
+<tr class="separator:ga99ad0455295982e4e2dbf81df297a821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga8734f83b24a2e0f50fe6f844ff136f43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#ga8734f83b24a2e0f50fe6f844ff136f43">elegraphics::drawCustomers</a> (const <a class="el" href="classCustomerList.html">CustomerList</a> &amp;listCustomer, <a class="el" href="classSection.html">Section</a> sec, int numPerRow, int maxCustomer, int startCol, int startRow)</td></tr>
+<tr class="memdesc:ga8734f83b24a2e0f50fe6f844ff136f43"><td class="mdescLeft">&#160;</td><td class="mdescRight">a helper function to draw customers from a <a class="el" href="classCustomerList.html">CustomerList</a>.  <a href="group__elegraphics.html#ga8734f83b24a2e0f50fe6f844ff136f43">More...</a><br /></td></tr>
+<tr class="separator:ga8734f83b24a2e0f50fe6f844ff136f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga66edd58f52a4822845b90692a8df2357"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#ga66edd58f52a4822845b90692a8df2357">elegraphics::drawFloor</a> (int n, <a class="el" href="classSection.html">Section</a> sec)</td></tr>
 <tr class="memdesc:ga66edd58f52a4822845b90692a8df2357"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw the floor frame  <a href="group__elegraphics.html#ga66edd58f52a4822845b90692a8df2357">More...</a><br /></td></tr>
 <tr class="separator:ga66edd58f52a4822845b90692a8df2357"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga42cf9e7c71a684f560b47d3fb846b00b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#ga42cf9e7c71a684f560b47d3fb846b00b">elegraphics::drawElevator</a> (int floor, ElevatorState state, <a class="el" href="classSection.html">Section</a> sec)</td></tr>
-<tr class="memdesc:ga42cf9e7c71a684f560b47d3fb846b00b"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw the elevator inside the floor frame  <a href="group__elegraphics.html#ga42cf9e7c71a684f560b47d3fb846b00b">More...</a><br /></td></tr>
-<tr class="separator:ga42cf9e7c71a684f560b47d3fb846b00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03ec9092590f465a9afeb27a4e721cfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#ga03ec9092590f465a9afeb27a4e721cfe">elegraphics::drawElevator</a> (int floor, ElevatorDoorState ds, ElevatorDirection dir, <a class="el" href="classSection.html">Section</a> sec)</td></tr>
+<tr class="memdesc:ga03ec9092590f465a9afeb27a4e721cfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw the elevator inside the floor frame  <a href="group__elegraphics.html#ga03ec9092590f465a9afeb27a4e721cfe">More...</a><br /></td></tr>
+<tr class="separator:ga03ec9092590f465a9afeb27a4e721cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0636b0c780ce2256cc32b7e50ea0d5de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#ga0636b0c780ce2256cc32b7e50ea0d5de">elegraphics::getFlrTopRow</a> (int flr)</td></tr>
 <tr class="memdesc:ga0636b0c780ce2256cc32b7e50ea0d5de"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper function to get the top row number of certain floor  <a href="group__elegraphics.html#ga0636b0c780ce2256cc32b7e50ea0d5de">More...</a><br /></td></tr>
 <tr class="separator:ga0636b0c780ce2256cc32b7e50ea0d5de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5f821e4ae83d2a75117e87cadbcaf1da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#ga5f821e4ae83d2a75117e87cadbcaf1da">elegraphics::getFlrBotRow</a> (int flr)</td></tr>
 <tr class="memdesc:ga5f821e4ae83d2a75117e87cadbcaf1da"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper function to get the bottom row number of certain floor  <a href="group__elegraphics.html#ga5f821e4ae83d2a75117e87cadbcaf1da">More...</a><br /></td></tr>
 <tr class="separator:ga5f821e4ae83d2a75117e87cadbcaf1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5c546041b9f6733b0f615fbdac29ee18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#ga5c546041b9f6733b0f615fbdac29ee18">elegraphics::drawElevatorAndFloor</a> (int floor, int maxFloor, ElevatorState state, <a class="el" href="classSection.html">Section</a> sec)</td></tr>
-<tr class="memdesc:ga5c546041b9f6733b0f615fbdac29ee18"><td class="mdescLeft">&#160;</td><td class="mdescRight">a combined drawFloor and drawElevator, clearing section automatically.  <a href="group__elegraphics.html#ga5c546041b9f6733b0f615fbdac29ee18">More...</a><br /></td></tr>
-<tr class="separator:ga5c546041b9f6733b0f615fbdac29ee18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga274efff21722c75288c931a2c9d2a71b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#ga274efff21722c75288c931a2c9d2a71b">elegraphics::drawCustomersInElevator</a> (const list&lt; <a class="el" href="structCustomer.html">Customer</a> &gt; &amp;listCustomer, int floor, <a class="el" href="classSection.html">Section</a> sec)</td></tr>
-<tr class="memdesc:ga274efff21722c75288c931a2c9d2a71b"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw customers in the elevator  <a href="group__elegraphics.html#ga274efff21722c75288c931a2c9d2a71b">More...</a><br /></td></tr>
-<tr class="separator:ga274efff21722c75288c931a2c9d2a71b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3407c75c080895adbf167e3506e30603"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#ga3407c75c080895adbf167e3506e30603">elegraphics::drawCustomersOnFloor</a> (const list&lt; <a class="el" href="structCustomer.html">Customer</a> &gt; &amp;listCustomer, int floor, <a class="el" href="classSection.html">Section</a> sec)</td></tr>
-<tr class="memdesc:ga3407c75c080895adbf167e3506e30603"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw customers on the floor  <a href="group__elegraphics.html#ga3407c75c080895adbf167e3506e30603">More...</a><br /></td></tr>
-<tr class="separator:ga3407c75c080895adbf167e3506e30603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade98f7154a010646519e78ab64dfb2a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#gade98f7154a010646519e78ab64dfb2a2">elegraphics::drawElevatorAndFloor</a> (int floor, int maxFloor, ElevatorDoorState ds, ElevatorDirection dir, <a class="el" href="classSection.html">Section</a> sec)</td></tr>
+<tr class="memdesc:gade98f7154a010646519e78ab64dfb2a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">a combined drawFloor and drawElevator, clearing section automatically.  <a href="group__elegraphics.html#gade98f7154a010646519e78ab64dfb2a2">More...</a><br /></td></tr>
+<tr class="separator:gade98f7154a010646519e78ab64dfb2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabecfb6f1068d5f9e751c935e57799315"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#gabecfb6f1068d5f9e751c935e57799315">elegraphics::drawCustomersInElevator</a> (const <a class="el" href="classCustomerList.html">CustomerList</a> &amp;listCustomer, int floor, <a class="el" href="classSection.html">Section</a> sec)</td></tr>
+<tr class="memdesc:gabecfb6f1068d5f9e751c935e57799315"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw customers in the elevator  <a href="group__elegraphics.html#gabecfb6f1068d5f9e751c935e57799315">More...</a><br /></td></tr>
+<tr class="separator:gabecfb6f1068d5f9e751c935e57799315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae41a2c0311219210acf719a4e44e7112"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#gae41a2c0311219210acf719a4e44e7112">elegraphics::drawCustomersOnFloor</a> (const <a class="el" href="classCustomerList.html">CustomerList</a> &amp;listCustomer, int floor, <a class="el" href="classSection.html">Section</a> sec)</td></tr>
+<tr class="memdesc:gae41a2c0311219210acf719a4e44e7112"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw customers on the floor  <a href="group__elegraphics.html#gae41a2c0311219210acf719a4e44e7112">More...</a><br /></td></tr>
+<tr class="separator:gae41a2c0311219210acf719a4e44e7112"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga802649d0a876d1365dead475c60140ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#ga802649d0a876d1365dead475c60140ce">elegraphics::clrscr</a> ()</td></tr>
 <tr class="memdesc:ga802649d0a876d1365dead475c60140ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear the entire screen  <a href="group__elegraphics.html#ga802649d0a876d1365dead475c60140ce">More...</a><br /></td></tr>
 <tr class="separator:ga802649d0a876d1365dead475c60140ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,16 +155,20 @@ Variables</h2></td></tr>
 <tr class="separator:ga1e69fed70ad71fe2d4bbe474895c61ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab14bb9a237a1082de897647a0cef66f6"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#gab14bb9a237a1082de897647a0cef66f6">elegraphics::QUEUEWIDTH</a> = 20</td></tr>
 <tr class="separator:gab14bb9a237a1082de897647a0cef66f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafdb2f9915ffd995f6a822dd2652157f3"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#gafdb2f9915ffd995f6a822dd2652157f3">elegraphics::CONSOLEWIDTH</a> = 30</td></tr>
-<tr class="separator:gafdb2f9915ffd995f6a822dd2652157f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaeb21e3ad85976be569d3fb981b107459"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#gaeb21e3ad85976be569d3fb981b107459">elegraphics::CONSOLEHEIGHT</a> = 5</td></tr>
-<tr class="separator:gaeb21e3ad85976be569d3fb981b107459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga75a48f75d3ca7beb61a6d764b729f69a"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#ga75a48f75d3ca7beb61a6d764b729f69a">elegraphics::CONSOLEINWIDTH</a> = 30</td></tr>
+<tr class="separator:ga75a48f75d3ca7beb61a6d764b729f69a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga70c8e235f40388fa515acc79b9ebff36"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#ga70c8e235f40388fa515acc79b9ebff36">elegraphics::CONSOLEINHEIGHT</a> = 5</td></tr>
+<tr class="separator:ga70c8e235f40388fa515acc79b9ebff36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga21c0cf11a2279a7e5301fca55be61983"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#ga21c0cf11a2279a7e5301fca55be61983">elegraphics::CONSOLEOUTWIDTH</a> = 30</td></tr>
+<tr class="separator:ga21c0cf11a2279a7e5301fca55be61983"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafb3a1014364458bb9af9830b96cc9585"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSection.html">Section</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#gafb3a1014364458bb9af9830b96cc9585">elegraphics::secElevatorB</a></td></tr>
 <tr class="separator:gafb3a1014364458bb9af9830b96cc9585"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacb4b4bedf94bdffdc14ae61c4c57cf34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSection.html">Section</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#gacb4b4bedf94bdffdc14ae61c4c57cf34">elegraphics::secFloor</a></td></tr>
 <tr class="separator:gacb4b4bedf94bdffdc14ae61c4c57cf34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf3bc6c75d8de0ffcb24cd16572b3b969"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSection.html">Section</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#gaf3bc6c75d8de0ffcb24cd16572b3b969">elegraphics::secConsole</a></td></tr>
-<tr class="separator:gaf3bc6c75d8de0ffcb24cd16572b3b969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga79ae4a701b1c2368f1474c41b6e31950"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConsoleSection.html">ConsoleSection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#ga79ae4a701b1c2368f1474c41b6e31950">elegraphics::secConsoleIn</a></td></tr>
+<tr class="separator:ga79ae4a701b1c2368f1474c41b6e31950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11fae583f23a7e012dd396799e41697c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConsoleSection.html">ConsoleSection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__elegraphics.html#ga11fae583f23a7e012dd396799e41697c">elegraphics::secConsoleOut</a></td></tr>
+<tr class="separator:ga11fae583f23a7e012dd396799e41697c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
