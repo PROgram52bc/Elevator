@@ -8,6 +8,7 @@ class SignalCore_B {
 		virtual void addSignal(int currentFloor, int signal, Direction direction) = 0;
 		virtual void popSignal() = 0;
 		virtual int getSignal() const = 0;
+		virtual Direction getDirection() const = 0;
 		virtual bool isEmpty() const = 0;
 		virtual ~SignalCore_B() {};
 };

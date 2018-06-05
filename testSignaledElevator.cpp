@@ -3,13 +3,13 @@
 #include "SignalCore_Normal.h"
 #include <thread>
 #include <chrono>
+#include <mutex>
 
 
 std::mutex mtx;
 
 void run_elevator(SignaledElevator<SignalCore_Normal>& e)
 {
-	
 	while (1)
 	{
 		e.move();

@@ -9,10 +9,12 @@ Elevator::Elevator(int maxFlr, Section sec):
 	maxCustomers(DEFAULT_MAX_CUSTOMER),
 	customers(maxCustomers),
 	currentFloor(1),
-	currentState(elegraphics::up),
+	currentDoorState(elegraphics::closed),
+	currentDirection(elegraphics::none),
 	section(sec)
 { 
 	drawMe();
+	elegraphics::secConsoleOut.sendMsg("elevator created!");
 }
 
 
@@ -20,15 +22,17 @@ Elevator::Elevator(int maxFlr, Section sec):
 
 void Elevator::drawMe() 
 {
-	elegraphics::drawElevatorAndFloor(currentFloor, maxFloor, currentState, section);
+	elegraphics::drawElevatorAndFloor(currentFloor, maxFloor, currentDoorState, currentDirection, section);
 	elegraphics::drawCustomersInElevator(customers, currentFloor, section);
 }
 
 bool Elevator::goUp() 
 {
+	if (currentDoorState == elegraphics::open)
+		throw(std::runtime_error("Can't go up with door open."));
 	if (currentFloor == maxFloor)
 		return false;
-	currentState = elegraphics::up;
+	// currentDirection = elegraphics::up;
 	currentFloor++;
 	drawMe();
 	return true;
@@ -36,17 +40,14 @@ bool Elevator::goUp()
 
 bool Elevator::goDown()
 {
+	if (currentDoorState == elegraphics::open)
+		throw(std::runtime_error("Can't go down with door open."));
 	if (currentFloor == 1)
 		return false;
-	currentState = elegraphics::down;
+	// currentDirection = elegraphics::down;
 	currentFloor--;
 	drawMe();
 	return true;
-}
-
-bool Elevator::isFull()
-{
-	return customers.isFull();
 }
 
 bool Elevator::getInCustomer(Customer c)
@@ -73,8 +74,15 @@ bool Elevator::getOutCustomer()
 	return true;
 }
 
-void Elevator::setCurrentState(elegraphics::ElevatorState st)
+void Elevator::setCurrentDoorState(
+		elegraphics::ElevatorDoorState ds)
 {
-	currentState = st;
+	currentDoorState = ds;
+	drawMe();
+}
+void Elevator::setCurrentDirection(
+		elegraphics::ElevatorDirection dir)
+{
+	currentDirection = dir;
 	drawMe();
 }

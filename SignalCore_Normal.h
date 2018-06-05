@@ -30,8 +30,15 @@ class SignalCore_Normal: public SignalCore_B
 			//std::cout << std::endl;
 			// second version end
 		}
+		virtual Direction getDirection() const override;
 
 	private:
+		class Signal {
+			public:
+				int floor;
+				Direction direction;
+				Signal(int f, Direction d): floor(f), direction(d) {}
+		};
 		/**@brief helper function
 		 * @param x the floor to be tested
 		 * @param a the first boundary floor
@@ -48,7 +55,7 @@ class SignalCore_Normal: public SignalCore_B
 		 * @retval true if the current movement corresponds to dir
 		 * @retval false if not corresponds to dir or if dir is both
 		 */
-		bool same_direction(int from, int to, Direction dir) 
+		bool same_direction(Direction dir, int from, int to) 
 		{ return  (to-from)*dir > 0; }
 		/**@brief helper function
 		 * @param from the starting floor
@@ -58,15 +65,12 @@ class SignalCore_Normal: public SignalCore_B
 		 * dir or if dir is both
 		 * @retval false if not corresponds to dir 
 		 */
-		bool good_direction(int from, int to, Direction dir)
-		{ return dir == both || same_direction(from, to, dir); }
+		bool good_direction(Direction dir, int from, int to)
+		{ return dir == both || same_direction(dir, from, to); }
 
-		class Signal {
-			public:
-				int floor;
-				Direction direction;
-				Signal(int f, Direction d): floor(f), direction(d) {}
-		};
+		bool insertable(Signal curr, Signal next, Signal toBeInserted);
+		void _iterateInsert(int signal, SignalCore_B::Direction direction);
+
 		std::forward_list<Signal> signalList;
 };
 

@@ -55,6 +55,7 @@ bool Floor::addCustomerToFloor(Customer c, int flr)
 }
 
 /**@brief remove a customer from the floor
+ * @throw EmptyError when no customer is available
  */
 Customer Floor::getOutCustomerFromFloor(
 		std::function<bool(Customer)> f,

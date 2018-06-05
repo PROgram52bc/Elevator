@@ -22,12 +22,17 @@ namespace elegraphics {
 	const int CONSOLEINWIDTH = 30; /**< Width of input section */
 	const int CONSOLEINHEIGHT = 5; /**< Height of input section */
 	const int CONSOLEOUTWIDTH = 30; /**< Width of output setion */
-	enum ElevatorState /** the state of the elevator */
-	{ 	up, 	/**< when the elevator is going upward */
-		down, 	/**< when the elevator is going down */
+	enum ElevatorDoorState /** the state of the elevator's door */
+	{
 		open, 	/**< when the elevator's door is open */
 		closed	/**< when the elevator's door is closed */
 	}; 
+	enum ElevatorDirection /** the direction where the elevator is going */
+	{
+	 	up, 	/**< when the elevator is going upward */
+		down, 	/**< when the elevator is going down */
+		none	/**< when the elevator is resting */
+	};
 	extern Section secElevator;
 	extern Section secElevatorB;
 	extern Section secFloor;
@@ -37,12 +42,12 @@ namespace elegraphics {
 	/**************Helper Functions****************/
 	void drawCustomers(const CustomerList& listCustomer, Section sec, int numPerRow, int maxCustomer = 20, int startCol = 1, int startRow = 1);
 	void drawFloor(int flr, Section sec = secElevator);
-	void drawElevator(int floor, ElevatorState d, Section sec = secElevator);
+	void drawElevator(int floor, ElevatorDoorState ds, ElevatorDirection dir, Section sec);
 	int getFlrTopRow(int flr);
 	int getFlrBotRow(int flr);
 
 	/**************Functions****************/
-	void drawElevatorAndFloor(int flr, int max, ElevatorState d, Section sec = secElevator); 
+	void drawElevatorAndFloor(int floor, int maxFloor, ElevatorDoorState ds, ElevatorDirection dir, Section sec);
 	void drawCustomersInElevator(const CustomerList& listCustomer, int floor, Section sec = secElevator); 
 	void drawCustomersOnFloor(const CustomerList& listCustomer, int floor, Section sec = secFloor);
 	

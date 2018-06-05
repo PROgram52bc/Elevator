@@ -81,5 +81,5 @@ void Section::drawStrAt(const string& toBeDrawn,
 	// draw the string
 	cout << gotoRowCol(globalRow, globalCol);
 	cout << toBeDrawn.substr(startIdx, lengthToDraw); 
-	cout << conio::resetAll();
+	cout << conio::resetAll() << flush;
 }

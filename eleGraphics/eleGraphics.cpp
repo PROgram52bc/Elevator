@@ -31,32 +31,42 @@ namespace elegraphics {
 	ConsoleSection secConsoleOut(secElevatorB.getConsecutiveCol(), secElevatorB.getStartRow(),
 			CONSOLEOUTWIDTH, secElevatorB.getHeight());
 
-
-	string upElevator[] = {
+	string upClosedElevator[] = {
 		"^     ^",
 		"|     |",
 		"|     |",
 		"|     |"
 	};
-	string downElevator[] = {
+	string downClosedElevator[] = {
 		"|     |",
 		"|     |",
 		"|     |",
 		"v     v"
 	};
-	string openElevator[] = {
-		"[     ]",
-		"o     o",
-		"o     o",
-		"[     ]"
-	};
-	string closedElevator[] = {
+	string noneClosedElevator[] = {
 		"|     |",
 		"|     |",
 		"|     |",
 		"|     |"
 	};
-
+	string noneOpenElevator[] = {
+		"[     ]",
+		"o     o",
+		"o     o",
+		"[     ]"
+	};
+	string upOpenElevator[] = {
+		"^     ^",
+		"o     o",
+		"o     o",
+		"[     ]"
+	};
+	string downOpenElevator[] = {
+		"[     ]",
+		"o     o",
+		"o     o",
+		"v     v"
+	};
 /*****************************Functions***************************/
 	/** @brief helper function to get the top row number of certain floor
 	 *  @param [in] flr Floor number
@@ -88,23 +98,38 @@ namespace elegraphics {
 	}
 
 	/** @brief draw the elevator inside the floor frame */
-	void drawElevator(int floor, ElevatorState state, Section sec) {
+	void drawElevator(int floor, ElevatorDoorState ds, ElevatorDirection dir, Section sec) {
 		string* pEle = nullptr;
-		switch (state) {
-			case up:
-				pEle = upElevator;
-				break;
-			case down:
-				pEle = downElevator;
-				break;
+		switch (ds) 
+		{
 			case open:
-				pEle = openElevator;
+				switch(dir)
+				{
+					case up:
+						pEle = upOpenElevator;
+						break;
+					case down:
+						pEle = downOpenElevator;
+						break;
+					case none:
+						pEle = noneOpenElevator;
+						break;
+				}
 				break;
 			case closed:
-				pEle = closedElevator;
+				switch(dir)
+				{
+					case up:
+						pEle = upClosedElevator;
+						break;
+					case down:
+						pEle = downClosedElevator;
+						break;
+					case none:
+						pEle = noneClosedElevator;
+				}
 				break;
 		}
-
 		int floorRow = getFlrTopRow(floor);
 		for (int strRowNum=0; strRowNum<FLRHEIGHT; strRowNum++) /**< tracking the line number in the elevator string array */
 		{
@@ -116,10 +141,10 @@ namespace elegraphics {
 
 	/** @brief a combined drawFloor and drawElevator, clearing section automatically.
 	*/
-	void drawElevatorAndFloor(int floor, int maxFloor, ElevatorState state, Section sec) {
+	void drawElevatorAndFloor(int floor, int maxFloor, ElevatorDoorState ds, ElevatorDirection dir, Section sec) {
 		sec.clrSection();
-		drawFloor(maxFloor);
-		drawElevator(floor, state);
+		drawFloor(maxFloor, sec);
+		drawElevator(floor, ds, dir, sec);
 		secConsoleIn.focusCursor();
 	}
 

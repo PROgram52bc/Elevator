@@ -14,7 +14,8 @@ class Elevator
 		const int maxCustomers;
 		int currentFloor;
 		CustomerList customers;
-		elegraphics::ElevatorState currentState;
+		elegraphics::ElevatorDoorState currentDoorState;
+		elegraphics::ElevatorDirection currentDirection;
 
 		/****Helpers Methods****/
 		void drawMe();
@@ -27,14 +28,21 @@ class Elevator
 		bool goDown();
 		bool getInCustomer(Customer c);
 		bool getOutCustomer();
-		void setCurrentState(elegraphics::ElevatorState st);
+		void setCurrentDoorState(
+				elegraphics::ElevatorDoorState st);
+		void setCurrentDirection(
+				elegraphics::ElevatorDirection st);
 		void incrementCustomers()
 		{ customers.incrementCustomers(); }
 
 		/****Observers****/
-		bool isFull();
-		int getCurrentFloor() { return currentFloor; }
-		elegraphics::ElevatorState getCurrentState() { return currentState; }
+		bool isFull() const
+		{ return customers.isFull(); }
+		int getCurrentFloor() const { return currentFloor; }
+		elegraphics::ElevatorDoorState 
+			getCurrentDoorState() const { return currentDoorState; }
+		elegraphics::ElevatorDirection 
+			getCurrentDirection() const { return currentDirection; }
 
 };
 

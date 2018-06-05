@@ -21,13 +21,19 @@ SignaledElevator<core>::~SignaledElevator()
 template <class core>
 bool SignaledElevator<core>::move() 
 {
-	if (elevator.getCurrentState() == elegraphics::open)
+	if (elevator.getCurrentDoorState() == elegraphics::open)
 	{
 		signalCore->popSignal();
-		setState();
+		elevator.setCurrentDoorState(elegraphics::closed);
 		return true;
 	}
-	if (!signalCore->isEmpty()) {
+	if (signalCore->isEmpty())
+	{
+		setDirection();
+		return false;
+	}
+	else // if signalCore not empty
+	{
 		int nextFloor = signalCore->getSignal();
 		int currentFloor = elevator.getCurrentFloor();
 		if (nextFloor > currentFloor)
@@ -40,11 +46,11 @@ bool SignaledElevator<core>::move()
 		}
 		else // if nextFloor == currentFloor
 		{
-			elevator.setCurrentState(elegraphics::open);
+			elevator.setCurrentDoorState(elegraphics::open);
+			setDirection();
 		}
 		return true;
 	}
-	return false;
 }
 
 template <class core>
@@ -54,29 +60,15 @@ void SignaledElevator<core>::addSignal(int flr, SignalCore_B::Direction dir)
 }
 
 template <class core>
-void SignaledElevator<core>::setState()
+void SignaledElevator<core>::setDirection()
 {
-	if (signalCore->isEmpty())
-	{
-		elevator.setCurrentState(elegraphics::closed);
-		return;
-	}
-	int nextFloor = signalCore->getSignal();
-	int currentFloor = elevator.getCurrentFloor();
-	if (nextFloor == currentFloor)
-	{
-		throw (std::logic_error("Can't set state with the target floor == current floor."));
-	}
-	if (nextFloor > currentFloor)
-	{
-		elevator.setCurrentState(elegraphics::up);
-		return;
-	}
-	if (nextFloor < currentFloor)
-	{
-		elevator.setCurrentState(elegraphics::down);
-		return;
-	}
+	if (signalCore->isEmpty() || 
+			signalCore->getDirection() == SignalCore_B::both)
+		elevator.setCurrentDirection(elegraphics::none);
+	else if (signalCore->getDirection() == SignalCore_B::up)
+		elevator.setCurrentDirection(elegraphics::up);
+	else if (signalCore->getDirection() == SignalCore_B::down)
+		elevator.setCurrentDirection(elegraphics::down);
 }
 
 #endif
