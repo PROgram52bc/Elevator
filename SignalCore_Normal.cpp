@@ -84,8 +84,11 @@ bool SignalCore_Normal::insertable(Signal curr, Signal next, Signal toBeInserted
 				next.direction,
 				curr.floor,
 				next.floor) &&
-			next.direction == 
-			toBeInserted.direction &&
+			(
+			 next.direction == toBeInserted.direction
+			 ||
+			 toBeInserted.direction == SignalCore_B::both
+			) &&
 			same_direction(
 				next.direction,
 				toBeInserted.floor,
@@ -93,6 +96,7 @@ bool SignalCore_Normal::insertable(Signal curr, Signal next, Signal toBeInserted
 	   ) 
 		/* if changing direction at next 
 		 * and the signal's direction is same as next
+		 * (or is both -- pushed from the inside)
 		 * and the signal can be covered before next,
 		 * insert after the current one */
 		return true;
