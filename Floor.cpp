@@ -15,7 +15,7 @@ void Floor::drawMe()
 {
 	section.clrSection();
 	for (int i=0; i<maxFloor; i++)
-		elegraphics::drawCustomersOnFloor(floors[i], i+1, section);
+		elegraphics::drawCustomersOnFloor(floors.at(i), i+1, section);
 }
 
 /**@brief report whether a floor is empty
@@ -26,7 +26,7 @@ bool Floor::floorIsEmpty(int flr) const
 		throw (std::out_of_range
 				("Given floor number out of range.")
 			  );
-	return floors[flr-1].isEmpty(); 
+	return floors.at(flr-1).isEmpty(); 
 }
 
 /**@brief report whether a floor is full
@@ -37,7 +37,7 @@ bool Floor::floorIsFull(int flr) const
 		throw (std::out_of_range
 				("Given floor number out of range.")
 			  );
-	return floors[flr-1].isFull();
+	return floors.at(flr-1).isFull();
 }
 
 /**@brief add a customer to floor
@@ -49,9 +49,20 @@ bool Floor::addCustomerToFloor(Customer c, int flr)
 {
 	if (floorIsFull(flr))
 		return false;
-	bool result = floors[flr-1].addCustomer(c);
+	bool result = floors.at(flr-1).addCustomer(c);
 	drawMe();
 	return result;
+}
+
+bool Floor::hasCustomerOnFloor(
+		std::function<bool(Customer)> f,
+		int flr)
+{
+	auto listFloor = floors.at(flr-1).getList();
+	for (const auto& i: listFloor)
+		if (f(i))
+			return true;
+	return false;
 }
 
 /**@brief remove a customer from the floor
@@ -64,7 +75,7 @@ Customer Floor::getOutCustomerFromFloor(
 	if (floorIsEmpty(flr))
 		throw (EmptyError
 				("Can't get out customer, floor is empty."));
-	Customer result = floors[flr-1].popCustomer(f);
+	Customer result = floors.at(flr-1).popCustomer(f);
 	drawMe();
 	return result;
 }

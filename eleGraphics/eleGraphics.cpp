@@ -164,10 +164,10 @@ namespace elegraphics {
 			int customerFloor = itCustomer->getDestinationFloor();
 			int customerTimeSpent = itCustomer->getTimeSpent();
 			conio::Color customerColor = conio::GREEN;
-			if (customerTimeSpent > 10)
-				customerColor = conio::YELLOW;
-			else if (customerTimeSpent > 20)
+			if (customerTimeSpent > 20)
 				customerColor = conio::RED;
+			else if (customerTimeSpent > 10)
+				customerColor = conio::YELLOW;
 			sec.drawStrAt(to_string(customerFloor), 
 					startCol+colOffset,
 					currentRow,

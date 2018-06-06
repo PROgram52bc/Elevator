@@ -1,5 +1,4 @@
 #include "SignaledElevator.h"
-#include "SignaledElevator.cpp"
 #include "SignalCore_Normal.h"
 #include <thread>
 #include <chrono>

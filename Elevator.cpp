@@ -14,7 +14,6 @@ Elevator::Elevator(int maxFlr, Section sec):
 	section(sec)
 { 
 	drawMe();
-	elegraphics::secConsoleOut.sendMsg("elevator created!");
 }
 
 

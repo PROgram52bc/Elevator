@@ -1,6 +1,5 @@
 #ifndef SIGNALEDELEVATOR_CPP
 #define SIGNALEDELEVATOR_CPP
-#include "SignaledElevator.h"
 
 /**@brief constructor */
 template <class core>
@@ -24,6 +23,7 @@ bool SignaledElevator<core>::move()
 	if (elevator.getCurrentDoorState() == elegraphics::open)
 	{
 		signalCore->popSignal();
+		setDirection();
 		elevator.setCurrentDoorState(elegraphics::closed);
 		return true;
 	}
@@ -34,6 +34,7 @@ bool SignaledElevator<core>::move()
 	}
 	else // if signalCore not empty
 	{
+		setDirection();
 		int nextFloor = signalCore->getSignal();
 		int currentFloor = elevator.getCurrentFloor();
 		if (nextFloor > currentFloor)
@@ -47,7 +48,6 @@ bool SignaledElevator<core>::move()
 		else // if nextFloor == currentFloor
 		{
 			elevator.setCurrentDoorState(elegraphics::open);
-			setDirection();
 		}
 		return true;
 	}
@@ -66,13 +66,55 @@ void SignaledElevator<core>::addSignal(int flr, SignalCore_B::Direction dir)
 template <class core>
 void SignaledElevator<core>::setDirection()
 {
-	if (signalCore->isEmpty() || 
-			signalCore->getDirection() == SignalCore_B::both)
+	if (signalCore->isEmpty())
+		/** When there is no more signal
+		 * set direction to none */
+	{
 		elevator.setCurrentDirection(elegraphics::none);
-	else if (signalCore->getDirection() == SignalCore_B::up)
-		elevator.setCurrentDirection(elegraphics::up);
-	else if (signalCore->getDirection() == SignalCore_B::down)
-		elevator.setCurrentDirection(elegraphics::down);
+		return;
+	}
+	/** next signal's floor number */
+	int sigFloor = signalCore->getSignal();
+	/** current floor number */
+	int currFloor = elevator.getCurrentFloor();
+	/** next signal's direction */
+	SignalCore_B::Direction 
+		sigDir = signalCore->getDirection();
+	/** the elevator's direction to be set */
+	elegraphics::ElevatorDirection 
+		dirToBeSet;
+
+	if (sigFloor == currFloor)
+		/** When arrived at the next signal,
+		 * set direction according to the signal's direction */
+	{
+		if (sigDir == SignalCore_B::both)
+			dirToBeSet = elegraphics::none;
+		else if (sigDir == SignalCore_B::up)
+			dirToBeSet = elegraphics::up;
+		else if (sigDir == SignalCore_B::down)
+			dirToBeSet = elegraphics::down;
+	}
+	else /** if signalCore->getSignal() != getCurrentFloor() */
+		/** When not yet arrived at the next signal, 
+		 * set direction based on the positions
+		 * of the next signal and the current floor */
+//	{
+//		if (sigDir == SignalCore_B::both)
+//			/** Only when the next signal
+//			 * is from inside the elevator */
+//		{
+			if (sigFloor > currFloor)
+				dirToBeSet = elegraphics::up;
+			else /** if sigFloor < currFloor */
+				dirToBeSet = elegraphics::down;
+//		}
+//		else
+//		{
+//			dirToBeSet = elegraphics::none;
+//		}
+//	}
+	elevator.setCurrentDirection(dirToBeSet);
 }
 
 #endif

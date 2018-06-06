@@ -22,7 +22,12 @@ class Floor {
 		bool floorIsEmpty(int flr) const;
 		bool floorIsFull(int flr) const;
 		bool addCustomerToFloor(Customer c, int flr);
-		Customer getOutCustomerFromFloor(std::function<bool(Customer)> f, int flr);
+		bool hasCustomerOnFloor(
+				std::function<bool(Customer)> f,
+				int flr);
+		Customer getOutCustomerFromFloor(
+				std::function<bool(Customer)> f, 
+				int flr);
 		void incrementCustomers()
 		{ 
 			for (auto& floor: floors)

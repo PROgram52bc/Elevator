@@ -43,4 +43,6 @@ class SignaledElevator
 		{ return elevator.isFull(); }
 };
 
+#include "SignaledElevator.cpp"
+
 #endif

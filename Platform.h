@@ -1,7 +1,6 @@
 #ifndef PLATFORM_H
 #define PLATFORM_H
 #include "SignaledElevator.h"
-#include "SignaledElevator.cpp"
 #include "SignalCore_Normal.h"
 #include "Floor.h"
 #include "eleGraphics/eleGraphics.h"
@@ -17,6 +16,7 @@ class Platform
 		void process(); // get the next move
 		bool isRunning;
 		bool loadCustomer();
+		void addSignalToElevator(int dest, int flr);
 		void incrementCustomers()
 		{ 
 			sigElevator.incrementCustomers();
@@ -26,7 +26,7 @@ class Platform
 		void run_func();
 		Platform(int maxFlr);
 		void addCustomerToFloor(Customer cust, int flr);
-		virtual void run();
+		virtual thread run();
 };
 
 #endif
