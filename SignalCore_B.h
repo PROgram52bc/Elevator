@@ -10,6 +10,11 @@ class SignalCore_B {
 		virtual int getSignal() const = 0;
 		virtual Direction getDirection() const = 0;
 		virtual bool isEmpty() const = 0;
+		/**@brief returns an integer indicating the distance
+		 * to the signal, only used for multiple elevators
+		 */
+		virtual int getSignalDistance(int currentFloor, int signal, Direction direction)
+		{ return 0; }
 		virtual ~SignalCore_B() {};
 };
 

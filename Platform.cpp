@@ -2,9 +2,14 @@
 #include <functional>
 #include "EmptyError.h"
 #include "FullElevatorError.h"
-/* fixme: when the elevator is full, the platform should
+/**@bug when the elevator is full, the platform should
  * manage to resend the signal for the unloaded customers
  * after the elevator has gone.
+ * @bug sometimes secConsoleOut.sendMsg conflicts with
+ * the draw in elevators (e.g. message is displaced,
+ * or there is color in secConsoleOut
+ * @bug SignaledElevator still gets some orders wrong,
+ * to be observed
  */
 Platform::Platform(int maxFlr):
 	sigElevator(maxFlr, elegraphics::secElevator),
@@ -72,14 +77,14 @@ void Platform::process()
  */
 bool Platform::loadCustomer()
 {
-	/** Try get customer out of elevator */
+	/* Try get customer out of elevator */
 	if (sigElevator.getOutCustomer())
 		return true;
-	/** If elevator is full, can't do anything */
+	/* If elevator is full, can't do anything */
 	if (sigElevator.isFull())
 		throw(FullElevatorError(
 					sigElevator.getFloor()));
-	/** Try get customer from floor to elevator */
+	/* Try get customer from floor to elevator */
 	int currentFloor = sigElevator.getFloor();
 	function<bool(Customer)> query;
 	switch (sigElevator.getDirection()) {
@@ -105,10 +110,10 @@ bool Platform::loadCustomer()
 		cust = floor.
 			getOutCustomerFromFloor(query, currentFloor);
 	}
-	/** if no customer available, can't do anything */
+	/* if no customer available, can't do anything */
 	catch (EmptyError)
 	{ return false; }
-	/** get the customer into the elevator */
+	/* get the customer into the elevator */
 	if (sigElevator.getInCustomer(cust))
 	{
 		sigElevator.addSignal(
@@ -116,7 +121,7 @@ bool Platform::loadCustomer()
 				SignalCore_B::both);
 		return true;
 	}
-	/** by this time, the elevator is not full,
+	/* by this time, the elevator is not full,
 	 * so it must be something wrong if can't get
 	 * the customer into the elevator.
 	 */

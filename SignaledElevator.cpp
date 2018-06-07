@@ -61,31 +61,30 @@ void SignaledElevator<core>::addSignal(int flr, SignalCore_B::Direction dir)
 
 /**@brief set elevator state according to the next direction
  * in signalList
- * @bug can't use when closing the door.
  */
 template <class core>
 void SignaledElevator<core>::setDirection()
 {
 	if (signalCore->isEmpty())
-		/** When there is no more signal
+		/* When there is no more signal
 		 * set direction to none */
 	{
 		elevator.setCurrentDirection(elegraphics::none);
 		return;
 	}
-	/** next signal's floor number */
+	/* next signal's floor number */
 	int sigFloor = signalCore->getSignal();
-	/** current floor number */
+	/* current floor number */
 	int currFloor = elevator.getCurrentFloor();
-	/** next signal's direction */
+	/* next signal's direction */
 	SignalCore_B::Direction 
 		sigDir = signalCore->getDirection();
-	/** the elevator's direction to be set */
+	/* the elevator's direction to be set */
 	elegraphics::ElevatorDirection 
 		dirToBeSet;
 
 	if (sigFloor == currFloor)
-		/** When arrived at the next signal,
+		/* When arrived at the next signal,
 		 * set direction according to the signal's direction */
 	{
 		if (sigDir == SignalCore_B::both)
@@ -95,18 +94,18 @@ void SignaledElevator<core>::setDirection()
 		else if (sigDir == SignalCore_B::down)
 			dirToBeSet = elegraphics::down;
 	}
-	else /** if signalCore->getSignal() != getCurrentFloor() */
-		/** When not yet arrived at the next signal, 
+	else /* if signalCore->getSignal() != getCurrentFloor() */
+		/* When not yet arrived at the next signal, 
 		 * set direction based on the positions
 		 * of the next signal and the current floor */
 //	{
 //		if (sigDir == SignalCore_B::both)
-//			/** Only when the next signal
+//			/* Only when the next signal
 //			 * is from inside the elevator */
 //		{
 			if (sigFloor > currFloor)
 				dirToBeSet = elegraphics::up;
-			else /** if sigFloor < currFloor */
+			else /* if sigFloor < currFloor */
 				dirToBeSet = elegraphics::down;
 //		}
 //		else
