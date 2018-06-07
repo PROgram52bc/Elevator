@@ -4,5 +4,6 @@ var searchData=
   ['floor',['Floor',['../classFloor.html#af3c1aecc5af7a1112307f5ca348b20b8',1,'Floor']]],
   ['floorisempty',['floorIsEmpty',['../classFloor.html#aff1d7ef9ffa9d7e42f5708872f0795df',1,'Floor']]],
   ['floorisfull',['floorIsFull',['../classFloor.html#aa98e587f1b4781c19a9febca91e6b470',1,'Floor']]],
-  ['focuscursor',['focusCursor',['../classConsoleSection.html#a3e9304bfdef51ca4b0f9618595767244',1,'ConsoleSection']]]
+  ['focuscursor',['focusCursor',['../classConsoleSection.html#a3e9304bfdef51ca4b0f9618595767244',1,'ConsoleSection']]],
+  ['fullelevatorerror',['FullElevatorError',['../classFullElevatorError.html#a3a443d8af7f3db4bf195a1df843d5d16',1,'FullElevatorError']]]
 ];

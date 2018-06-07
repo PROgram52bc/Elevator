@@ -1,0 +1,6 @@
+<map id="SignaledElevator&lt; core &gt;" name="SignaledElevator&lt; core &gt;">
+<area shape="rect" id="node2" href="$classElevator.html" title="Elevator" alt="" coords="73,95,144,121"/>
+<area shape="rect" id="node3" href="$classCustomerList.html" title="CustomerList" alt="" coords="5,5,105,32"/>
+<area shape="rect" id="node4" href="$classSection.html" title="Section" alt="" coords="130,5,197,32"/>
+<area shape="rect" id="node5" href="$classSignalCore__B.html" title="a base class with defined interface for the signal core " alt="" coords="168,95,271,121"/>
+</map>

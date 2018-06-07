@@ -1,0 +1,4 @@
+<map id="Elevator" name="Elevator">
+<area shape="rect" id="node2" href="$classCustomerList.html" title="CustomerList" alt="" coords="5,5,105,32"/>
+<area shape="rect" id="node3" href="$classSection.html" title="Section" alt="" coords="130,5,197,32"/>
+</map>

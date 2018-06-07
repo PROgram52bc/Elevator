@@ -1,0 +1,8 @@
+<map id="Platform" name="Platform">
+<area shape="rect" id="node2" href="$classFloor.html" title="Floor" alt="" coords="5,145,56,172"/>
+<area shape="rect" id="node3" href="$classSection.html" title="Section" alt="" coords="20,5,87,32"/>
+<area shape="rect" id="node5" href="$classElevator.html" title="Elevator" alt="" coords="102,95,173,121"/>
+<area shape="rect" id="node4" href="$classSignaledElevator.html" title="SignaledElevator\&lt; Signal\lCore_Normal \&gt;" alt="" coords="84,196,252,237"/>
+<area shape="rect" id="node6" href="$classCustomerList.html" title="CustomerList" alt="" coords="135,5,235,32"/>
+<area shape="rect" id="node7" href="$classSignalCore__B.html" title="a base class with defined interface for the signal core " alt="" coords="197,95,299,121"/>
+</map>

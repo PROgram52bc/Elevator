@@ -77,6 +77,12 @@ Collaboration diagram for Platform:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPlatform__coll__graph.png" border="0" usemap="#Platform_coll__map" alt="Collaboration graph"/></div>
 <map name="Platform_coll__map" id="Platform_coll__map">
+<area shape="rect" id="node2" href="classFloor.html" title="Floor" alt="" coords="5,145,56,172"/>
+<area shape="rect" id="node3" href="classSection.html" title="Section" alt="" coords="20,5,87,32"/>
+<area shape="rect" id="node5" href="classElevator.html" title="Elevator" alt="" coords="102,95,173,121"/>
+<area shape="rect" id="node4" href="classSignaledElevator.html" title="SignaledElevator\&lt; Signal\lCore_Normal \&gt;" alt="" coords="84,196,252,237"/>
+<area shape="rect" id="node6" href="classCustomerList.html" title="CustomerList" alt="" coords="135,5,235,32"/>
+<area shape="rect" id="node7" href="classSignalCore__B.html" title="a base class with defined interface for the signal core " alt="" coords="197,95,299,121"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -88,8 +94,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab318651d7ac5aac9955c0dea489c0cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fc6718c28b340f7266f619ecd69270c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatform.html#a0fc6718c28b340f7266f619ecd69270c">addCustomerToFloor</a> (<a class="el" href="classCustomer.html">Customer</a> cust, int flr)</td></tr>
 <tr class="separator:a0fc6718c28b340f7266f619ecd69270c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f5e5574c715b6fe97755fab0c3e3f4d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatform.html#a4f5e5574c715b6fe97755fab0c3e3f4d">run</a> ()</td></tr>
-<tr class="separator:a4f5e5574c715b6fe97755fab0c3e3f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ee0a5c46a2dd3b2892ee1f932e82eff"><td class="memItemLeft" align="right" valign="top">virtual thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatform.html#a4ee0a5c46a2dd3b2892ee1f932e82eff">run</a> ()</td></tr>
+<tr class="separator:a4ee0a5c46a2dd3b2892ee1f932e82eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -98,6 +104,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a564bce74d46e339a5950724b73dc39c0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatform.html#a564bce74d46e339a5950724b73dc39c0">loadCustomer</a> ()</td></tr>
 <tr class="memdesc:a564bce74d46e339a5950724b73dc39c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">manage the loading of customers, once at a time  <a href="#a564bce74d46e339a5950724b73dc39c0">More...</a><br /></td></tr>
 <tr class="separator:a564bce74d46e339a5950724b73dc39c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae46b1b73b2d34401ac7f71b812ece99b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatform.html#ae46b1b73b2d34401ac7f71b812ece99b">addSignalToElevator</a> (int dest, int flr)</td></tr>
+<tr class="memdesc:ae46b1b73b2d34401ac7f71b812ece99b"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a signal to the elevator according to the destination and current floor  <a href="#ae46b1b73b2d34401ac7f71b812ece99b">More...</a><br /></td></tr>
+<tr class="separator:ae46b1b73b2d34401ac7f71b812ece99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9884625ea385d75bde6e427644fa200e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatform.html#a9884625ea385d75bde6e427644fa200e">incrementCustomers</a> ()</td></tr>
 <tr class="separator:a9884625ea385d75bde6e427644fa200e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -160,6 +169,57 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ae46b1b73b2d34401ac7f71b812ece99b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae46b1b73b2d34401ac7f71b812ece99b">&#9670;&nbsp;</a></span>addSignalToElevator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Platform::addSignalToElevator </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>add a signal to the elevator according to the destination and current floor </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>the destination floor </td></tr>
+    <tr><td class="paramname">flr</td><td>the current floor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">logic_error</td><td>if dest == flr </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a9884625ea385d75bde6e427644fa200e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9884625ea385d75bde6e427644fa200e">&#9670;&nbsp;</a></span>incrementCustomers()</h2>
 
@@ -216,22 +276,12 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p class="">Try get customer out of elevator <br />
-<br />
-<br />
-<br />
-<br />
- If elevator is full, can't do anything <br />
-<br />
-<br />
-<br />
- Try get customer from floor to elevator <br />
-<br />
-<br />
- if no customer available, can't do anything <br />
-<br />
- get the customer into the elevator <br />
- by this time, the elevator is not full, so it must be something wrong if can't get the customer into the elevator.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classFullElevatorError.html" title="an exception thrown when trying to load customers to a full elevator ">FullElevatorError</a></td><td>if elevator is full, for resending the signal for unloaded customer </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -260,8 +310,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a4f5e5574c715b6fe97755fab0c3e3f4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f5e5574c715b6fe97755fab0c3e3f4d">&#9670;&nbsp;</a></span>run()</h2>
+<a id="a4ee0a5c46a2dd3b2892ee1f932e82eff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ee0a5c46a2dd3b2892ee1f932e82eff">&#9670;&nbsp;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,7 +320,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Platform::run </td>
+          <td class="memname">thread Platform::run </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

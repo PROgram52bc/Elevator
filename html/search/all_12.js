@@ -10,5 +10,6 @@ var searchData=
   ['testsignalcore_5fnormal_2ecpp',['testSignalCore_Normal.cpp',['../testSignalCore__Normal_8cpp.html',1,'']]],
   ['testsignaledelevator_2ecpp',['testSignaledElevator.cpp',['../testSignaledElevator_8cpp.html',1,'']]],
   ['textstyle',['TextStyle',['../namespaceconio.html#a4c720b3477d66baeb5a8c8c60b9d2002',1,'conio']]],
-  ['timespent',['timeSpent',['../classCustomer.html#a215f5c0100cc112cbb3c28a2d01c9c02',1,'Customer']]]
+  ['timespent',['timeSpent',['../classCustomer.html#a215f5c0100cc112cbb3c28a2d01c9c02',1,'Customer']]],
+  ['totaltime',['totalTime',['../testPlatform_8cpp.html#a5817bf068d6d65ed0c3cca32e4ec8136',1,'testPlatform.cpp']]]
 ];

@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['platform',['Platform',['../classPlatform.html#ab318651d7ac5aac9955c0dea489c0cf5',1,'Platform']]],
-  ['popcustomer',['popCustomer',['../classCustomerList.html#ae889f98c5a6846707e3a3cd5905682e4',1,'CustomerList']]],
-  ['popsignal',['popSignal',['../classSignalCore__B.html#a1e0bd6d29f99f45e738099504e6dfc2f',1,'SignalCore_B::popSignal()'],['../classSignalCore__Normal.html#a292cb0fd954d2537cb826f8d578a4367',1,'SignalCore_Normal::popSignal()']]],
-  ['printlist',['printList',['../classSignalCore__Normal.html#ad85b70c509ef9d55c4e22ac4bc1c6bc1',1,'SignalCore_Normal::printList()'],['../testCustomerList_8cpp.html#afdb2fd5d9c9eabcba06d83ed57b069b8',1,'printList():&#160;testCustomerList.cpp']]],
-  ['process',['process',['../classPlatform.html#ad2adcda565d14b25f6769b006b991c2f',1,'Platform']]]
+  ['main',['main',['../consoleSectionDemo_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;consoleSectionDemo.cpp'],['../testEleGraphics_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testEleGraphics.cpp'],['../testSection_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testSection.cpp'],['../RawElevatorDemo_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;RawElevatorDemo.cpp'],['../testCustomerList_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testCustomerList.cpp'],['../testElevator2_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testElevator2.cpp'],['../testEmptyError_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testEmptyError.cpp'],['../testFloor_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testFloor.cpp'],['../testPlatform_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testPlatform.cpp'],['../testSignalCore__Normal_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testSignalCore_Normal.cpp'],['../testSignaledElevator_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testSignaledElevator.cpp']]],
+  ['move',['move',['../classSignaledElevator.html#a6a37591d83b0c925b509e67e43341751',1,'SignaledElevator']]]
 ];

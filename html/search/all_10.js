@@ -8,7 +8,7 @@ var searchData=
   ['resetall',['resetAll',['../namespaceconio.html#a0f86b2fbc565f5e6831e75216cf3e708',1,'conio']]],
   ['reveal',['REVEAL',['../namespaceconio.html#a4c720b3477d66baeb5a8c8c60b9d2002a868cb2d2b4a144a66137bb7f664c41d9',1,'conio']]],
   ['row',['row',['../classSection.html#a9caef7e8c0fb2f208068d9e46f369671',1,'Section']]],
-  ['run',['run',['../classPlatform.html#a4f5e5574c715b6fe97755fab0c3e3f4d',1,'Platform']]],
+  ['run',['run',['../classPlatform.html#a4ee0a5c46a2dd3b2892ee1f932e82eff',1,'Platform']]],
   ['run_5felevator',['run_elevator',['../testSignaledElevator_8cpp.html#afa54858846ec18410901090659d91ff5',1,'testSignaledElevator.cpp']]],
   ['run_5ffunc',['run_func',['../classPlatform.html#ab1b06f825872ef6a23e46c664765391e',1,'Platform']]]
 ];

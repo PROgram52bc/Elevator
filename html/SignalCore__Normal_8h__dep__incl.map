@@ -1,0 +1,8 @@
+<map id="SignalCore_Normal.h" name="SignalCore_Normal.h">
+<area shape="rect" id="node2" href="$Platform_8h.html" title="Platform.h" alt="" coords="77,80,160,107"/>
+<area shape="rect" id="node5" href="$SignalCore__Normal_8cpp.html" title="SignalCore_Normal.cpp" alt="" coords="184,80,344,107"/>
+<area shape="rect" id="node6" href="$testSignalCore__Normal_8cpp.html" title="testSignalCore_Normal.cpp" alt="" coords="369,80,551,107"/>
+<area shape="rect" id="node7" href="$testSignaledElevator_8cpp.html" title="testSignaledElevator.cpp" alt="" coords="575,80,742,107"/>
+<area shape="rect" id="node3" href="$Platform_8cpp.html" title="Platform.cpp" alt="" coords="5,155,101,181"/>
+<area shape="rect" id="node4" href="$testPlatform_8cpp.html" title="testPlatform.cpp" alt="" coords="126,155,245,181"/>
+</map>

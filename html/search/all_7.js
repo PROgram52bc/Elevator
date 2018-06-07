@@ -11,7 +11,7 @@ var searchData=
   ['getdoorstate',['getDoorState',['../classSignaledElevator.html#a97bd798e6347c0481251a0de7a1af98e',1,'SignaledElevator']]],
   ['getendcol',['getEndCol',['../classSection.html#a544f757cc4d28e25bec0a2ce39decbfe',1,'Section']]],
   ['getendrow',['getEndRow',['../classSection.html#a88e54fe5cab18c4458176a672eb34f5d',1,'Section']]],
-  ['getfloor',['getFloor',['../classSignaledElevator.html#ae368e38644a7a31ba445a1d412058f1a',1,'SignaledElevator']]],
+  ['getfloor',['getFloor',['../classFullElevatorError.html#a78752c9d1659ec30c23d063b4fa9fcbc',1,'FullElevatorError::getFloor()'],['../classSignaledElevator.html#ae368e38644a7a31ba445a1d412058f1a',1,'SignaledElevator::getFloor()']]],
   ['getflrbotrow',['getFlrBotRow',['../group__elegraphics.html#ga5f821e4ae83d2a75117e87cadbcaf1da',1,'elegraphics']]],
   ['getflrtoprow',['getFlrTopRow',['../group__elegraphics.html#ga0636b0c780ce2256cc32b7e50ea0d5de',1,'elegraphics']]],
   ['getheight',['getHeight',['../classSection.html#aca3a385bbda2bf850ad29e32391f9222',1,'Section']]],
