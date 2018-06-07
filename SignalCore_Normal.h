@@ -4,6 +4,7 @@
 #include "SignalCore_B.h"
 #include <forward_list>
 #include <iostream>
+#include <sstream>
 
 class SignalCore_Normal: public SignalCore_B
 {
@@ -95,6 +96,16 @@ class SignalCore_Normal: public SignalCore_B
 			//	std::cout << i << " ";
 			//std::cout << std::endl;
 			// second version end
+		}
+		std::string getListStr() const {
+			std::ostringstream os;
+			for (auto& i: signalList)
+				os << i.floor << " ";
+			os << std::endl;
+			for (auto& i: signalList)
+				os << i.direction << " ";
+			os << std::endl;
+			return os.str();
 		}
 		virtual Direction getDirection() const override;
 
