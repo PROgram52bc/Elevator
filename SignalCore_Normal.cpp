@@ -2,8 +2,14 @@
 #include "EmptyError.h"
 #include <string>
 
-SignalCore_Normal::SignalCore_Normal() {}
-SignalCore_Normal::~SignalCore_Normal() {}
+SignalCore_Normal::SignalCore_Normal() {
+	// below debug
+	out.open("SignalCore_Normal.log");
+}
+SignalCore_Normal::~SignalCore_Normal() {
+	// below debug
+	out.close();
+}
 /**@brief check if the signal can be inserted at the beginning */
 bool SignalCore_Normal::_insertableAtBeginning(
 		int currentFloor,
@@ -76,17 +82,23 @@ void SignalCore_Normal::addSignal(int currentFloor, int signal, SignalCore_B::Di
 				itPos,
 				Signal(signal,direction));
 	}
+	// debug
+	printList(out);
 
 }
 
 /**@brief a general tester for signalCore_Normal
- * @return true if toBeInserted can be inserted between curr and next */
+ * @return true if toBeInserted can be inserted between curr and next 
+ */
+
 bool SignalCore_Normal::_insertable(Signal curr, Signal next, Signal toBeInserted) const
 {
-	if (_in_between(
+	if (
+			_in_between(
 				toBeInserted.floor, 
 				curr.floor, 
-				next.floor) &&
+				next.floor) 
+			&&
 			_good_direction(
 				toBeInserted.direction,
 				curr.floor, 
@@ -195,6 +207,8 @@ void SignalCore_Normal::popSignal()
 { 
 	if (isEmpty()) throw (EmptyError("SignalList empty, can't pop signal."));
 	signalList.pop_front();
+	// debug
+	printList(out);
 }
 
 /**@brief get the next request's floor number */

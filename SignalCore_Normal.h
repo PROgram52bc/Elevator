@@ -4,7 +4,9 @@
 #include "SignalCore_B.h"
 #include <forward_list>
 #include <iostream>
+#include <fstream>
 #include <sstream>
+#include <iomanip>
 
 class SignalCore_Normal: public SignalCore_B
 {
@@ -81,15 +83,20 @@ class SignalCore_Normal: public SignalCore_B
 		virtual int getSignal() const override;
 		virtual bool isEmpty() const override
 		{ return signalList.empty(); }
+		virtual Direction getDirection() const override;
+		// below debug purpose
 		/**@brief a tester */
-		void printList() const {
+		void printList(std::ostream& os = std::cout) const {
+			using namespace std;
 			//first version start
+			os << left << setw(15) << "Floor: ";
 			for (auto& i: signalList)
-				std::cout << i.floor << " ";
-			std::cout << std::endl;
+				os << setw(3) << i.floor << " ";
+			os << endl <<
+				left << setw(15) << "Direction: ";
 			for (auto& i: signalList)
-				std::cout << i.direction << " ";
-			std::cout << std::endl;
+				os << setw(3) << i.direction << " ";
+			os << endl << endl;
 			//first version end
 			//second version start
 			//for (const int& i:signalList)
@@ -97,6 +104,7 @@ class SignalCore_Normal: public SignalCore_B
 			//std::cout << std::endl;
 			// second version end
 		}
+		std::ofstream out;
 		std::string getListStr() const {
 			std::ostringstream os;
 			for (auto& i: signalList)
@@ -107,7 +115,6 @@ class SignalCore_Normal: public SignalCore_B
 			os << std::endl;
 			return os.str();
 		}
-		virtual Direction getDirection() const override;
 
 };
 
