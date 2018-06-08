@@ -46,7 +46,7 @@ class SignalCore_Normal: public SignalCore_B
 		bool _good_direction(Direction dir, int from, int to) const
 		{ return dir == both || _same_direction(dir, from, to); }
 		bool _is_opposite(Direction a, Direction b) const
-		{ return a == (-1) * b;}
+		{ return a==up&&b==down || a==down&&b==up ;}
 
 		bool _insertable(Signal curr, Signal next, Signal toBeInserted) const;
 		void _iterateInsert(int signal, SignalCore_B::Direction direction);

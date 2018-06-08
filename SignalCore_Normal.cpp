@@ -94,17 +94,23 @@ void SignalCore_Normal::addSignal(int currentFloor, int signal, SignalCore_B::Di
 bool SignalCore_Normal::_insertable(Signal curr, Signal next, Signal toBeInserted) const
 {
 	if (
-			_in_between(
-				toBeInserted.floor, 
-				curr.floor, 
-				next.floor) 
+			(
+			 _in_between(
+				 toBeInserted.floor, 
+				 curr.floor, 
+				 next.floor) 
+			 ||
+			 toBeInserted.floor ==
+			 curr.floor
+			)
 			&&
 			_good_direction(
 				toBeInserted.direction,
 				curr.floor, 
 				next.floor
 				))
-		/* if it is in between it and next, 
+		/* if the new signal is in the interval
+		 * [it, next) 
 		 * and on the same direction,
 		 * insert after the current one */
 		return true;
@@ -185,8 +191,8 @@ std::forward_list<SignalCore_Normal::Signal>::iterator
 		if (
 				next(it) == signalList.end()
 			/* if it is the last signal, return it. */
-				||
-				_combinable(*it, sig)
+				//||
+				//_combinable(*it, sig)
 			/* if sig can be combined with *it, return it */
 				|| 
 				_insertable(
