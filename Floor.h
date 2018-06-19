@@ -24,7 +24,8 @@ class Floor {
 		bool addCustomerToFloor(Customer c, int flr);
 		bool hasCustomerOnFloor(
 				std::function<bool(Customer)> f,
-				int flr);
+				int flr)
+		{ return floors.at(flr-1).hasCustomer(f); }
 		Customer getOutCustomerFromFloor(
 				std::function<bool(Customer)> f, 
 				int flr);

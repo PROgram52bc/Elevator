@@ -54,17 +54,6 @@ bool Floor::addCustomerToFloor(Customer c, int flr)
 	return result;
 }
 
-bool Floor::hasCustomerOnFloor(
-		std::function<bool(Customer)> f,
-		int flr)
-{
-	auto listFloor = floors.at(flr-1).getList();
-	for (const auto& i: listFloor)
-		if (f(i))
-			return true;
-	return false;
-}
-
 /**@brief remove a customer from the floor
  * @throw EmptyError when no customer is available
  */

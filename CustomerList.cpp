@@ -80,3 +80,12 @@ void CustomerList::incrementCustomers()
 	for (auto& i: customers)
 		i.incrementTimeSpent();
 }
+
+bool CustomerList::hasCustomer(
+		std::function<bool(Customer)> f)
+{
+	for (const auto& i: customers)
+		if (f(i))
+			return true;
+	return false;
+}
