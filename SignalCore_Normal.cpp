@@ -135,7 +135,6 @@ bool SignalCore_Normal::_insertable(Signal curr, Signal next, Signal toBeInserte
 		 * insert after the current one */
 		return true;
 	return false;
-	
 }
 
 /**@brief combine the given signal with the existing signal
@@ -190,10 +189,10 @@ std::forward_list<SignalCore_Normal::Signal>::iterator
 	{
 		if (
 				next(it) == signalList.end()
-			/* if it is the last signal, return it. */
+				/* if it is the last signal, return it. */
 				//||
 				//_combinable(*it, sig)
-			/* if sig can be combined with *it, return it */
+				/* if sig can be combined with *it, return it */
 				|| 
 				_insertable(
 					*it,
@@ -204,6 +203,18 @@ std::forward_list<SignalCore_Normal::Signal>::iterator
 		{
 			return it;
 		}
+		// fixme: Added part below
+//		if (
+//				next(it)->direction == both
+//				&&
+//				next(next(it)) != signalList.end()
+//				&&
+//				next(next(it))->floor - next(it)->floor *
+//				next(it)->floor - it->floor < 0
+//		   )
+//		{
+//			return next(it);
+//		}
 	}
 	throw(std::logic_error(
 				"Cannot get a valid position to insert signal."));
