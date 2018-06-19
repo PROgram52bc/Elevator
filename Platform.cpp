@@ -192,8 +192,8 @@ void Platform::resendSignal()
 						to_string(dir));
 				resendList.erase(it++);
 			}
+			else
+				resendList.erase(it++);
 		}
-
-
 	}
 }

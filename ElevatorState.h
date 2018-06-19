@@ -8,9 +8,9 @@ enum ElevatorDoorState /** the state of the elevator's door */
 }; 
 enum ElevatorDirection /** the direction where the elevator is going */
 {
-	up, 	/**< when the elevator is going upward */
-	down, 	/**< when the elevator is going down */
-	none	/**< when the elevator is resting */
+	up = 1, 	/**< when the elevator is going upward */
+	down = -1, 	/**< when the elevator is going down */
+	none = 0	/**< when the elevator is resting */
 };
 
 #endif

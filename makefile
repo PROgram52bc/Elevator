@@ -25,6 +25,9 @@ Platform.o: Platform.cpp Platform.h SignaledElevator.h SignaledElevator.cpp
 	# Whenever they change, Platform.o should be recompiled
 	$(CXX) $(CXXFLAGS) -c $< -o $@ 
 
+Elevator.o: Elevator.cpp Elevator.h ElevatorState.h
+	$(CXX) $(CXXFLAGS) -c $< -o $@ 
+
 $(OBJ): %.o: %.cpp %.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@ 
 
