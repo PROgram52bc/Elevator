@@ -5,9 +5,6 @@
 /**@bug when the elevator is full, the platform should
  * manage to resend the signal for the unloaded customers
  * after the elevator has gone.
- * @bug sometimes secConsoleOut.sendMsg conflicts with
- * the draw in elevators (e.g. message is displaced,
- * or there is color in secConsoleOut
  * @bug SignaledElevator still gets some orders wrong,
  * to be observed
  */
@@ -44,23 +41,26 @@ void Platform::addSignalToElevator(int dest, int flr)
 void Platform::process()
 {
 	std::lock_guard<std::mutex> l(mtx);
-	if (sigElevator.getDoorState() == elegraphics::open)
+	/* if elevator is ready to be loaded */
+	if (sigElevator.isLoadable())
 	{
 		try
 		{
-			loadCustomer() ||
+			/* try to load the elevator */
+			if (!tryLoadElevator())
+				/* if failed to load (no customer avail on floor)
+				 * continue the elevator's movement */
 				sigElevator.move();
 		}
 		catch(FullElevatorError& e)
 		{
-			/* fixme: Do things here to
-			 * (remember to) resend signal later
-			 * according to customers at
-			 * e.getFloor() */
+			/* if the elevator is full, resend signal later
+			 */
 			elegraphics::secConsoleOut.sendMsg(
 					"Full Elevator at floor " + 
 					to_string(e.getFloor()) +
-					".");
+					" with direction: " +
+					to_string(e.getDirection()));
 			sigElevator.move();
 		}
 	}
@@ -69,21 +69,22 @@ void Platform::process()
 	incrementCustomers();
 }
 
-/**@brief manage the loading of customers, once at a time
+/**@brief get Customers from floor to the elevator
  * @retval true if loaded
  * @retval false if not loaded
- * @throw FullElevatorError if elevator is full, for resending
+ * @throw fixme: Do things here toFullElevatorError if elevator is full, for resending
  * the signal for unloaded customer
  */
-bool Platform::loadCustomer()
+bool Platform::tryLoadElevator()
 {
-	/* Try get customer out of elevator */
-	if (sigElevator.getOutCustomer())
-		return true;
+//	/* Try get customer out of elevator */
+//	if (sigElevator.getOutCustomer())
+//		return true;
 	/* If elevator is full, can't do anything */
 	if (sigElevator.isFull())
 		throw(FullElevatorError(
-					sigElevator.getFloor()));
+					sigElevator.getFloor(),
+					FullElevatorError::Direction(sigElevator.getDirection())));
 	/* Try get customer from floor to elevator */
 	int currentFloor = sigElevator.getFloor();
 	function<bool(Customer)> query;
@@ -127,7 +128,6 @@ bool Platform::loadCustomer()
 	 */
 	else 
 		throw (std::runtime_error("Failed to get customer into the elevator from floor"));
-
 }
 
 void Platform::run_func()

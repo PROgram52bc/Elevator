@@ -15,7 +15,7 @@ class Platform
 		Floor floor;
 		void process(); // get the next move
 		bool isRunning;
-		bool loadCustomer();
+		bool tryLoadElevator();
 		void addSignalToElevator(int dest, int flr);
 		void incrementCustomers()
 		{ 

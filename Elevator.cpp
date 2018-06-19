@@ -73,6 +73,14 @@ bool Elevator::getOutCustomer()
 	return true;
 }
 
+bool Elevator::hasCustomerToGetOut() const 
+{
+	return hasCustomer(
+			[=](Customer c) { return
+			c.getDestinationFloor() == currentFloor;
+			});
+}
+
 void Elevator::setCurrentDoorState(
 		elegraphics::ElevatorDoorState ds)
 {

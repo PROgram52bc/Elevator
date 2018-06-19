@@ -17,7 +17,7 @@ class Elevator
 		elegraphics::ElevatorDoorState currentDoorState;
 		elegraphics::ElevatorDirection currentDirection;
 
-		/****Helpers Methods****/
+		/****Helper Methods****/
 		void drawMe();
 	public:
 		/****Constructor***/
@@ -28,6 +28,9 @@ class Elevator
 		bool goDown();
 		bool getInCustomer(Customer c);
 		bool getOutCustomer();
+		bool hasCustomer(std::function<bool(Customer)> f) const
+		{ return customers.hasCustomer(f); }
+		bool hasCustomerToGetOut() const;
 		void setCurrentDoorState(
 				elegraphics::ElevatorDoorState st);
 		void setCurrentDirection(
@@ -43,7 +46,6 @@ class Elevator
 			getCurrentDoorState() const { return currentDoorState; }
 		elegraphics::ElevatorDirection 
 			getCurrentDirection() const { return currentDirection; }
-
 };
 
 #endif

@@ -82,7 +82,7 @@ void CustomerList::incrementCustomers()
 }
 
 bool CustomerList::hasCustomer(
-		std::function<bool(Customer)> f)
+		std::function<bool(Customer)> f) const
 {
 	for (const auto& i: customers)
 		if (f(i))

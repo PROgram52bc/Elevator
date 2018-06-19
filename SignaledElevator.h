@@ -41,6 +41,15 @@ class SignaledElevator
 		{ return elevator.getCurrentFloor(); }
 		bool isFull() const
 		{ return elevator.isFull(); }
+		bool hasCustomerToGetOut() const;
+		/**@brief indicating whether the elevator is ready for
+		 * new customers to get in */
+		bool isLoadable() const
+		{ 
+			return 
+				elevator.getCurrentDoorState() == elegraphics::open &&
+				!elevator.hasCustomerToGetOut();
+		}
 };
 
 #include "SignaledElevator.cpp"

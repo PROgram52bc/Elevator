@@ -16,16 +16,21 @@ SignaledElevator<core>::~SignaledElevator()
 	delete signalCore;
 }
 
-/**@brief move the elevator according to the requests made*/
+/**@brief move the elevator according to the requests made
+ * and get out Customers who have arrived at destination
+ */
 template <class core>
 bool SignaledElevator<core>::move() 
 {
 	if (elevator.getCurrentDoorState() == elegraphics::open)
 	{
-		signalCore->popSignal();
-		setDirection();
-		elevator.setCurrentDoorState(elegraphics::closed);
-		return true;
+		if (!getOutCustomer())
+		{
+			signalCore->popSignal();
+			setDirection();
+			elevator.setCurrentDoorState(elegraphics::closed);
+		}
+			return true;
 	}
 	if (signalCore->isEmpty())
 	{
@@ -114,6 +119,17 @@ void SignaledElevator<core>::setDirection()
 //		}
 //	}
 	elevator.setCurrentDirection(dirToBeSet);
+}
+
+/**@brief check if there are customer to get out at current floor */
+template <class core>
+bool SignaledElevator<core>::hasCustomerToGetOut() const
+{
+	int currentFloor = elevator.getCurrentFloor();
+	return elevator.hasCustomer(
+			[currentFloor](Customer c) { return 
+			c.getDestinationFloor() == currentFloor;
+			});
 }
 
 #endif

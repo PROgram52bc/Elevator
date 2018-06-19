@@ -5,7 +5,6 @@
 #include "eleGraphics/eleGraphics.h"
 
 using namespace std;
-const int pause = 1;
 
 int main() {
 	elegraphics::clrscr();
@@ -32,6 +31,12 @@ int main() {
 					elegraphics::secConsoleOut.sendMsg("Laowugui went away.");
 				else
 					elegraphics::secConsoleOut.sendMsg("Failed to pop customer.");
+				break;
+			case 'c':
+				if(my_ele.hasCustomerToGetOut())
+					elegraphics::secConsoleOut.sendMsg("Has Customer to get out.");
+				else
+					elegraphics::secConsoleOut.sendMsg("Does not have customer to get out.");
 				break;
 			case '1':
 			case '2':

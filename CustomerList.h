@@ -20,7 +20,7 @@ class CustomerList {
 		Customer popCustomer(std::function<bool(Customer)>);
 		const std::list<Customer>& getList() const;
 		void incrementCustomers();
-		bool hasCustomer(std::function<bool(Customer)>);
+		bool hasCustomer(std::function<bool(Customer)>) const;
 
 };
 
