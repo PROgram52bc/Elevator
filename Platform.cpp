@@ -38,9 +38,12 @@ void Platform::addSignalToElevator(int dest, int flr)
 		sigElevator.addSignal(flr, SignalCore_B::down);
 }
 
+
 void Platform::process()
 {
 	std::lock_guard<std::mutex> l(mtx);
+	/* try to resend signal if there is any */
+	resendSignal();
 	/* if elevator is ready to be loaded */
 	if (sigElevator.isLoadable())
 	{
@@ -54,13 +57,15 @@ void Platform::process()
 		}
 		catch(FullElevatorError& e)
 		{
-			/* if the elevator is full, resend signal later
-			 */
+			/* if the elevator is full, resend signal later */
 			elegraphics::secConsoleOut.sendMsg(
 					"Full Elevator at floor " + 
 					to_string(e.getFloor()) +
 					" with direction: " +
 					to_string(e.getDirection()));
+			resendList.push_back(resentSignal(
+						e.getFloor(),
+						e.getDirection()));
 			sigElevator.move();
 		}
 	}
@@ -146,4 +151,49 @@ thread Platform::run()
 	std::thread t(&Platform::run_func, this);
 	isRunning = true;
 	return t;
+}
+
+void Platform::resendSignal()
+{
+	for (auto it=resendList.begin(); it!=resendList.end(); it++)
+	{
+		/* if time is up */
+		if (it->countDown-- <= 0)
+		{
+			/* set up a query for testing customer */
+			std::function<bool(Customer)> query;
+			SignalCore_B::Direction dir;
+			switch (it->direction) {
+				case up:
+					query = 
+						[=](Customer c)
+						{ return c.getDestinationFloor() > it->floor; };
+					dir = SignalCore_B::up;
+					break;
+				case down:
+					query = 
+						[=](Customer c)
+						{ return c.getDestinationFloor() < it->floor; };
+					dir = SignalCore_B::down;
+					break;
+				default:
+					throw (std::logic_error("Can't resend a signal with ElevatorDirection: none."));
+			}
+			/* if there are still customers waiting */
+			if (floor.hasCustomerOnFloor(
+						query,
+						it->floor))
+			{
+				sigElevator.addSignal(it->floor, dir);
+				elegraphics::secConsoleOut.sendMsg(
+						"resent signal at floor " +
+						to_string(it->floor) +
+						" Signal direction: " +
+						to_string(dir));
+				resendList.erase(it++);
+			}
+		}
+
+
+	}
 }

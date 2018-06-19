@@ -30,7 +30,7 @@ int main() {
 					to_string(toFloor) +
 					" created!");
 		}
-		this_thread::sleep_for(chrono::seconds(1));
+		this_thread::sleep_for(chrono::milliseconds(1000));
 	}
 	t.join();
 

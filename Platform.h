@@ -6,11 +6,24 @@
 #include "eleGraphics/eleGraphics.h"
 #include <mutex>
 #include <thread>
+#include <list>
 
 class Platform
 {
-	//private:
-		//std::list<
+	private:
+		static const int resendDelay = 3;
+		class resentSignal{
+			public:
+				int countDown;
+				int floor;
+				ElevatorDirection direction;
+				resentSignal(int f, ElevatorDirection d):
+					countDown(resendDelay),
+					floor(f),
+					direction(d) {}
+		};
+		std::list<resentSignal> resendList;
+		void resendSignal();
 	protected:
 		std::mutex mtx; // protects elevator and floor
 		SignaledElevator<SignalCore_Normal> sigElevator;
