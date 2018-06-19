@@ -23,7 +23,7 @@ testSection: testSection.cpp section.o conio.o
 testConsoleSection: testConsoleSection.cpp consoleSection.o section.o conio.o
 	$(CXX) $(CXXFLAGS) $^ -o $@ $(LIB)
 
-eleGraphics.o: eleGraphics.cpp eleGraphics.h conio.o section.o consoleSection.o
+eleGraphics.o: eleGraphics.cpp eleGraphics.h conio.o section.o consoleSection.o ../ElevatorState.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 consoleSection.o: consoleSection.cpp consoleSection.h section.o

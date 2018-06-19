@@ -9,8 +9,8 @@ Elevator::Elevator(int maxFlr, Section sec):
 	maxCustomers(DEFAULT_MAX_CUSTOMER),
 	customers(maxCustomers),
 	currentFloor(1),
-	currentDoorState(elegraphics::closed),
-	currentDirection(elegraphics::none),
+	currentDoorState(closed),
+	currentDirection(none),
 	section(sec)
 { 
 	drawMe();
@@ -27,11 +27,11 @@ void Elevator::drawMe()
 
 bool Elevator::goUp() 
 {
-	if (currentDoorState == elegraphics::open)
+	if (currentDoorState == open)
 		throw(std::runtime_error("Can't go up with door open."));
 	if (currentFloor == maxFloor)
 		return false;
-	// currentDirection = elegraphics::up;
+	// currentDirection = up;
 	currentFloor++;
 	drawMe();
 	return true;
@@ -39,11 +39,11 @@ bool Elevator::goUp()
 
 bool Elevator::goDown()
 {
-	if (currentDoorState == elegraphics::open)
+	if (currentDoorState == open)
 		throw(std::runtime_error("Can't go down with door open."));
 	if (currentFloor == 1)
 		return false;
-	// currentDirection = elegraphics::down;
+	// currentDirection = down;
 	currentFloor--;
 	drawMe();
 	return true;
@@ -82,13 +82,13 @@ bool Elevator::hasCustomerToGetOut() const
 }
 
 void Elevator::setCurrentDoorState(
-		elegraphics::ElevatorDoorState ds)
+		ElevatorDoorState ds)
 {
 	currentDoorState = ds;
 	drawMe();
 }
 void Elevator::setCurrentDirection(
-		elegraphics::ElevatorDirection dir)
+		ElevatorDirection dir)
 {
 	currentDirection = dir;
 	drawMe();

@@ -8,6 +8,7 @@
 #include "consoleSection.h"
 #include "../Customer.h"
 #include "../CustomerList.h"
+#include "../ElevatorState.h"
 /** \addtogroup elegraphics
   @{
   */
@@ -22,17 +23,6 @@ namespace elegraphics {
 	const int CONSOLEINWIDTH = 30; /**< Width of input section */
 	const int CONSOLEINHEIGHT = 5; /**< Height of input section */
 	const int CONSOLEOUTWIDTH = 30; /**< Width of output setion */
-	enum ElevatorDoorState /** the state of the elevator's door */
-	{
-		open, 	/**< when the elevator's door is open */
-		closed	/**< when the elevator's door is closed */
-	}; 
-	enum ElevatorDirection /** the direction where the elevator is going */
-	{
-	 	up, 	/**< when the elevator is going upward */
-		down, 	/**< when the elevator is going down */
-		none	/**< when the elevator is resting */
-	};
 	extern Section secElevator;
 	extern Section secElevatorB;
 	extern Section secFloor;

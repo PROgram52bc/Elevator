@@ -9,6 +9,8 @@
 
 class Platform
 {
+	//private:
+		//std::list<
 	protected:
 		std::mutex mtx; // protects elevator and floor
 		SignaledElevator<SignalCore_Normal> sigElevator;

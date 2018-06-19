@@ -18,19 +18,19 @@ int main() {
 	customers.addCustomer(Customer(9));
 	customers.addCustomer(Customer(3));
 	customers.addCustomer(Customer(3));
-	elegraphics::drawElevatorAndFloor(3,8,elegraphics::up);
+	elegraphics::drawElevatorAndFloor(3,8,up);
 	elegraphics::drawCustomersInElevator(customers, 3);
 	elegraphics::drawCustomersOnFloor(customers, 3);
 	
 
 //	for (int i=1; i<=9; i++) {
-//		elegraphics::drawElevatorAndFloor(i, 9, elegraphics::up);
+//		elegraphics::drawElevatorAndFloor(i, 9, up);
 //		elegraphics::drawCustomersInElevator(customers, i);
 //		cin.get();
 //	}
 
 //	for (int i=5; i>1; i--) {
-//		drawElevatorAndFloor(10, i, elegraphics::down);
+//		drawElevatorAndFloor(10, i, down);
 //		cin.get();
 //	}
 

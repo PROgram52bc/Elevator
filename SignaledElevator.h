@@ -33,9 +33,9 @@ class SignaledElevator
 		void incrementCustomers()
 		{ elevator.incrementCustomers(); }
 		/******Observers******/
-		elegraphics::ElevatorDirection getDirection() const
+		ElevatorDirection getDirection() const
 		{ return elevator.getCurrentDirection(); }
-		elegraphics::ElevatorDoorState getDoorState() const
+		ElevatorDoorState getDoorState() const
 		{ return elevator.getCurrentDoorState(); }
 		int getFloor() const 
 		{ return elevator.getCurrentFloor(); }
@@ -47,7 +47,7 @@ class SignaledElevator
 		bool isLoadable() const
 		{ 
 			return 
-				elevator.getCurrentDoorState() == elegraphics::open &&
+				elevator.getCurrentDoorState() == open &&
 				!elevator.hasCustomerToGetOut();
 		}
 };

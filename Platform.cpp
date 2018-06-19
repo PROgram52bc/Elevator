@@ -84,22 +84,22 @@ bool Platform::tryLoadElevator()
 	if (sigElevator.isFull())
 		throw(FullElevatorError(
 					sigElevator.getFloor(),
-					FullElevatorError::Direction(sigElevator.getDirection())));
+					sigElevator.getDirection()));
 	/* Try get customer from floor to elevator */
 	int currentFloor = sigElevator.getFloor();
 	function<bool(Customer)> query;
 	switch (sigElevator.getDirection()) {
-		case elegraphics::up:
+		case up:
 			query = 
 				[=](Customer c)
 				{ return c.getDestinationFloor() > currentFloor; };
 			break;
-		case elegraphics::down:
+		case down:
 			query = 
 				[=](Customer c)
 				{ return c.getDestinationFloor() < currentFloor; };
 			break;
-		case elegraphics::none:
+		case none:
 			query = 
 				[=](Customer c)
 				{ return false; };

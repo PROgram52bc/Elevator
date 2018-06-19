@@ -22,13 +22,13 @@ SignaledElevator<core>::~SignaledElevator()
 template <class core>
 bool SignaledElevator<core>::move() 
 {
-	if (elevator.getCurrentDoorState() == elegraphics::open)
+	if (elevator.getCurrentDoorState() == open)
 	{
 		if (!getOutCustomer())
 		{
 			signalCore->popSignal();
 			setDirection();
-			elevator.setCurrentDoorState(elegraphics::closed);
+			elevator.setCurrentDoorState(closed);
 		}
 			return true;
 	}
@@ -52,7 +52,7 @@ bool SignaledElevator<core>::move()
 		}
 		else // if nextFloor == currentFloor
 		{
-			elevator.setCurrentDoorState(elegraphics::open);
+			elevator.setCurrentDoorState(open);
 		}
 		return true;
 	}
@@ -74,7 +74,7 @@ void SignaledElevator<core>::setDirection()
 		/* When there is no more signal
 		 * set direction to none */
 	{
-		elevator.setCurrentDirection(elegraphics::none);
+		elevator.setCurrentDirection(none);
 		return;
 	}
 	/* next signal's floor number */
@@ -85,7 +85,7 @@ void SignaledElevator<core>::setDirection()
 	SignalCore_B::Direction 
 		sigDir = signalCore->getDirection();
 	/* the elevator's direction to be set */
-	elegraphics::ElevatorDirection 
+	ElevatorDirection 
 		dirToBeSet;
 
 	if (sigFloor == currFloor)
@@ -93,11 +93,11 @@ void SignaledElevator<core>::setDirection()
 		 * set direction according to the signal's direction */
 	{
 		if (sigDir == SignalCore_B::both)
-			dirToBeSet = elegraphics::none;
+			dirToBeSet = none;
 		else if (sigDir == SignalCore_B::up)
-			dirToBeSet = elegraphics::up;
+			dirToBeSet = up;
 		else if (sigDir == SignalCore_B::down)
-			dirToBeSet = elegraphics::down;
+			dirToBeSet = down;
 	}
 	else /* if signalCore->getSignal() != getCurrentFloor() */
 		/* When not yet arrived at the next signal, 
@@ -109,13 +109,13 @@ void SignaledElevator<core>::setDirection()
 //			 * is from inside the elevator */
 //		{
 			if (sigFloor > currFloor)
-				dirToBeSet = elegraphics::up;
+				dirToBeSet = up;
 			else /* if sigFloor < currFloor */
-				dirToBeSet = elegraphics::down;
+				dirToBeSet = down;
 //		}
 //		else
 //		{
-//			dirToBeSet = elegraphics::none;
+//			dirToBeSet = none;
 //		}
 //	}
 	elevator.setCurrentDirection(dirToBeSet);
