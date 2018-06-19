@@ -4,6 +4,8 @@
  */
 void ConsoleSection::focusCursor(int col, int row) 
 {
+	/* protect output conflict with multiple threads */
+	std::lock_guard<std::mutex> lg(outputMutex);
 	if (col>this->getWidth() || row>this->getHeight())
 		throw std::out_of_range("Invalid position to focus cursor.");
 	int globalCol = this->getStartCol() + col - 1;
@@ -13,12 +15,14 @@ void ConsoleSection::focusCursor(int col, int row)
 
 void ConsoleSection::sendMsg(const std::string& message)
 {
+	/* protect output conflict with multiple threads */
+	std::lock_guard<std::mutex> lg(outputMutex);
 	// clear section and reset cursor if needed
 	int charAvail = (this->getHeight() - this->cursorRow) 
 		* this->getWidth();
 	if (message.length() > charAvail)
 	{
-		this->clrSection();
+		this->_clrSection();
 		this->cursorRow = 1;
 	}
 	// insert string in multiple lines
@@ -27,7 +31,7 @@ void ConsoleSection::sendMsg(const std::string& message)
 	{
 		string segment = rest.substr(0, this->getWidth());
 		rest = rest.substr(this->getWidth());
-		this->drawStrAt(segment, 1, this->cursorRow++);
+		this->_drawStrAt(segment, 1, this->cursorRow++);
 	}
-	this->drawStrAt(rest, 1, this->cursorRow++);
+	this->_drawStrAt(rest, 1, this->cursorRow++);
 }

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <mutex>
 #include "conio.h"
 
 
@@ -13,6 +14,15 @@ class Section {
 			row,
 			width,
 			height;
+	protected:
+		/* protect output conflict with multiple threads */
+		static std::mutex outputMutex;
+		void _drawStrAt( const string&, 
+						int col=1, 
+						int row=1, 
+						conio::Color bg=conio::RESET, 
+						conio::Color fg=conio::RESET);
+		void _clrSection();
 	public:
 		/* Constructors */
 		explicit Section(int c, int r, int w, int h):

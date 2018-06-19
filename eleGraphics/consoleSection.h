@@ -2,12 +2,6 @@
 #define CONSOLESECTION_H
 #include "section.h"
 
-/* Next step:
- * implement sendMsg(string) method
- * It should support
- * 1. manual new line
- * 2. strings longer than the width
- */
 class ConsoleSection: public Section {
 	private:
 		int cursorRow;

@@ -11,12 +11,12 @@ int main() {
 
 	testSec1.clrSection();
 	// draw a frame
-	testSec1.drawStrAt(string(testSec1.width, '*')); // top
-	testSec1.drawStrAt(string(testSec1.width, '*'), 1, -1); // bottom
-	for (int row=1; row<= testSec1.height; row++)
+	testSec1.drawStrAt(string(testSec1.getWidth(), '*')); // top
+	testSec1.drawStrAt(string(testSec1.getWidth(), '*'), 1, -1); // bottom
+	for (int row=1; row<= testSec1.getHeight(); row++)
 	{
 		testSec1.drawStrAt("*", 1, row);
-		testSec1.drawStrAt("*", testSec1.width, row);
+		testSec1.drawStrAt("*", testSec1.getWidth(), row);
 	}
 
 

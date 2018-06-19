@@ -2,11 +2,10 @@
 
 using namespace std;
 using namespace conio;
+std::mutex Section::outputMutex;
 
-/**
-  * @brief Clear the section
-  */
-void Section::clrSection() {
+/**@brief a protected method without lock guard */
+void Section::_clrSection() {
 	for (int i=0; i<height; i++)
 	{
 		cout << gotoRowCol(row+i, col);
@@ -14,20 +13,17 @@ void Section::clrSection() {
 			cout << " " << flush;
 	}
 }
-/** 
-  @throw throws an out_of_range exception if the starting point is invalid.
-
-  @param toBeDrawn 
-  @param c the column (x) to start drawing at, 
-  if negative, count from the bottom of the section,
-  omit the part that goes out of the section.
-  @param r the row (y) to start drawing at, 
-  if negative, count from the right and align string to the right,
-  omit the part that goes out of the section.
-  @param bg the background color of string.
-  @param fg the foreground color of string.
+/**
+  * @brief Clear the section
   */
-void Section::drawStrAt(const string& toBeDrawn,
+void Section::clrSection() {
+	/* protect output conflict with multiple threads */
+	std::lock_guard<std::mutex> lg(outputMutex);
+	_clrSection();
+}
+
+/**@brief a protected method without lock guard */
+void Section::_drawStrAt(const string& toBeDrawn,
 						int c, 
 						int r,
 						conio::Color bg, 	
@@ -82,4 +78,27 @@ void Section::drawStrAt(const string& toBeDrawn,
 	cout << gotoRowCol(globalRow, globalCol);
 	cout << toBeDrawn.substr(startIdx, lengthToDraw); 
 	cout << conio::resetAll() << flush;
+}
+/** 
+  @throw throws an out_of_range exception if the starting point is invalid.
+
+  @param toBeDrawn 
+  @param c the column (x) to start drawing at, 
+  if negative, count from the bottom of the section,
+  omit the part that goes out of the section.
+  @param r the row (y) to start drawing at, 
+  if negative, count from the right and align string to the right,
+  omit the part that goes out of the section.
+  @param bg the background color of string.
+  @param fg the foreground color of string.
+  */
+void Section::drawStrAt(const string& toBeDrawn,
+						int c, 
+						int r,
+						conio::Color bg, 	
+						conio::Color fg	
+						) {
+	/* protect output conflict with multiple threads */
+	std::lock_guard<std::mutex> lg(outputMutex);
+	_drawStrAt(toBeDrawn, c, r, bg, fg);
 }

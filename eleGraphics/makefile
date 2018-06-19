@@ -4,12 +4,12 @@
 # $< for first prerequisites
 CXX = g++
 CXXFLAGS = -std=c++11 -Wall -g
+LIB = -lpthread
 OBJ = conio.o eleGraphics.o section.o consoleSection.o
-TESTCPP = testEleGraphics.cpp testSection.cpp
+TESTEXE = testEleGraphics testSection testConsoleSection
 
 OBJECTS: $(OBJ)
 
-TESTEXE = $(basename $(TESTCPP))
 
 testEleGraphics: testEleGraphics.cpp eleGraphics.o section.o conio.o ../CustomerList.o consoleSection.o
 	$(CXX) $(CXXFLAGS) $^ -o $@ 
@@ -19,6 +19,9 @@ consoleSectionDemo: consoleSectionDemo.cpp consoleSection.o section.o conio.o
 
 testSection: testSection.cpp section.o conio.o
 	$(CXX) $(CXXFLAGS) $^ -o $@ 
+	
+testConsoleSection: testConsoleSection.cpp consoleSection.o section.o conio.o
+	$(CXX) $(CXXFLAGS) $^ -o $@ $(LIB)
 
 eleGraphics.o: eleGraphics.cpp eleGraphics.h conio.o section.o consoleSection.o
 	$(CXX) $(CXXFLAGS) -c $< -o $@
@@ -33,4 +36,4 @@ conio.o: conio.cpp conio.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(TESTEXE) *.o
+	$(RM) $(TESTEXE) *.o 
