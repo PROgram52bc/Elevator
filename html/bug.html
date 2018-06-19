@@ -66,14 +66,11 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt><a class="anchor" id="_bug000001"></a>Member <a class="el" href="classSignalCore__Normal.html#a182fe51f1a69c2d7bff17db01aff537e">SignalCore_Normal::insertable</a>  (<a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a> curr, <a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a> next, <a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a> toBeInserted)</dt>
-<dd><p class="startdd">if curr is the same as next, undefined retval </p>
-<p class="">if toBeInserted is the same as curr, undefined retval </p>
-<p class="">if toBeInserted is the same as next, undefined retval </p>
-<p class="enddd">if toBeInserted.direction is both, undefined retval  </p>
+<dt><a class="anchor" id="_bug000001"></a>Member <a class="el" href="classPlatform.html#ab318651d7ac5aac9955c0dea489c0cf5">Platform::Platform</a>  (int maxFlr)</dt>
+<dd><p class="startdd">when the elevator is full, the platform should manage to resend the signal for the unloaded customers after the elevator has gone. </p>
+<p class="">sometimes secConsoleOut.sendMsg conflicts with the draw in elevators (e.g. message is displaced, or there is color in secConsoleOut </p>
+<p class="enddd"><a class="el" href="classSignaledElevator.html">SignaledElevator</a> still gets some orders wrong, to be observed </p>
 </dd>
-<dt><a class="anchor" id="_bug000002"></a>Member <a class="el" href="classSignaledElevator.html#a597d13cd09fff1df6200c6c7e802c5ea">SignaledElevator&lt; core &gt;::setDirection</a>  ()</dt>
-<dd>can't use when closing the door. </dd>
 </dl>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->

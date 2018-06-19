@@ -63,6 +63,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classSection-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -105,6 +107,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a500b5df816b8a9a187a50963025c3f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c2f4462d6c814cdcda1b6817207e03e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSection.html#a8c2f4462d6c814cdcda1b6817207e03e">drawStrAt</a> (const string &amp;, int <a class="el" href="classSection.html#a77ee601f6d27d488cba4298a1e6dbbb9">col</a>=1, int <a class="el" href="classSection.html#a9caef7e8c0fb2f208068d9e46f369671">row</a>=1, <a class="el" href="namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eb">conio::Color</a> bg=<a class="el" href="namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eba5ba3eb6635297a623bd94e08d9174816">conio::RESET</a>, <a class="el" href="namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eb">conio::Color</a> fg=<a class="el" href="namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eba5ba3eb6635297a623bd94e08d9174816">conio::RESET</a>)</td></tr>
 <tr class="separator:a8c2f4462d6c814cdcda1b6817207e03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a8dced8888c3e9000051c4d00ae982e51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSection.html#a8dced8888c3e9000051c4d00ae982e51">_drawStrAt</a> (const string &amp;, int <a class="el" href="classSection.html#a77ee601f6d27d488cba4298a1e6dbbb9">col</a>=1, int <a class="el" href="classSection.html#a9caef7e8c0fb2f208068d9e46f369671">row</a>=1, <a class="el" href="namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eb">conio::Color</a> bg=<a class="el" href="namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eba5ba3eb6635297a623bd94e08d9174816">conio::RESET</a>, <a class="el" href="namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eb">conio::Color</a> fg=<a class="el" href="namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eba5ba3eb6635297a623bd94e08d9174816">conio::RESET</a>)</td></tr>
+<tr class="memdesc:a8dced8888c3e9000051c4d00ae982e51"><td class="mdescLeft">&#160;</td><td class="mdescRight">a protected method without lock guard  <a href="#a8dced8888c3e9000051c4d00ae982e51">More...</a><br /></td></tr>
+<tr class="separator:a8dced8888c3e9000051c4d00ae982e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2367e7b14a49d2838bf5fae1e00161"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSection.html#a0c2367e7b14a49d2838bf5fae1e00161">_clrSection</a> ()</td></tr>
+<tr class="memdesc:a0c2367e7b14a49d2838bf5fae1e00161"><td class="mdescLeft">&#160;</td><td class="mdescRight">a protected method without lock guard  <a href="#a0c2367e7b14a49d2838bf5fae1e00161">More...</a><br /></td></tr>
+<tr class="separator:a0c2367e7b14a49d2838bf5fae1e00161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a402c8607bd2cd2692c210f76f2ddb2df"><td class="memItemLeft" align="right" valign="top">static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSection.html#a402c8607bd2cd2692c210f76f2ddb2df">outputMutex</a></td></tr>
+<tr class="separator:a402c8607bd2cd2692c210f76f2ddb2df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -167,6 +183,89 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0c2367e7b14a49d2838bf5fae1e00161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c2367e7b14a49d2838bf5fae1e00161">&#9670;&nbsp;</a></span>_clrSection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Section::_clrSection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>a protected method without lock guard </p>
+
+</div>
+</div>
+<a id="a8dced8888c3e9000051c4d00ae982e51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dced8888c3e9000051c4d00ae982e51">&#9670;&nbsp;</a></span>_drawStrAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Section::_drawStrAt </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>toBeDrawn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>col</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eb">conio::Color</a>&#160;</td>
+          <td class="paramname"><em>bg</em> = <code><a class="el" href="namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eba5ba3eb6635297a623bd94e08d9174816">conio::RESET</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eb">conio::Color</a>&#160;</td>
+          <td class="paramname"><em>fg</em> = <code><a class="el" href="namespaceconio.html#a5580b879f58716cb8abe8eb7ecb789eba5ba3eb6635297a623bd94e08d9174816">conio::RESET</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>a protected method without lock guard </p>
+
+</div>
+</div>
 <a id="a500b5df816b8a9a187a50963025c3f1e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a500b5df816b8a9a187a50963025c3f1e">&#9670;&nbsp;</a></span>clrSection()</h2>
 
@@ -489,6 +588,28 @@ Private Attributes</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a402c8607bd2cd2692c210f76f2ddb2df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a402c8607bd2cd2692c210f76f2ddb2df">&#9670;&nbsp;</a></span>outputMutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex Section::outputMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

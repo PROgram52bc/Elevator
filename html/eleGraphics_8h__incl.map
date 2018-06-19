@@ -1,7 +1,7 @@
 <map id="eleGraphics/eleGraphics.h" name="eleGraphics/eleGraphics.h">
-<area shape="rect" id="node4" href="$conio_8h.html" title="Declarations for the console I/O functions namespace. " alt="" coords="195,229,259,256"/>
-<area shape="rect" id="node5" href="$section_8h.html" title="section.h" alt="" coords="120,155,195,181"/>
-<area shape="rect" id="node6" href="$consoleSection_8h.html" title="consoleSection.h" alt="" coords="35,80,157,107"/>
-<area shape="rect" id="node7" href="$Customer_8h.html" title="../Customer.h" alt="" coords="334,155,437,181"/>
-<area shape="rect" id="node8" href="$CustomerList_8h.html" title="../CustomerList.h" alt="" coords="412,80,535,107"/>
+<area shape="rect" id="node4" href="$conio_8h.html" title="Declarations for the console I/O functions namespace. " alt="" coords="250,229,314,256"/>
+<area shape="rect" id="node5" href="$section_8h.html" title="section.h" alt="" coords="120,155,194,181"/>
+<area shape="rect" id="node7" href="$consoleSection_8h.html" title="consoleSection.h" alt="" coords="122,80,245,107"/>
+<area shape="rect" id="node8" href="$Customer_8h.html" title="../Customer.h" alt="" coords="320,155,423,181"/>
+<area shape="rect" id="node9" href="$CustomerList_8h.html" title="../CustomerList.h" alt="" coords="398,80,521,107"/>
 </map>

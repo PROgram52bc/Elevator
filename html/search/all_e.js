@@ -6,6 +6,7 @@ var searchData=
   ['platform_2eh',['Platform.h',['../Platform_8h.html',1,'']]],
   ['popcustomer',['popCustomer',['../classCustomerList.html#ae889f98c5a6846707e3a3cd5905682e4',1,'CustomerList']]],
   ['popsignal',['popSignal',['../classSignalCore__B.html#a1e0bd6d29f99f45e738099504e6dfc2f',1,'SignalCore_B::popSignal()'],['../classSignalCore__Normal.html#a292cb0fd954d2537cb826f8d578a4367',1,'SignalCore_Normal::popSignal()']]],
-  ['printlist',['printList',['../classSignalCore__Normal.html#ad85b70c509ef9d55c4e22ac4bc1c6bc1',1,'SignalCore_Normal::printList()'],['../testCustomerList_8cpp.html#afdb2fd5d9c9eabcba06d83ed57b069b8',1,'printList():&#160;testCustomerList.cpp']]],
+  ['printlist',['printList',['../classSignalCore__Normal.html#ad9e5d4b7003591ed678d53ef41037526',1,'SignalCore_Normal::printList()'],['../testCustomerList_8cpp.html#afdb2fd5d9c9eabcba06d83ed57b069b8',1,'printList():&#160;testCustomerList.cpp']]],
+  ['printmsg',['printMsg',['../testConsoleSection_8cpp.html#a415167b94d469b25ba43ccdb76756ae3',1,'testConsoleSection.cpp']]],
   ['process',['process',['../classPlatform.html#ad2adcda565d14b25f6769b006b991c2f',1,'Platform']]]
 ];

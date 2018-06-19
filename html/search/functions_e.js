@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['same_5fdirection',['same_direction',['../classSignalCore__Normal.html#a31b42cf2b04975fca38e4c357a242551',1,'SignalCore_Normal']]],
   ['secconsolein',['secConsoleIn',['../namespaceelegraphics.html#a7a96200f0ae12c0c24549d4967937949',1,'elegraphics']]],
   ['secconsoleout',['secConsoleOut',['../namespaceelegraphics.html#a87fccbe5eb1f5e7f4fcda57dd8fc61ee',1,'elegraphics']]],
   ['secelevatorb',['secElevatorB',['../namespaceelegraphics.html#aa1455353cbf3bd4ed70d032b2d59176e',1,'elegraphics']]],

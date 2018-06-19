@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['refreshsection',['refreshSection',['../testConsoleSection_8cpp.html#ac16b9431aa2bfbaf0d3ca3647b98c206',1,'testConsoleSection.cpp']]],
   ['resetall',['resetAll',['../namespaceconio.html#a0f86b2fbc565f5e6831e75216cf3e708',1,'conio']]],
   ['run',['run',['../classPlatform.html#a4ee0a5c46a2dd3b2892ee1f932e82eff',1,'Platform']]],
   ['run_5felevator',['run_elevator',['../testSignaledElevator_8cpp.html#afa54858846ec18410901090659d91ff5',1,'testSignaledElevator.cpp']]],

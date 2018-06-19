@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['same_5fdirection',['same_direction',['../classSignalCore__Normal.html#a31b42cf2b04975fca38e4c357a242551',1,'SignalCore_Normal']]],
   ['secconsolein',['secConsoleIn',['../group__elegraphics.html#ga79ae4a701b1c2368f1474c41b6e31950',1,'elegraphics::secConsoleIn()'],['../namespaceelegraphics.html#a7a96200f0ae12c0c24549d4967937949',1,'elegraphics::secConsoleIn(secElevator.getStartCol(), secElevator.getConsecutiveRow(), CONSOLEINWIDTH, CONSOLEINHEIGHT)']]],
   ['secconsoleout',['secConsoleOut',['../group__elegraphics.html#ga11fae583f23a7e012dd396799e41697c',1,'elegraphics::secConsoleOut()'],['../namespaceelegraphics.html#a87fccbe5eb1f5e7f4fcda57dd8fc61ee',1,'elegraphics::secConsoleOut(secElevatorB.getConsecutiveCol(), secElevatorB.getStartRow(), CONSOLEOUTWIDTH, secElevatorB.getHeight())']]],
   ['secelevator',['secElevator',['../group__elegraphics.html#ga159960d7d49c8ab8d3a634e8b3870b85',1,'elegraphics']]],

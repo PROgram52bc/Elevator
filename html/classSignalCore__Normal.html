@@ -64,8 +64,10 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classSignalCore__Normal-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SignalCore_Normal Class Reference</div>  </div>
@@ -111,37 +113,63 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5c79ba55d7bbc80b136b0e54d4e9af26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5926a4e7a5f8c0e67c5ad43875478930"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#a5926a4e7a5f8c0e67c5ad43875478930">isEmpty</a> () const override</td></tr>
 <tr class="separator:a5926a4e7a5f8c0e67c5ad43875478930"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad85b70c509ef9d55c4e22ac4bc1c6bc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#ad85b70c509ef9d55c4e22ac4bc1c6bc1">printList</a> () const</td></tr>
-<tr class="separator:ad85b70c509ef9d55c4e22ac4bc1c6bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33b9a486518b37d41b9f5809ab200429"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#a33b9a486518b37d41b9f5809ab200429">getDirection</a> () const override</td></tr>
 <tr class="memdesc:a33b9a486518b37d41b9f5809ab200429"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the next request's direction  <a href="#a33b9a486518b37d41b9f5809ab200429">More...</a><br /></td></tr>
 <tr class="separator:a33b9a486518b37d41b9f5809ab200429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9e5d4b7003591ed678d53ef41037526"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#ad9e5d4b7003591ed678d53ef41037526">printList</a> (std::ostream &amp;os=std::cout) const</td></tr>
+<tr class="memdesc:ad9e5d4b7003591ed678d53ef41037526"><td class="mdescLeft">&#160;</td><td class="mdescRight">a tester  <a href="#ad9e5d4b7003591ed678d53ef41037526">More...</a><br /></td></tr>
+<tr class="separator:ad9e5d4b7003591ed678d53ef41037526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2744f82763d3789764a912f03b36c54"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#af2744f82763d3789764a912f03b36c54">getListStr</a> () const</td></tr>
+<tr class="separator:af2744f82763d3789764a912f03b36c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classSignalCore__B"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSignalCore__B')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classSignalCore__B.html">SignalCore_B</a></td></tr>
+<tr class="memitem:ae786edb577dfd7326199fd34a8c909b2 inherit pub_methods_classSignalCore__B"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__B.html#ae786edb577dfd7326199fd34a8c909b2">getSignalDistance</a> (int currentFloor, int signal, <a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">Direction</a> direction)</td></tr>
+<tr class="memdesc:ae786edb577dfd7326199fd34a8c909b2 inherit pub_methods_classSignalCore__B"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns an integer indicating the distance to the signal, only used for multiple elevators  <a href="classSignalCore__B.html#ae786edb577dfd7326199fd34a8c909b2">More...</a><br /></td></tr>
+<tr class="separator:ae786edb577dfd7326199fd34a8c909b2 inherit pub_methods_classSignalCore__B"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1d7c0a90301e690351c6b7b5cef7b44 inherit pub_methods_classSignalCore__B"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__B.html#ae1d7c0a90301e690351c6b7b5cef7b44">~SignalCore_B</a> ()</td></tr>
 <tr class="separator:ae1d7c0a90301e690351c6b7b5cef7b44 inherit pub_methods_classSignalCore__B"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a99dd50043f689199b5b9a6c7c77c2dd9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#a99dd50043f689199b5b9a6c7c77c2dd9">in_between</a> (int x, int a, int b)</td></tr>
-<tr class="memdesc:a99dd50043f689199b5b9a6c7c77c2dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper function  <a href="#a99dd50043f689199b5b9a6c7c77c2dd9">More...</a><br /></td></tr>
-<tr class="separator:a99dd50043f689199b5b9a6c7c77c2dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31b42cf2b04975fca38e4c357a242551"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#a31b42cf2b04975fca38e4c357a242551">same_direction</a> (<a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">Direction</a> dir, int from, int to)</td></tr>
-<tr class="memdesc:a31b42cf2b04975fca38e4c357a242551"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper function  <a href="#a31b42cf2b04975fca38e4c357a242551">More...</a><br /></td></tr>
-<tr class="separator:a31b42cf2b04975fca38e4c357a242551"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22377a1152218c98962c46e993ced729"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#a22377a1152218c98962c46e993ced729">good_direction</a> (<a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">Direction</a> dir, int from, int to)</td></tr>
-<tr class="memdesc:a22377a1152218c98962c46e993ced729"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper function  <a href="#a22377a1152218c98962c46e993ced729">More...</a><br /></td></tr>
-<tr class="separator:a22377a1152218c98962c46e993ced729"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a182fe51f1a69c2d7bff17db01aff537e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#a182fe51f1a69c2d7bff17db01aff537e">insertable</a> (<a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a> curr, <a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a> next, <a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a> toBeInserted)</td></tr>
-<tr class="memdesc:a182fe51f1a69c2d7bff17db01aff537e"><td class="mdescLeft">&#160;</td><td class="mdescRight">a general tester for signalCore_Normal  <a href="#a182fe51f1a69c2d7bff17db01aff537e">More...</a><br /></td></tr>
-<tr class="separator:a182fe51f1a69c2d7bff17db01aff537e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04cd58bb11a1227f2d7b6fb500ba7953"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#a04cd58bb11a1227f2d7b6fb500ba7953">_iterateInsert</a> (int signal, <a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">SignalCore_B::Direction</a> direction)</td></tr>
-<tr class="memdesc:a04cd58bb11a1227f2d7b6fb500ba7953"><td class="mdescLeft">&#160;</td><td class="mdescRight">responsible for inserting the signal somewhere after the first signal in the list  <a href="#a04cd58bb11a1227f2d7b6fb500ba7953">More...</a><br /></td></tr>
-<tr class="separator:a04cd58bb11a1227f2d7b6fb500ba7953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ac38b4ba9e79dad8b9bdb541aa60ac2b2"><td class="memItemLeft" align="right" valign="top">std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#ac38b4ba9e79dad8b9bdb541aa60ac2b2">out</a></td></tr>
+<tr class="separator:ac38b4ba9e79dad8b9bdb541aa60ac2b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a1bf5734c22d019cf7ef1a1059de26e86"><td class="memItemLeft" align="right" valign="top">std::forward_list&lt; <a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a> &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#a1bf5734c22d019cf7ef1a1059de26e86">getInsertPosition</a> (<a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a> sig)</td></tr>
+<tr class="memdesc:a1bf5734c22d019cf7ef1a1059de26e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the position for inserting a signal  <a href="#a1bf5734c22d019cf7ef1a1059de26e86">More...</a><br /></td></tr>
+<tr class="separator:a1bf5734c22d019cf7ef1a1059de26e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90d2073585c419ef81094bb47fa17b91"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#a90d2073585c419ef81094bb47fa17b91">_insertableAtBeginning</a> (int currentFloor, int signal, <a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">SignalCore_B::Direction</a> direction) const</td></tr>
+<tr class="memdesc:a90d2073585c419ef81094bb47fa17b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if the signal can be inserted at the beginning  <a href="#a90d2073585c419ef81094bb47fa17b91">More...</a><br /></td></tr>
+<tr class="separator:a90d2073585c419ef81094bb47fa17b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
 <tr class="memitem:a3ac320ca3059463a6b6fd32812277995"><td class="memItemLeft" align="right" valign="top">std::forward_list&lt; <a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#a3ac320ca3059463a6b6fd32812277995">signalList</a></td></tr>
 <tr class="separator:a3ac320ca3059463a6b6fd32812277995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a49ae741c4cc7b99b0f6c4e35439cdd14"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#a49ae741c4cc7b99b0f6c4e35439cdd14">_in_between</a> (int x, int a, int b) const</td></tr>
+<tr class="memdesc:a49ae741c4cc7b99b0f6c4e35439cdd14"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper function  <a href="#a49ae741c4cc7b99b0f6c4e35439cdd14">More...</a><br /></td></tr>
+<tr class="separator:a49ae741c4cc7b99b0f6c4e35439cdd14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62fdd6c46b5234ab7a72345b6da1a63f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#a62fdd6c46b5234ab7a72345b6da1a63f">_same_direction</a> (<a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">Direction</a> dir, int from, int to) const</td></tr>
+<tr class="memdesc:a62fdd6c46b5234ab7a72345b6da1a63f"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper function  <a href="#a62fdd6c46b5234ab7a72345b6da1a63f">More...</a><br /></td></tr>
+<tr class="separator:a62fdd6c46b5234ab7a72345b6da1a63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa45acd7db21698d0fa692479d87308fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#aa45acd7db21698d0fa692479d87308fc">_good_direction</a> (<a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">Direction</a> dir, int from, int to) const</td></tr>
+<tr class="memdesc:aa45acd7db21698d0fa692479d87308fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper function  <a href="#aa45acd7db21698d0fa692479d87308fc">More...</a><br /></td></tr>
+<tr class="separator:aa45acd7db21698d0fa692479d87308fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84ede705887f9211cdba6742d6287f7f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#a84ede705887f9211cdba6742d6287f7f">_is_opposite</a> (<a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">Direction</a> a, <a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">Direction</a> b) const</td></tr>
+<tr class="separator:a84ede705887f9211cdba6742d6287f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cb7835f785f18d81609b0b7a2b213b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#a4cb7835f785f18d81609b0b7a2b213b5">_insertable</a> (<a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a> curr, <a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a> next, <a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a> toBeInserted) const</td></tr>
+<tr class="memdesc:a4cb7835f785f18d81609b0b7a2b213b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">a general tester for signalCore_Normal  <a href="#a4cb7835f785f18d81609b0b7a2b213b5">More...</a><br /></td></tr>
+<tr class="separator:a4cb7835f785f18d81609b0b7a2b213b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04cd58bb11a1227f2d7b6fb500ba7953"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#a04cd58bb11a1227f2d7b6fb500ba7953">_iterateInsert</a> (int signal, <a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">SignalCore_B::Direction</a> direction)</td></tr>
+<tr class="separator:a04cd58bb11a1227f2d7b6fb500ba7953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade377de317b3cb7e248fd26f37b9a51d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#ade377de317b3cb7e248fd26f37b9a51d">_combinable</a> (<a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a> original, <a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a> toBeCombined) const</td></tr>
+<tr class="separator:ade377de317b3cb7e248fd26f37b9a51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafdb9d19e87f9b0efeb56a83209dd68b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSignalCore__Normal.html#aafdb9d19e87f9b0efeb56a83209dd68b">_combineInsert</a> (std::forward_list&lt; <a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a> &gt;::iterator it, <a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a> toBeCombined)</td></tr>
+<tr class="memdesc:aafdb9d19e87f9b0efeb56a83209dd68b"><td class="mdescLeft">&#160;</td><td class="mdescRight">combine the given signal with the existing signal  <a href="#aafdb9d19e87f9b0efeb56a83209dd68b">More...</a><br /></td></tr>
+<tr class="separator:aafdb9d19e87f9b0efeb56a83209dd68b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -188,6 +216,323 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ade377de317b3cb7e248fd26f37b9a51d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade377de317b3cb7e248fd26f37b9a51d">&#9670;&nbsp;</a></span>_combinable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SignalCore_Normal::_combinable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a>&#160;</td>
+          <td class="paramname"><em>original</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a>&#160;</td>
+          <td class="paramname"><em>toBeCombined</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafdb9d19e87f9b0efeb56a83209dd68b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafdb9d19e87f9b0efeb56a83209dd68b">&#9670;&nbsp;</a></span>_combineInsert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SignalCore_Normal::_combineInsert </td>
+          <td>(</td>
+          <td class="paramtype">std::forward_list&lt; <a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a> &gt;::iterator&#160;</td>
+          <td class="paramname"><em>it</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a>&#160;</td>
+          <td class="paramname"><em>toBeCombined</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>combine the given signal with the existing signal </p>
+
+</div>
+</div>
+<a id="aa45acd7db21698d0fa692479d87308fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa45acd7db21698d0fa692479d87308fc">&#9670;&nbsp;</a></span>_good_direction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SignalCore_Normal::_good_direction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">Direction</a>&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>helper function </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from</td><td>the starting floor </td></tr>
+    <tr><td class="paramname">to</td><td>the destination floor </td></tr>
+    <tr><td class="paramname">dir</td><td>the direction to be tested </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>if the current movement corresponds to dir or if dir is both </td></tr>
+    <tr><td class="paramname">false</td><td>if not corresponds to dir </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a49ae741c4cc7b99b0f6c4e35439cdd14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49ae741c4cc7b99b0f6c4e35439cdd14">&#9670;&nbsp;</a></span>_in_between()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SignalCore_Normal::_in_between </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>helper function </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>the floor to be tested </td></tr>
+    <tr><td class="paramname">a</td><td>the first boundary floor </td></tr>
+    <tr><td class="paramname">b</td><td>the second boundary floor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>if x is in between a and b </td></tr>
+    <tr><td class="paramname">false</td><td>if x is not in between a and b </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4cb7835f785f18d81609b0b7a2b213b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cb7835f785f18d81609b0b7a2b213b5">&#9670;&nbsp;</a></span>_insertable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SignalCore_Normal::_insertable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a>&#160;</td>
+          <td class="paramname"><em>curr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a>&#160;</td>
+          <td class="paramname"><em>next</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a>&#160;</td>
+          <td class="paramname"><em>toBeInserted</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>a general tester for signalCore_Normal </p>
+<dl class="section return"><dt>Returns</dt><dd>true if toBeInserted can be inserted between curr and next </dd></dl>
+
+</div>
+</div>
+<a id="a90d2073585c419ef81094bb47fa17b91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90d2073585c419ef81094bb47fa17b91">&#9670;&nbsp;</a></span>_insertableAtBeginning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SignalCore_Normal::_insertableAtBeginning </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>currentFloor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">SignalCore_B::Direction</a>&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>check if the signal can be inserted at the beginning </p>
+
+</div>
+</div>
+<a id="a84ede705887f9211cdba6742d6287f7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84ede705887f9211cdba6742d6287f7f">&#9670;&nbsp;</a></span>_is_opposite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SignalCore_Normal::_is_opposite </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">Direction</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">Direction</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a04cd58bb11a1227f2d7b6fb500ba7953"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a04cd58bb11a1227f2d7b6fb500ba7953">&#9670;&nbsp;</a></span>_iterateInsert()</h2>
 
@@ -222,8 +567,64 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>responsible for inserting the signal somewhere after the first signal in the list </p>
-<dl class="section warning"><dt>Warning</dt><dd>when calling this method, signalList can't be empty! </dd></dl>
+</div>
+</div>
+<a id="a62fdd6c46b5234ab7a72345b6da1a63f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62fdd6c46b5234ab7a72345b6da1a63f">&#9670;&nbsp;</a></span>_same_direction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SignalCore_Normal::_same_direction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">Direction</a>&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>helper function </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from</td><td>the starting floor </td></tr>
+    <tr><td class="paramname">to</td><td>the destination floor </td></tr>
+    <tr><td class="paramname">dir</td><td>the direction to be tested </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>if the current movement corresponds to dir </td></tr>
+    <tr><td class="paramname">false</td><td>if not corresponds to dir or if dir is both </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -302,6 +703,61 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a1bf5734c22d019cf7ef1a1059de26e86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bf5734c22d019cf7ef1a1059de26e86">&#9670;&nbsp;</a></span>getInsertPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::forward_list&lt; <a class="el" href="classSignalCore__Normal_1_1Signal.html">SignalCore_Normal::Signal</a> &gt;::iterator SignalCore_Normal::getInsertPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a>&#160;</td>
+          <td class="paramname"><em>sig</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get the position for inserting a signal </p>
+<dl class="section warning"><dt>Warning</dt><dd><a class="el" href="classSignalCore__Normal.html#a90d2073585c419ef81094bb47fa17b91" title="check if the signal can be inserted at the beginning ">_insertableAtBeginning()</a> should be called prior to calling this method to check if it's possible to insert at the beginning. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>an iterator to signalList, indicating the position either to be replaced or to be inserted after </dd></dl>
+
+</div>
+</div>
+<a id="af2744f82763d3789764a912f03b36c54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2744f82763d3789764a912f03b36c54">&#9670;&nbsp;</a></span>getListStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SignalCore_Normal::getListStr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5c79ba55d7bbc80b136b0e54d4e9af26"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5c79ba55d7bbc80b136b0e54d4e9af26">&#9670;&nbsp;</a></span>getSignal()</h2>
 
@@ -328,169 +784,6 @@ Additional Inherited Members</h2></td></tr>
 <p>get the next request's floor number </p>
 
 <p>Implements <a class="el" href="classSignalCore__B.html#a40dfc0c5c84aaa9a31f866164d830b33">SignalCore_B</a>.</p>
-
-</div>
-</div>
-<a id="a22377a1152218c98962c46e993ced729"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22377a1152218c98962c46e993ced729">&#9670;&nbsp;</a></span>good_direction()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool SignalCore_Normal::good_direction </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">Direction</a>&#160;</td>
-          <td class="paramname"><em>dir</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>from</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>to</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>helper function </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">from</td><td>the starting floor </td></tr>
-    <tr><td class="paramname">to</td><td>the destination floor </td></tr>
-    <tr><td class="paramname">dir</td><td>the direction to be tested </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">true</td><td>if the current movement corresponds to dir or if dir is both </td></tr>
-    <tr><td class="paramname">false</td><td>if not corresponds to dir </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a99dd50043f689199b5b9a6c7c77c2dd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99dd50043f689199b5b9a6c7c77c2dd9">&#9670;&nbsp;</a></span>in_between()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool SignalCore_Normal::in_between </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>helper function </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>the floor to be tested </td></tr>
-    <tr><td class="paramname">a</td><td>the first boundary floor </td></tr>
-    <tr><td class="paramname">b</td><td>the second boundary floor </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">true</td><td>if x is in between a and b </td></tr>
-    <tr><td class="paramname">false</td><td>if x is not in between a and b </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a182fe51f1a69c2d7bff17db01aff537e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a182fe51f1a69c2d7bff17db01aff537e">&#9670;&nbsp;</a></span>insertable()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool SignalCore_Normal::insertable </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a>&#160;</td>
-          <td class="paramname"><em>curr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a>&#160;</td>
-          <td class="paramname"><em>next</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classSignalCore__Normal_1_1Signal.html">Signal</a>&#160;</td>
-          <td class="paramname"><em>toBeInserted</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>a general tester for signalCore_Normal </p>
-<dl class="section return"><dt>Returns</dt><dd>true if toBeInserted can be inserted between curr and next </dd></dl>
 
 </div>
 </div>
@@ -548,8 +841,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ad85b70c509ef9d55c4e22ac4bc1c6bc1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad85b70c509ef9d55c4e22ac4bc1c6bc1">&#9670;&nbsp;</a></span>printList()</h2>
+<a id="ad9e5d4b7003591ed678d53ef41037526"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9e5d4b7003591ed678d53ef41037526">&#9670;&nbsp;</a></span>printList()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -560,7 +853,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void SignalCore_Normal::printList </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em> = <code>std::cout</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -571,68 +865,25 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a31b42cf2b04975fca38e4c357a242551"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31b42cf2b04975fca38e4c357a242551">&#9670;&nbsp;</a></span>same_direction()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool SignalCore_Normal::same_direction </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classSignalCore__B.html#aa7514f48770a2a20e3d7bc5647d71a37">Direction</a>&#160;</td>
-          <td class="paramname"><em>dir</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>from</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>to</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>helper function </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">from</td><td>the starting floor </td></tr>
-    <tr><td class="paramname">to</td><td>the destination floor </td></tr>
-    <tr><td class="paramname">dir</td><td>the direction to be tested </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">true</td><td>if the current movement corresponds to dir </td></tr>
-    <tr><td class="paramname">false</td><td>if not corresponds to dir or if dir is both </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>a tester </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac38b4ba9e79dad8b9bdb541aa60ac2b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac38b4ba9e79dad8b9bdb541aa60ac2b2">&#9670;&nbsp;</a></span>out</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ofstream SignalCore_Normal::out</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3ac320ca3059463a6b6fd32812277995"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ac320ca3059463a6b6fd32812277995">&#9670;&nbsp;</a></span>signalList</h2>
 
@@ -648,7 +899,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

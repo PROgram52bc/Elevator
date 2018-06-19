@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['upclosedelevator',['upClosedElevator',['../namespaceelegraphics.html#a8c757f2c1a6d47ef04e9e14cd24739df',1,'elegraphics']]],
-  ['upopenelevator',['upOpenElevator',['../namespaceelegraphics.html#a31a142bc8e53d2c07d18104bf14f31b6',1,'elegraphics']]]
+  ['timespent',['timeSpent',['../classCustomer.html#a215f5c0100cc112cbb3c28a2d01c9c02',1,'Customer']]],
+  ['totaltime',['totalTime',['../testPlatform_8cpp.html#a5817bf068d6d65ed0c3cca32e4ec8136',1,'testPlatform.cpp']]]
 ];
