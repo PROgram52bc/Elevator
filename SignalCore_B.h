@@ -4,17 +4,20 @@
 /**@brief a base class with defined interface for the signal core */
 class SignalCore_B {
 	public:
+		/**@brief a representation for signal's directions */
 		enum Direction { up=1, down=-1, both=0 };
+		/**@brief adds a signal to the core */
 		virtual void addSignal(int currentFloor, int signal, Direction direction) = 0;
+		/**@brief removes the signal at front */
 		virtual void popSignal() = 0;
+		/**@brief get the floor number of the signal at front */ 
 		virtual int getSignal() const = 0;
+		/**@brief get the direction of the signal at front */ 
 		virtual Direction getDirection() const = 0;
-		virtual bool isEmpty() const = 0;
-		/**@brief returns an integer indicating the distance
-		 * to the signal, only used for multiple elevators
+		/**@retval true if core is empty
+		 * @retval false if core is not empty
 		 */
-		virtual int getSignalDistance(int currentFloor, int signal, Direction direction)
-		{ return 0; }
+		virtual bool isEmpty() const = 0;
 		virtual ~SignalCore_B() {};
 };
 
