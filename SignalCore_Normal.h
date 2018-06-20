@@ -2,7 +2,7 @@
 #define SIGNALCORE_NORMAL_H
 
 #include "SignalCore_B.h"
-#include <forward_list>
+#include <list>
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -25,7 +25,7 @@ class SignalCore_Normal: public SignalCore_B
 		 * @retval false if x is not in between a and b
 		 */
 		bool _in_between(int x, int a, int b) const
-		{ return (x>a&&x<b || x<a&&x>b); }
+		{ return ( (x>a&&x<b) || (x<a&&x>b) ); }
 		/**@brief helper function
 		 * @param from the starting floor
 		 * @param to the destination floor
@@ -63,14 +63,14 @@ class SignalCore_Normal: public SignalCore_B
 					original.direction); 
 		}
 		void _combineInsert(
-				std::forward_list<Signal>::iterator it,
+				std::list<Signal>::iterator it,
 				Signal toBeCombined);
 
 	protected:
-		std::forward_list<Signal>::iterator
+		std::list<Signal>::iterator
 			getInsertPosition(Signal sig);
 		bool _insertableAtBeginning(int currentFloor, int signal, SignalCore_B::Direction direction) const;
-		std::forward_list<Signal> signalList;
+		std::list<Signal> signalList;
 
 	public:
 		SignalCore_Normal();

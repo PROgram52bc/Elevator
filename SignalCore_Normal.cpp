@@ -55,6 +55,9 @@ bool SignalCore_Normal::_insertableAtBeginning(
 /**@brief Add a customer request signal to the queue */
 void SignalCore_Normal::addSignal(int currentFloor, int signal, SignalCore_B::Direction direction) 
 {
+	// debug
+	printList(out);
+
 	if (_insertableAtBeginning(currentFloor, signal, direction))
 		/* if can be inserted at the beginning, do it */
 	{
@@ -78,17 +81,18 @@ void SignalCore_Normal::addSignal(int currentFloor, int signal, SignalCore_B::Di
 		/* if cannot be combined,
 		 * push it after the current signal */
 	{
-		signalList.insert_after(
-				itPos,
+		signalList.insert(
+				next(itPos),
 				Signal(signal,direction));
 	}
-	// debug
-	printList(out);
 
 }
 
 /**@brief a general tester for signalCore_Normal
- * @return true if toBeInserted can be inserted between curr and next 
+ * @return true if toBeInserted can be inserted 
+ * between curr and next 
+ * @warning this does not include all cases; 
+ * other tests should follow if a false is returned.
  */
 
 bool SignalCore_Normal::_insertable(Signal curr, Signal next, Signal toBeInserted) const
@@ -140,7 +144,7 @@ bool SignalCore_Normal::_insertable(Signal curr, Signal next, Signal toBeInserte
 /**@brief combine the given signal with the existing signal
  */
 void SignalCore_Normal::_combineInsert(
-		std::forward_list<SignalCore_Normal::Signal>::iterator it, 
+		std::list<SignalCore_Normal::Signal>::iterator it, 
 		Signal toBeCombined)
 {
 	if (toBeCombined.direction == it->direction)
@@ -180,7 +184,7 @@ void SignalCore_Normal::_combineInsert(
  * @return an iterator to signalList, indicating the position
  * either to be replaced or to be inserted after
  */
-std::forward_list<SignalCore_Normal::Signal>::iterator 
+std::list<SignalCore_Normal::Signal>::iterator 
 	SignalCore_Normal::getInsertPosition(Signal sig)
 {
 	for (auto it = signalList.begin();
